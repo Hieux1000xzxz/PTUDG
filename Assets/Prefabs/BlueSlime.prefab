@@ -46,9 +46,10 @@ GameObject:
   - component: {fileID: 4245625235681436241}
   - component: {fileID: 7796996980154336663}
   - component: {fileID: 1514248092590924549}
-  m_Layer: 3
+  - component: {fileID: -4785703217331879825}
+  m_Layer: 6
   m_Name: BlueSlime
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,3 +244,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.018026352, y: -0.04618472}
   m_Size: {x: 0.8587532, y: 0.8629831}
   m_Direction: 0
+--- !u!114 &-4785703217331879825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129789155098566882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173793640fa7d7e4dbc75051e08a6521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  deathPrefab: {fileID: 7669966937311582299, guid: 2279ca83cbdf24e4082468656d4c1a18, type: 3}
+  floatingTextPrefab: {fileID: 1135579629834738341, guid: b39d161a9034af64a82d1d7019291e53, type: 3}
