@@ -18,9 +18,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3'
   - 
   - 
   - 
@@ -42,6 +42,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Layer 1
+    uniqueID: 552826897
+    locked: 0
+  - name: Layer 2
+    uniqueID: 2319855317
     locked: 0
   m_RenderingLayers:
   - Default
