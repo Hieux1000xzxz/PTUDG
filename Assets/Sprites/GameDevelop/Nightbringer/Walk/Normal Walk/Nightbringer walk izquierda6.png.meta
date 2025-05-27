@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer walk izquierda6_0: 4372010688516822089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper lanza frente 3er ataque7_0: -2133087461407824782
+      Vesper lanza frente 3er ataque7_1: 2000877644612800917
+      Vesper lanza frente 3er ataque7_2: 3966610753454422893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer attack summon izquierda60 #1148052_0: 5244054236823313915
+      Nightbringer attack summon izquierda60 #1148052_1: -1241089268808561447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

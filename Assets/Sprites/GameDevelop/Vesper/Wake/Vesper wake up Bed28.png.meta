@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper wake up Bed28_0: -953502277234667448
+      Vesper wake up Bed28_1: -6547038733517124238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper shadow ball izquierda9_0: -3839280123505715922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

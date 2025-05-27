@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer attack wave derecha51_0: -6968694796221300456
+      Nightbringer attack wave derecha51_1: -3846362972617626270
+      Nightbringer attack wave derecha51_2: -6339896551330779158
+      Nightbringer attack wave derecha51_3: 3054037101909612123
+      Nightbringer attack wave derecha51_4: 7816962216120261504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

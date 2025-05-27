@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer attack charge derecha50_0: 2196908711184981399
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

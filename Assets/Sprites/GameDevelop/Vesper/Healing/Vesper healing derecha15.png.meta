@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper healing derecha15_0: 4990288128532233798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

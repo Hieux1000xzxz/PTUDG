@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer Ba zell attack summon izquierda60_0: 3520750992957309788
+      Nightbringer Ba zell attack summon izquierda60_1: -6586074688610719212
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vesper interaction seal116_0: -5488294143023462083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

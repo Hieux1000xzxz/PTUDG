@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper gondola19_0: -6907555210119985659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

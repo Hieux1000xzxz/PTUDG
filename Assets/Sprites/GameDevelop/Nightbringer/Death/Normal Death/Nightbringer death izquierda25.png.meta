@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer death izquierda25_0: -887920840450540795
+      Nightbringer death izquierda25_1: 4044386183874156468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

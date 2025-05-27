@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vesper pompa16_0: -2029081407186537277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

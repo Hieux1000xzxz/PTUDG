@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nightbringer Ba zell attack wave izquierda53_0: 8070775078076624637
+      Nightbringer Ba zell attack wave izquierda53_1: -7641390151663799121
+      Nightbringer Ba zell attack wave izquierda53_2: 123024481699684271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

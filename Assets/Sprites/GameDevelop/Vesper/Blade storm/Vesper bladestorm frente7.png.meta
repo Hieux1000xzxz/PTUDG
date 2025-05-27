@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper bladestorm frente7_0: 5611158501253572885
+      Vesper bladestorm frente7_1: 6011365550506625344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vesper ESPADON frente 3er ataque9_0: 260238834020703137
+      Vesper ESPADON frente 3er ataque9_1: 7889211086036352174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
