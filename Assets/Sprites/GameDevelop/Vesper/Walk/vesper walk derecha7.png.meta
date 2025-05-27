@@ -103,10 +103,10 @@ TextureImporter:
       name: vesper walk derecha7_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 21
-        height: 23
+        x: 0
+        y: 0
+        width: 23
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a924440b5f621cf4389cb27e12850572
     internalID: 0
     vertices: []
     indices: 
