@@ -46,6 +46,12 @@ GameObject:
   - component: {fileID: 353763121606276645}
   - component: {fileID: 5777808768264505980}
   - component: {fileID: 655497680536936734}
+  - component: {fileID: 6688843579111715811}
+  - component: {fileID: 1763869440973662466}
+  - component: {fileID: 264515516811776203}
+  - component: {fileID: 5025042792194655879}
+  - component: {fileID: 8063712462168062396}
+  - component: {fileID: 274788574320209607}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -62,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 8520286994756439704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46, y: 2.33, z: 0}
+  m_LocalPosition: {x: -0.06, y: 2.3, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -112,7 +118,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 552826897
   m_SortingLayer: 1
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 5692671443236587484, guid: 27d5b8f2a2a3d2f48be8f7cf2e6960f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,11 +165,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  attackPoint: {fileID: 711083208983344580}
-  attackLength: 1.2
-  attackWidth: 1
-  attackDelay: 0.2
-  attackCooldown: 0.5
+  attackDelay: 0.3
+  attackCooldown: 0.6
+  warriorAnimator: {fileID: 9100000, guid: 0dbd9c9d4f9fe204b88eb41405be69e5, type: 2}
+  mageAnimator: {fileID: 9100000, guid: 822db7c14bd5caa4789ae407a73d4d40, type: 2}
 --- !u!50 &353763121606276645
 Rigidbody2D:
   serializedVersion: 5
@@ -246,3 +251,108 @@ MonoBehaviour:
   totalDuration: 1
   slashCount: 3
   damagePerHit: 10
+  cooldownTime: 10
+  slashPrefab: {fileID: 6127185634937417836, guid: 1912754282d32654f9392a96da36a0fd, type: 3}
+  slashSpeed: 8
+--- !u!114 &6688843579111715811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c637998c441d2240aca0a98354c1c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1763869440973662466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9c10e8579c74940b0ff11c4910ca7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashDuration: 1
+  hitInterval: 0.2
+  damagePerHit: 10
+  attackLength: 1.5
+  attackWidth: 1
+  attackPoint: {fileID: 711083208983344580}
+  cooldownTime: 5
+--- !u!114 &264515516811776203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac21c93a1a0147c4fb9f5aa0d2d406e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 711083208983344580}
+  attackLength: 1.5
+  attackWidth: 0.5
+  attackDamage: 15
+--- !u!114 &5025042792194655879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963e5a1b885cba8408320574f1e7073d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPrefab: {fileID: 5314248272164810418, guid: 40da40fbdd30e6a43a3db5f5718072f8, type: 3}
+  attackPoint: {fileID: 711083208983344580}
+  projectileSpeed: 8
+  attackDamage: 10
+  enemyTag: Enemy
+--- !u!114 &8063712462168062396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b69f6b29e11d849b3b4f282bfbd821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionAreaPrefab: {fileID: 8926859448230160511, guid: cf5b55106f7b8b244971b182fcb46770, type: 3}
+  explosionEffect: {fileID: 5921951903980953427, guid: 50bf86f7cec25b245abcaa069460efeb, type: 3}
+  explosionRadius: 2.5
+  explosionDamage: 30
+  explosionDelay: 1.5
+  enemyTag: Enemy
+  cooldownTime: 10
+--- !u!114 &274788574320209607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361c81a58a397d0468ab21b5896a66d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceProjectilePrefab: {fileID: 7319089552330959462, guid: 66e01b245dfd2334d9ebf0a775cfc1ba, type: 3}
+  projectileSpeed: 10
+  explosionAreaSize: {x: 4, y: 2}
+  damage: 2
+  freezeDuration: 3
+  cooldownTime: 5
+  enemyTag: Enemy

@@ -7,6 +7,7 @@ public class MoonveilDashSkill : MonoBehaviour
     public float dashDuration = 0.6f;
     public float hitInterval = 0.15f;
     public int damagePerHit = 10;
+    public float attackLength = 1.5f; // Chiều dài của đòn tấn công
     public float attackWidth = 0.4f;
     public Transform attackPoint;
 
@@ -67,7 +68,7 @@ public class MoonveilDashSkill : MonoBehaviour
 
                 Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(
                     center,
-                    new Vector2(1f, attackWidth),
+                    new Vector2(attackLength, attackWidth),
                     0f
                 );
 
@@ -93,6 +94,6 @@ public class MoonveilDashSkill : MonoBehaviour
         if (!attackPoint) return;
         Vector2 pos = (Vector2)attackPoint.position + Vector2.right * 0.5f;
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(pos, new Vector3(1f, attackWidth, 0));
+        Gizmos.DrawWireCube(pos, new Vector3(attackLength, attackWidth, 0));
     }
 }

@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private MageAttack mageAttack;
 
     private bool isAttacking = false;
-    private bool isCasting = false;
+    private bool isMovementLocked = false;
 
     private Vector2 attackLockPosition;
 
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private TripleSlashSkill tripleSlashSkill;
     private MoonveilDashSkill moonveilDashSkill;
     private MageExplosionSkill explosionSkill;
-
+    private IceBlastSkill iceBlastSkill;
 
     public RuntimeAnimatorController warriorAnimator;
     public RuntimeAnimatorController mageAnimator;
@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         tripleSlashSkill = GetComponent<TripleSlashSkill>();
         moonveilDashSkill = GetComponent<MoonveilDashSkill>();
         explosionSkill = GetComponent<MageExplosionSkill>();
+        iceBlastSkill = GetComponent<IceBlastSkill>();
 
     }
     private void Start()
@@ -57,41 +58,39 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        if (isAttacking) return;
-
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-        moveInput = moveInput.normalized;
-
-        if (moveInput.sqrMagnitude > 0.01f)
+        if (!isMovementLocked)
         {
-            lastMoveDirection = moveInput;
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+            moveInput = moveInput.normalized;
+
+            if (moveInput.sqrMagnitude > 0.01f)
+            {
+                lastMoveDirection = moveInput;
+            }
+
+            if (lastMoveDirection.x > 0.1f)
+                spriteRenderer.flipX = false;
+            else if (lastMoveDirection.x < -0.1f)
+                spriteRenderer.flipX = true;
+
+            animator.SetBool("isMoving", moveInput.sqrMagnitude > 0);
         }
 
-        if (lastMoveDirection.x > 0.1f)
-            spriteRenderer.flipX = false;
-        else if (lastMoveDirection.x < -0.1f)
-            spriteRenderer.flipX = true;
-
-        animator.SetBool("isMoving", moveInput.sqrMagnitude > 0);
-
         // Tấn công
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
         {
-            if (currentForm == PlayerForm.Warrior && !isAttacking)
-            {
-                StartCoroutine(AttackRoutine());
-            }
-            else if (currentForm == PlayerForm.Mage && !isAttacking)
-            {
-                StartCoroutine(MageAttackRoutine());
-            }
+            StartCoroutine(AttackRoutine());
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
             if (currentForm == PlayerForm.Warrior && tripleSlashSkill && !tripleSlashSkill.IsTripleSlashing())
             {
                 tripleSlashSkill.ActivateTripleSlash();
+            }
+            else if (currentForm == PlayerForm.Mage && iceBlastSkill && !iceBlastSkill.IsCasting())
+            {
+                iceBlastSkill.ActivateIceBlast();
             }
         }
         if (Input.GetKeyDown(KeyCode.K))
@@ -100,9 +99,9 @@ public class PlayerController : MonoBehaviour
             {
                 moonveilDashSkill.ActivateMoonveilDash();
             }
-            if(currentForm == PlayerForm.Mage && explosionSkill)
+            if(currentForm == PlayerForm.Mage && explosionSkill && !explosionSkill.IsExploding())
             {
-                StartCoroutine(CastExplosionRoutine());
+                explosionSkill.ActivateExplosion();
             }
         }
             // Biến hình
@@ -126,6 +125,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.MovePosition(tripleSlashSkill.GetLockPosition());
         }
+        else if (explosionSkill && explosionSkill.IsExploding())
+        {
+            rb.MovePosition(explosionSkill.GetLockPosition());
+        }
         else
         {
             Vector2 newPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
@@ -136,6 +139,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator AttackRoutine()
     {
         isAttacking = true;
+        isMovementLocked = true;
         attackLockPosition = rb.position;
 
         animator.SetBool("isAttacking", true);
@@ -152,40 +156,10 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(attackCooldown);
         animator.SetBool("isAttacking", false);
+        isMovementLocked = false;
         isAttacking = false;
     }
-    private IEnumerator MageAttackRoutine()
-    {
-        isAttacking = true;
-        attackLockPosition = rb.position;
-
-        animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(0.5f);
-
-        if (currentForm == PlayerForm.Warrior)
-        {
-            warriorAttack.PerformAttack();
-        }
-        else if (currentForm == PlayerForm.Mage)
-        {
-            mageAttack.PerformAttack(lastMoveDirection);
-        }
-        yield return new WaitForSeconds(attackCooldown+0.2f);
-        animator.SetBool("isAttacking", false);
-        yield return new WaitForSeconds(0.2f);
-        isAttacking = false;
-    }
-    private IEnumerator CastExplosionRoutine()
-    {
-        moveInput = Vector2.zero;
-
-        animator.SetTrigger("castSkill");
-        yield return new WaitForSeconds(0.7f); // thời gian tung chiêu (khớp animation)
-
-        explosionSkill.ActivateExplosion();
-
-        yield return new WaitForSeconds(0.3f); // đợi thêm chút cho cảm giác mượt
-    }
+   
 
     public void SetForm(PlayerForm form)
     {

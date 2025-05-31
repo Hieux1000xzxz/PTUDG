@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MageAttack : MonoBehaviour
 {
@@ -6,17 +6,24 @@ public class MageAttack : MonoBehaviour
     public Transform attackPoint;
     public float projectileSpeed = 8f;
     public int attackDamage = 10;
+    public string enemyTag = "Enemy";
 
-    public void PerformAttack(Vector2 direction)
+    public void PerformAttack(Vector2 _)
     {
         if (!attackPrefab) return;
 
-        GameObject projectile = Instantiate(attackPrefab, attackPoint.position + new Vector3 (0,-0.2f,0), Quaternion.identity);
+        // Tìm kẻ địch gần nhất
+        GameObject target = FindNearestEnemy();
+        if (target == null) return;
+
+        Vector2 direction = (target.transform.position - attackPoint.position).normalized;
+
+        GameObject projectile = Instantiate(attackPrefab, attackPoint.position, Quaternion.identity);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
 
         if (rb != null)
         {
-            rb.linearVelocity = direction.normalized * projectileSpeed;
+            rb.linearVelocity = direction * projectileSpeed;
         }
 
         Projectile proj = projectile.GetComponent<Projectile>();
@@ -26,5 +33,25 @@ public class MageAttack : MonoBehaviour
         }
 
         Destroy(projectile, 2f);
+    }
+
+    private GameObject FindNearestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        GameObject nearest = null;
+        float minDist = float.MaxValue;
+        Vector2 myPos = attackPoint.position;
+
+        foreach (var enemy in enemies)
+        {
+            float dist = Vector2.Distance(myPos, enemy.transform.position);
+            if (dist < minDist)
+            {
+                minDist = dist;
+                nearest = enemy;
+            }
+        }
+
+        return nearest;
     }
 }
