@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -118,10 +118,10 @@ TextureImporter:
       name: Priest-Attack_Effect_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 50
-        width: 11
-        height: 26
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Priest-Attack_Effect_1
       rect:
         serializedVersion: 2
-        x: 145
-        y: 42
-        width: 15
-        height: 26
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: Priest-Attack_Effect_2
       rect:
         serializedVersion: 2
-        x: 241
-        y: 40
-        width: 23
-        height: 30
+        x: 200
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Priest-Attack_Effect_3
       rect:
         serializedVersion: 2
-        x: 340
-        y: 40
-        width: 25
-        height: 32
+        x: 300
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: Priest-Attack_Effect_4
       rect:
         serializedVersion: 2
-        x: 449
-        y: 40
-        width: 7
-        height: 35
+        x: 400
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,33 +224,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Priest-Attack_Effect_5
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 37
-        width: 32
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b6c152d53da8f900800000000000000
-      internalID: 718514587239040688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4ae6b80dd61320a49957adf4ca9ae464
     internalID: 0
     vertices: []
     indices: 
@@ -265,7 +243,6 @@ TextureImporter:
       Priest-Attack_Effect_2: -4842815625234924671
       Priest-Attack_Effect_3: -4905259927918614645
       Priest-Attack_Effect_4: 703259547594288074
-      Priest-Attack_Effect_5: 718514587239040688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

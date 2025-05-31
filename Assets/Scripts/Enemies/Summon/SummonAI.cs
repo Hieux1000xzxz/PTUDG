@@ -17,7 +17,6 @@ public class SummonAI : MonoBehaviour
     [Header("Combat Settings")]
     public int damage = 10;
     public float attackCooldown = 1f; // Thời gian giữa 2 lần gây damage
-    public LayerMask playerLayer;
     public float attackRange = 0.5f;  // Phạm vi kiểm tra trúng player khi charge
     private bool isWaiting = false;
     private bool isCharging = false;
@@ -112,7 +111,7 @@ public class SummonAI : MonoBehaviour
     {
         if (Time.time - lastAttackTime < attackCooldown) return; // Nếu đang cooldown, bỏ qua
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLayer);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
         /*foreach (Collider2D hit in hits)
         {
             PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();

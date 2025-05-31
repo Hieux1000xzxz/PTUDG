@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 711083208983344580}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,8 @@ GameObject:
   - component: {fileID: 3609050159195287520}
   - component: {fileID: 353763121606276645}
   - component: {fileID: 5777808768264505980}
-  m_Layer: 3
+  - component: {fileID: 655497680536936734}
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -61,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 8520286994756439704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.87, y: 3.09, z: 0}
+  m_LocalPosition: {x: 0.46, y: 2.33, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -109,10 +110,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 552826897
+  m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 5692671443236587484, guid: 25ac2a8c1e1ea10458f01711a3e6a47e, type: 3}
+  m_Sprite: {fileID: 5692671443236587484, guid: 27d5b8f2a2a3d2f48be8f7cf2e6960f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +134,7 @@ Animator:
   m_GameObject: {fileID: 8520286994756439704}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6902524fee2f7f345afa05d8a3824eba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0dbd9c9d4f9fe204b88eb41405be69e5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -163,9 +164,6 @@ MonoBehaviour:
   attackWidth: 1
   attackDelay: 0.2
   attackCooldown: 0.5
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!50 &353763121606276645
 Rigidbody2D:
   serializedVersion: 5
@@ -230,3 +228,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.002576256, y: 0.02318635}
   m_Size: {x: 0.1292225, y: 0.1807479}
   m_Direction: 0
+--- !u!114 &655497680536936734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1b43d834fbbfb4fa7c3e5d97794b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 711083208983344580}
+  attackLength: 1.5
+  attackWidth: 1
+  totalDuration: 1
+  slashCount: 3
+  damagePerHit: 10

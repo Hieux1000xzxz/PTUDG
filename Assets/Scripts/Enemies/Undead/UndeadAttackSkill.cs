@@ -9,7 +9,7 @@ public class UndeadAttackSkill : MonoBehaviour
     public float attackWidth = 1f;         // Chiều rộng tấn công
     public int damageAmount = 20;          // Lượng damage gây ra
 
-    public LayerMask playerLayer;          // Layer mask của player
+
     public Transform attackOrigin;         // Vị trí gốc để tạo vùng tấn công
     private Vector2 attackDirection = Vector2.right;  // Hướng mặc định (sẽ update sau)
 
@@ -54,14 +54,17 @@ public class UndeadAttackSkill : MonoBehaviour
         Vector2 size = new Vector2(attackRange, attackWidth);
 
         // Kiểm tra xem có player nào trong phạm vi không
-        Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f, playerLayer);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f);
 
         /*foreach (Collider2D hit in hits)
         {
-            PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            if (hit.CompareTag("Player"))
             {
-                playerHealth.TakeDamage(damageAmount);
+                PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damageAmount);
+                }
             }
         }*/
     }

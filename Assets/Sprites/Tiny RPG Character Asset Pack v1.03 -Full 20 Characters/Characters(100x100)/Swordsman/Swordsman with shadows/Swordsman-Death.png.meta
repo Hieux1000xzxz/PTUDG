@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -112,10 +112,10 @@ TextureImporter:
       name: Swordsman-Death_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 39
-        width: 26
-        height: 23
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Swordsman-Death_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 39
-        width: 29
-        height: 21
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: Swordsman-Death_2
       rect:
         serializedVersion: 2
-        x: 244
-        y: 39
-        width: 30
-        height: 19
+        x: 200
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: Swordsman-Death_3
       rect:
         serializedVersion: 2
-        x: 345
-        y: 39
-        width: 35
-        height: 15
+        x: 300
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1618a15fef8ee274fab692e1bbb29d40
     internalID: 0
     vertices: []
     indices: 

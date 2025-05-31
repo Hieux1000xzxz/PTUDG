@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2404634480700559087}
   - component: {fileID: 8526877554294436280}
   - component: {fileID: 297877235101177049}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Summon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6445720560292868901}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.236139, y: -7.8316593, z: 0}
+  m_LocalPosition: {x: -25.617134, y: -6.393448, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,9 +78,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 552826897
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -6973191664251310759, guid: 29e1a35b2f1e69a41865f06c37ca8d51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -201,9 +201,6 @@ MonoBehaviour:
   spawnDelay: 1
   damage: 10
   attackCooldown: 1
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
   attackRange: 0.5
 --- !u!114 &297877235101177049
 MonoBehaviour:
