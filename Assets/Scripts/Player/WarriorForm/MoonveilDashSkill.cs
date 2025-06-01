@@ -10,6 +10,7 @@ public class MoonveilDashSkill : MonoBehaviour
     public float attackLength = 1.5f; // Chiều dài của đòn tấn công
     public float attackWidth = 0.4f;
     public Transform attackPoint;
+    public float manaCost = 20f;
 
     [Header("Cooldown Settings")]
     public float cooldownTime = 5f;
@@ -22,6 +23,7 @@ public class MoonveilDashSkill : MonoBehaviour
     private PlayerController playerController;
     private Animator animator;
     private Vector2 dashStartPosition;
+    private PlayerHealth playerHealth;
     private float dashTimer;
 
     void Awake()
@@ -30,6 +32,7 @@ public class MoonveilDashSkill : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
     private void Update()
     {
@@ -38,11 +41,19 @@ public class MoonveilDashSkill : MonoBehaviour
     }
     public void ActivateMoonveilDash()
     {
-        if (!isDashing && cooldownTimer <= 0f)
+        if (isDashing) return;             // Đang thực hiện skill
+        if (cooldownTimer > 0f) return;           // Đang cooldown
+        if (playerHealth == null) return;
+        if (playerHealth.currentMana < manaCost)
         {
-            StartCoroutine(MoonveilDashRoutine());
-            cooldownTimer = cooldownTime;
+            Debug.Log("Không đủ mana để dùng Triple Slash");
+            return;
         }
+
+        playerHealth.UseMana(manaCost); // Trừ mana
+        cooldownTimer = cooldownTime;
+
+        StartCoroutine(MoonveilDashRoutine());
     }
 
     public bool IsDashing()

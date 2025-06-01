@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using NUnit.Framework.Internal.Commands;
 
 public enum PlayerForm { Warrior, Mage }
 
@@ -36,13 +37,11 @@ public class PlayerController : MonoBehaviour
     public RuntimeAnimatorController warriorAnimator;
     public RuntimeAnimatorController mageAnimator;
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
         warriorAttack = GetComponent<WarriorAttack>();
         mageAttack = GetComponent<MageAttack>();
         tripleSlashSkill = GetComponent<TripleSlashSkill>();

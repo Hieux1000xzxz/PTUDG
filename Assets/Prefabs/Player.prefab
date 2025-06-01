@@ -52,6 +52,8 @@ GameObject:
   - component: {fileID: 5025042792194655879}
   - component: {fileID: 8063712462168062396}
   - component: {fileID: 274788574320209607}
+  - component: {fileID: 4633622233490444498}
+  - component: {fileID: 3017367460792130380}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -251,6 +253,7 @@ MonoBehaviour:
   totalDuration: 1
   slashCount: 3
   damagePerHit: 10
+  manaCost: 10
   cooldownTime: 10
   slashPrefab: {fileID: 6127185634937417836, guid: 1912754282d32654f9392a96da36a0fd, type: 3}
   slashSpeed: 8
@@ -266,6 +269,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c637998c441d2240aca0a98354c1c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  maxMana: 50
+  currentMana: 0
+  armor: 10
+  healthRegenRate: 0
+  manaRegenRate: 5
 --- !u!114 &1763869440973662466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +294,7 @@ MonoBehaviour:
   attackLength: 1.5
   attackWidth: 1
   attackPoint: {fileID: 711083208983344580}
+  manaCost: 20
   cooldownTime: 5
 --- !u!114 &264515516811776203
 MonoBehaviour:
@@ -336,6 +347,7 @@ MonoBehaviour:
   explosionDamage: 30
   explosionDelay: 1.5
   enemyTag: Enemy
+  manaCost: 20
   cooldownTime: 10
 --- !u!114 &274788574320209607
 MonoBehaviour:
@@ -355,4 +367,38 @@ MonoBehaviour:
   damage: 2
   freezeDuration: 3
   cooldownTime: 5
+  manaCost: 20
   enemyTag: Enemy
+--- !u!114 &4633622233490444498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c637998c441d2240aca0a98354c1c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  maxMana: 50
+  currentMana: 0
+  armor: 10
+  healthRegenRate: 0
+  manaRegenRate: 1
+--- !u!114 &3017367460792130380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da256db74a621624285fa23b52616f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+  manaSlider: {fileID: 0}

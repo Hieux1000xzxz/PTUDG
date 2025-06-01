@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: 245a228cffaffc643ae72a09c82a60c7
+guid: 94469d63abe184b45bb49b864830c6a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3529585072740049112
-    second: Skeleton Archer-Walk_0
+      213: 1574297250965444970
+    second: "po\xE7\xA6o azul_0"
   - first:
-      213: 1552569696712542236
-    second: Skeleton Archer-Walk_1
+      213: 6315407548632597649
+    second: "po\xE7\xA6o azul_1"
   - first:
-      213: 4004280702128150363
-    second: Skeleton Archer-Walk_2
-  - first:
-      213: -2672155573072289348
-    second: Skeleton Archer-Walk_3
-  - first:
-      213: -5095432870617726702
-    second: Skeleton Archer-Walk_4
-  - first:
-      213: 487595970675031006
-    second: Skeleton Archer-Walk_5
-  - first:
-      213: -6304041728307141930
-    second: Skeleton Archer-Walk_6
-  - first:
-      213: -3530639821347134945
-    second: Skeleton Archer-Walk_7
+      213: 1880553985874550144
+    second: "po\xE7\xA6o azul_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,177 +106,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton Archer-Walk_0
+      name: "po\xE7\xA6o azul_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb97359b61a1d7438dab1f0cdbc8b86
+      internalID: 1014523743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o azul_1"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd644ee5695dd44088adca68569b8ab
+      internalID: 702864797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o azul_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5c9e3478c555841b1ef9213ae1187c
+      internalID: -1573818669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o azul_3"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81cabb62e83bab49837f355af8a38e2
+      internalID: -1409925970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o azul_4"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c76e94df678a944b564ade5e4d5061
+      internalID: 1251307143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o azul_5"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f63e18c9fc075e439c118d628677a9a
+      internalID: 2056679788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o azul_6"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d021315cea9bf030800000000000000
-      internalID: 3529585072740049112
+      spriteID: ea9aa6dd599094041b2052df6e1a8657
+      internalID: -2142951240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Archer-Walk_1
+      name: "po\xE7\xA6o azul_7"
       rect:
         serializedVersion: 2
-        x: 100
+        x: 16
         y: 0
-        width: 100
-        height: 100
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c18469dc9e5db8510800000000000000
-      internalID: 1552569696712542236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b57dc4f3510129730800000000000000
-      internalID: 4004280702128150363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_3
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb1227af9a89aead0800000000000000
-      internalID: -2672155573072289348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2114bf90dc26949b0800000000000000
-      internalID: -5095432870617726702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_5
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edb3ff1b3f944c600800000000000000
-      internalID: 487595970675031006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_6
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d26307c27b8388a0800000000000000
-      internalID: -6304041728307141930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1261c2e9c5a00fc0800000000000000
-      internalID: -3530639821347134945
+      spriteID: 882699182050a654d81e8546d849686b
+      internalID: -2102393170
       vertices: []
       indices: 
       edges: []
@@ -300,7 +285,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 02181d76c34c1f44697edba6e10d6261
+    spriteID: e70a8b86a35215a4cb8ea81049d2b7b6
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +295,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Skeleton Archer-Walk_0: 3529585072740049112
-      Skeleton Archer-Walk_1: 1552569696712542236
-      Skeleton Archer-Walk_2: 4004280702128150363
-      Skeleton Archer-Walk_3: -2672155573072289348
-      Skeleton Archer-Walk_4: -5095432870617726702
-      Skeleton Archer-Walk_5: 487595970675031006
-      Skeleton Archer-Walk_6: -6304041728307141930
-      Skeleton Archer-Walk_7: -3530639821347134945
+      "po\xE7\xA6o azul_0": 1014523743
+      "po\xE7\xA6o azul_1": 702864797
+      "po\xE7\xA6o azul_2": -1573818669
+      "po\xE7\xA6o azul_3": -1409925970
+      "po\xE7\xA6o azul_4": 1251307143
+      "po\xE7\xA6o azul_5": 2056679788
+      "po\xE7\xA6o azul_6": -2142951240
+      "po\xE7\xA6o azul_7": -2102393170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

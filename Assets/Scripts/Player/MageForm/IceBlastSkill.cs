@@ -10,18 +10,22 @@ public class IceBlastSkill : MonoBehaviour
     public int damage = 25;
     public float freezeDuration = 2f;
 
-    [Header("Cooldown Settings")]
+    [Header("Ice Blast Settings")]
     public float cooldownTime = 8f;
+    public float manaCost = 20;
     private float cooldownTimer = 0f;
+
 
     [Header("Enemy Settings")]
     public string enemyTag = "Enemy";
 
     private Animator animator;
     private bool isCasting = false;
+    private PlayerHealth playerHealth;
     private void Start()
     {
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
     private void Update()
     {
@@ -36,7 +40,7 @@ public class IceBlastSkill : MonoBehaviour
         animator.SetBool("isAttacking", true);
         GameObject nearestEnemy = FindNearestEnemy();
         if (nearestEnemy == null) return;
-
+        playerHealth.UseMana(manaCost); // Trừ mana
         Vector2 direction = (nearestEnemy.transform.position - transform.position).normalized;
 
         GameObject proj = Instantiate(iceProjectilePrefab, transform.position, Quaternion.identity);

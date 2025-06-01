@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: 245a228cffaffc643ae72a09c82a60c7
+guid: 7e39680b22f50844697d0ccee1a6ecac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3529585072740049112
-    second: Skeleton Archer-Walk_0
+      213: 1731768069009229548
+    second: "po\xE7\xA6o vermelha bem vazia_0"
   - first:
-      213: 1552569696712542236
-    second: Skeleton Archer-Walk_1
+      213: 7803947033715713952
+    second: "po\xE7\xA6o vermelha bem vazia_1"
   - first:
-      213: 4004280702128150363
-    second: Skeleton Archer-Walk_2
-  - first:
-      213: -2672155573072289348
-    second: Skeleton Archer-Walk_3
-  - first:
-      213: -5095432870617726702
-    second: Skeleton Archer-Walk_4
-  - first:
-      213: 487595970675031006
-    second: Skeleton Archer-Walk_5
-  - first:
-      213: -6304041728307141930
-    second: Skeleton Archer-Walk_6
-  - first:
-      213: -3530639821347134945
-    second: Skeleton Archer-Walk_7
+      213: -3969005084117237289
+    second: "po\xE7\xA6o vermelha bem vazia_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,177 +106,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton Archer-Walk_0
+      name: "po\xE7\xA6o vermelha bem vazia_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6c8aa22e9780810800000000000000
+      internalID: 1731768069009229548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o vermelha bem vazia_1"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7a696ea703d4c60800000000000000
+      internalID: 7803947033715713952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o vermelha bem vazia_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1097997e24be8c0800000000000000
+      internalID: -3969005084117237289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o vermelha bem vazia_3"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da92e2334c81c7f4d84a04801b007d92
+      internalID: -1742727579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o vermelha bem vazia_4"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c496f71be73802649aac43c19a878e60
+      internalID: 418409822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o vermelha bem vazia_5"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daeb78b4f99088a48a7f4d31e9181742
+      internalID: -2012000672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "po\xE7\xA6o vermelha bem vazia_6"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d021315cea9bf030800000000000000
-      internalID: 3529585072740049112
+      spriteID: 182c6bbf775a9c940ad1f9f445a358bc
+      internalID: 543430974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Archer-Walk_1
+      name: "po\xE7\xA6o vermelha bem vazia_7"
       rect:
         serializedVersion: 2
-        x: 100
+        x: 16
         y: 0
-        width: 100
-        height: 100
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c18469dc9e5db8510800000000000000
-      internalID: 1552569696712542236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b57dc4f3510129730800000000000000
-      internalID: 4004280702128150363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_3
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb1227af9a89aead0800000000000000
-      internalID: -2672155573072289348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2114bf90dc26949b0800000000000000
-      internalID: -5095432870617726702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_5
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edb3ff1b3f944c600800000000000000
-      internalID: 487595970675031006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_6
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d26307c27b8388a0800000000000000
-      internalID: -6304041728307141930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton Archer-Walk_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1261c2e9c5a00fc0800000000000000
-      internalID: -3530639821347134945
+      spriteID: 266a1e1174f0df443817de3f00ec8145
+      internalID: 988742354
       vertices: []
       indices: 
       edges: []
@@ -300,7 +285,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 02181d76c34c1f44697edba6e10d6261
+    spriteID: 32cecae66950e034c95b2d3c432f37fd
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +295,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Skeleton Archer-Walk_0: 3529585072740049112
-      Skeleton Archer-Walk_1: 1552569696712542236
-      Skeleton Archer-Walk_2: 4004280702128150363
-      Skeleton Archer-Walk_3: -2672155573072289348
-      Skeleton Archer-Walk_4: -5095432870617726702
-      Skeleton Archer-Walk_5: 487595970675031006
-      Skeleton Archer-Walk_6: -6304041728307141930
-      Skeleton Archer-Walk_7: -3530639821347134945
+      "po\xE7\xA6o vermelha bem vazia_0": 1731768069009229548
+      "po\xE7\xA6o vermelha bem vazia_1": 7803947033715713952
+      "po\xE7\xA6o vermelha bem vazia_2": -3969005084117237289
+      "po\xE7\xA6o vermelha bem vazia_3": -1742727579
+      "po\xE7\xA6o vermelha bem vazia_4": 418409822
+      "po\xE7\xA6o vermelha bem vazia_5": -2012000672
+      "po\xE7\xA6o vermelha bem vazia_6": 543430974
+      "po\xE7\xA6o vermelha bem vazia_7": 988742354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

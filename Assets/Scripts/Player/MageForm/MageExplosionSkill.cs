@@ -10,6 +10,7 @@ public class MageExplosionSkill : MonoBehaviour
     public int explosionDamage = 30;
     public float explosionDelay = 2f;
     public string enemyTag = "Enemy";
+    public float manaCost = 20f;
 
     [Header("Cooldown Settings")]
     public float cooldownTime = 10f;
@@ -17,12 +18,13 @@ public class MageExplosionSkill : MonoBehaviour
 
     private bool isExploding = false;
     private Animator animator;
-
+    private PlayerHealth playerHealth;
     private Vector2 lockPosition;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     private void Update()
@@ -36,14 +38,21 @@ public class MageExplosionSkill : MonoBehaviour
     }
     public void ActivateExplosion()
     {
-        if (!isExploding && cooldownTimer <= 0f)
+        if (isExploding) return;             // Đang thực hiện skill
+        if (cooldownTimer > 0f) return;           // Đang cooldown
+        if (playerHealth == null) return;
+        if (playerHealth.currentMana < manaCost)
         {
-            GameObject nearestEnemy = FindNearestEnemy();
-            if (nearestEnemy == null) return;
-
-            StartCoroutine(ExplosionCoroutine(nearestEnemy.transform.position));
-            cooldownTimer = cooldownTime;
+            Debug.Log("Không đủ mana để dùng Triple Slash");
+            return;
         }
+
+        playerHealth.UseMana(manaCost); // Trừ mana
+        cooldownTimer = cooldownTime;
+        GameObject nearestEnemy = FindNearestEnemy();
+        if (nearestEnemy == null) return;
+        StartCoroutine(ExplosionCoroutine(nearestEnemy.transform.position));
+       
     }
 
     private IEnumerator ExplosionCoroutine(Vector2 targetPos)

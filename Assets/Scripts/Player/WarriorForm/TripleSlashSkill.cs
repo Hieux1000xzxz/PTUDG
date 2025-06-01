@@ -10,6 +10,7 @@ public class TripleSlashSkill : MonoBehaviour
     public float totalDuration = 1f;
     public int slashCount = 3;
     public int damagePerHit = 17;
+    public int manaCost = 10;
 
     [Header("Cooldown Settings")]
     public float cooldownTime = 10f;
@@ -22,6 +23,7 @@ public class TripleSlashSkill : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rb;
+    private PlayerHealth playerHealth;
 
     private bool isTripleSlashing = false;
     private Vector2 lockPosition;
@@ -31,6 +33,7 @@ public class TripleSlashSkill : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     private void Update()
@@ -41,11 +44,19 @@ public class TripleSlashSkill : MonoBehaviour
 
     public void ActivateTripleSlash()
     {
-        if (!isTripleSlashing && cooldownTimer <= 0f)
+        if (isTripleSlashing) return;             // Đang thực hiện skill
+        if (cooldownTimer > 0f) return;           // Đang cooldown
+        if (playerHealth == null) return;
+        if (playerHealth.currentMana < manaCost)
         {
-            StartCoroutine(TripleSlashCoroutine());
-            cooldownTimer = cooldownTime;
+            Debug.Log("Không đủ mana để dùng Triple Slash");
+            return;
         }
+
+        playerHealth.UseMana(manaCost); // Trừ mana
+        cooldownTimer = cooldownTime;
+
+        StartCoroutine(TripleSlashCoroutine());
     }
 
     public Vector2 GetLockPosition()
