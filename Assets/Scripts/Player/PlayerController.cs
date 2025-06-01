@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isAttacking = false;
     private bool isMovementLocked = false;
+    private bool isUsingSkill = false;
 
     private Vector2 attackLockPosition;
 
@@ -81,30 +82,36 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(AttackRoutine());
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && !isUsingSkill)
         {
             if (currentForm == PlayerForm.Warrior && tripleSlashSkill && !tripleSlashSkill.IsTripleSlashing())
             {
+                StartCoroutine(UseSkillCoroutine(tripleSlashSkill.totalDuration));
                 tripleSlashSkill.ActivateTripleSlash();
             }
             else if (currentForm == PlayerForm.Mage && iceBlastSkill && !iceBlastSkill.IsCasting())
             {
+                StartCoroutine(UseSkillCoroutine(0.5f));
                 iceBlastSkill.ActivateIceBlast();
             }
         }
-        if (Input.GetKeyDown(KeyCode.K))
+
+        if (Input.GetKeyDown(KeyCode.K) && !isUsingSkill)
         {
             if (currentForm == PlayerForm.Warrior && moonveilDashSkill && !moonveilDashSkill.IsDashing())
             {
+                StartCoroutine(UseSkillCoroutine(moonveilDashSkill.dashDuration));
                 moonveilDashSkill.ActivateMoonveilDash();
             }
-            if(currentForm == PlayerForm.Mage && explosionSkill && !explosionSkill.IsExploding())
+            else if (currentForm == PlayerForm.Mage && explosionSkill && !explosionSkill.IsExploding())
             {
+                StartCoroutine(UseSkillCoroutine(explosionSkill.explosionDelay));
                 explosionSkill.ActivateExplosion();
             }
         }
-            // Biến hình
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+
+        // Biến hình
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SetForm(PlayerForm.Warrior);
         }
@@ -158,7 +165,13 @@ public class PlayerController : MonoBehaviour
         isMovementLocked = false;
         isAttacking = false;
     }
-   
+
+    private IEnumerator UseSkillCoroutine(float duration)
+    {
+        isUsingSkill = true;
+        yield return new WaitForSeconds(duration);
+        isUsingSkill = false;
+    }
 
     public void SetForm(PlayerForm form)
     {
