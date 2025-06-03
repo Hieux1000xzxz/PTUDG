@@ -659,7 +659,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_047_0: -4677832330384200180
+      Effect_Constellation_1_047_1: 4698271567775588399
+      Effect_Constellation_1_047_10: 6707441917330922601
+      Effect_Constellation_1_047_11: -5348118082762574719
+      Effect_Constellation_1_047_12: 8122412741134469229
+      Effect_Constellation_1_047_13: 7242241631353914431
+      Effect_Constellation_1_047_14: 7643451190252064926
+      Effect_Constellation_1_047_15: 895596362259510365
+      Effect_Constellation_1_047_16: 7885991053943352712
+      Effect_Constellation_1_047_17: -692039568407264990
+      Effect_Constellation_1_047_18: 5854989830252707063
+      Effect_Constellation_1_047_19: -6326520080849073313
+      Effect_Constellation_1_047_2: 7984834309442720120
+      Effect_Constellation_1_047_20: 223480506769817065
+      Effect_Constellation_1_047_21: 2630566438025594371
+      Effect_Constellation_1_047_3: 4979997099094935035
+      Effect_Constellation_1_047_4: -7285045448283764070
+      Effect_Constellation_1_047_5: -815575567952178565
+      Effect_Constellation_1_047_6: 8415597044389541960
+      Effect_Constellation_1_047_7: -4381317582138863520
+      Effect_Constellation_1_047_8: -2599707347320608608
+      Effect_Constellation_1_047_9: -7799409979151486840
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

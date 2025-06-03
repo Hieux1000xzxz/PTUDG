@@ -1584,7 +1584,66 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_BloodImpact_1_69x60_0: -4326374102688624062
+      Effect_BloodImpact_1_69x60_1: 2574668345274877621
+      Effect_BloodImpact_1_69x60_10: 4253231431888049231
+      Effect_BloodImpact_1_69x60_11: -4003301471956819741
+      Effect_BloodImpact_1_69x60_12: -657048861150267854
+      Effect_BloodImpact_1_69x60_13: -9152613762589885287
+      Effect_BloodImpact_1_69x60_14: -2431233755810695464
+      Effect_BloodImpact_1_69x60_15: -6581049182516862709
+      Effect_BloodImpact_1_69x60_16: 637487026971963039
+      Effect_BloodImpact_1_69x60_17: -102281556827726503
+      Effect_BloodImpact_1_69x60_18: -935679979677820800
+      Effect_BloodImpact_1_69x60_19: 3399931096593078419
+      Effect_BloodImpact_1_69x60_2: 7867086982294022757
+      Effect_BloodImpact_1_69x60_20: -3476484925722539812
+      Effect_BloodImpact_1_69x60_21: -2513657710615856947
+      Effect_BloodImpact_1_69x60_22: -5497198162903072702
+      Effect_BloodImpact_1_69x60_23: 2214326484165680969
+      Effect_BloodImpact_1_69x60_24: 5930100268100695706
+      Effect_BloodImpact_1_69x60_25: 759540096271964491
+      Effect_BloodImpact_1_69x60_26: 4534931777672013692
+      Effect_BloodImpact_1_69x60_27: 5153955351194736541
+      Effect_BloodImpact_1_69x60_28: -6638657021241823156
+      Effect_BloodImpact_1_69x60_29: -8781628242607727067
+      Effect_BloodImpact_1_69x60_3: -8202958608020927694
+      Effect_BloodImpact_1_69x60_30: -332796996593383779
+      Effect_BloodImpact_1_69x60_31: -8927953100280245325
+      Effect_BloodImpact_1_69x60_32: 1520712266535456141
+      Effect_BloodImpact_1_69x60_33: 6765907802723069693
+      Effect_BloodImpact_1_69x60_34: -1762994669904218314
+      Effect_BloodImpact_1_69x60_35: -6068960287733584083
+      Effect_BloodImpact_1_69x60_36: 7328969268081178802
+      Effect_BloodImpact_1_69x60_37: 842558527091528921
+      Effect_BloodImpact_1_69x60_38: 8040137092880976631
+      Effect_BloodImpact_1_69x60_39: -6976366364982569521
+      Effect_BloodImpact_1_69x60_4: 5715052756364632920
+      Effect_BloodImpact_1_69x60_40: 5424706454393089374
+      Effect_BloodImpact_1_69x60_41: -1007397395199144428
+      Effect_BloodImpact_1_69x60_42: -8910453162384639799
+      Effect_BloodImpact_1_69x60_43: 4375869092059453184
+      Effect_BloodImpact_1_69x60_44: -3331699383722510884
+      Effect_BloodImpact_1_69x60_45: 4056945867315132910
+      Effect_BloodImpact_1_69x60_46: -5484908141474873560
+      Effect_BloodImpact_1_69x60_47: 8174224301197345315
+      Effect_BloodImpact_1_69x60_48: 4364658078603576740
+      Effect_BloodImpact_1_69x60_49: -3661872012507435634
+      Effect_BloodImpact_1_69x60_5: -3014154660257254992
+      Effect_BloodImpact_1_69x60_50: -6184931429240765410
+      Effect_BloodImpact_1_69x60_51: 1931570145601371375
+      Effect_BloodImpact_1_69x60_52: -6212827577826918018
+      Effect_BloodImpact_1_69x60_53: -4754528623006091803
+      Effect_BloodImpact_1_69x60_54: -6720431898310506767
+      Effect_BloodImpact_1_69x60_55: 201696896094175013
+      Effect_BloodImpact_1_69x60_56: -706407022775048153
+      Effect_BloodImpact_1_69x60_57: -1560541979263504921
+      Effect_BloodImpact_1_69x60_58: 2501558530263382908
+      Effect_BloodImpact_1_69x60_6: -8875049452307168894
+      Effect_BloodImpact_1_69x60_7: -2186118105049691031
+      Effect_BloodImpact_1_69x60_8: -6657470250019955863
+      Effect_BloodImpact_1_69x60_9: 5121930536720779716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

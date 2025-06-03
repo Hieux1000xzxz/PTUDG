@@ -959,7 +959,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_018_0: 8238177531544070976
+      Effect_Constellation_1_018_1: -8300098803155881475
+      Effect_Constellation_1_018_10: -1567257259867776058
+      Effect_Constellation_1_018_11: 8225451660158936372
+      Effect_Constellation_1_018_12: -2332822639678500663
+      Effect_Constellation_1_018_13: -3746749261286814936
+      Effect_Constellation_1_018_14: 6836934542149625261
+      Effect_Constellation_1_018_15: 766542562156054789
+      Effect_Constellation_1_018_16: -18855359605795295
+      Effect_Constellation_1_018_17: 8093280170455883774
+      Effect_Constellation_1_018_18: -5396922555220135421
+      Effect_Constellation_1_018_19: -1444225529542479164
+      Effect_Constellation_1_018_2: -4695235062356070560
+      Effect_Constellation_1_018_20: 5900566022579089204
+      Effect_Constellation_1_018_21: -7330755458963091747
+      Effect_Constellation_1_018_22: 4938089214816473381
+      Effect_Constellation_1_018_23: -1327569993038589017
+      Effect_Constellation_1_018_24: 7883914999768225742
+      Effect_Constellation_1_018_25: 7823555450268967056
+      Effect_Constellation_1_018_26: 1386010733919922900
+      Effect_Constellation_1_018_27: 6934506153311657190
+      Effect_Constellation_1_018_28: 243743336583154425
+      Effect_Constellation_1_018_29: 3949063103779599638
+      Effect_Constellation_1_018_3: -4415835558639278609
+      Effect_Constellation_1_018_30: -5526195988177038439
+      Effect_Constellation_1_018_31: 3859970672233211943
+      Effect_Constellation_1_018_32: -6512907124539731549
+      Effect_Constellation_1_018_33: 4211185657741250463
+      Effect_Constellation_1_018_4: 8481728705889006733
+      Effect_Constellation_1_018_5: -8729928180473116764
+      Effect_Constellation_1_018_6: -4944761646708138116
+      Effect_Constellation_1_018_7: -4819201888539011402
+      Effect_Constellation_1_018_8: -1453628810499571808
+      Effect_Constellation_1_018_9: 1959635910249793128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -909,7 +909,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_DitheredFire_1_058_0: -9008213763363011982
+      Effect_DitheredFire_1_058_1: 3774748530891848548
+      Effect_DitheredFire_1_058_10: -2785916332696079226
+      Effect_DitheredFire_1_058_11: -1426787434886312862
+      Effect_DitheredFire_1_058_12: 2912398770671271052
+      Effect_DitheredFire_1_058_13: -2966992015346114481
+      Effect_DitheredFire_1_058_14: -5495852467579481859
+      Effect_DitheredFire_1_058_15: -9063549320527139326
+      Effect_DitheredFire_1_058_16: 2191701638870167631
+      Effect_DitheredFire_1_058_17: -2634912254219040459
+      Effect_DitheredFire_1_058_18: 8888406183825448421
+      Effect_DitheredFire_1_058_19: -2383713380504958195
+      Effect_DitheredFire_1_058_2: 6972372640016414141
+      Effect_DitheredFire_1_058_20: -3024029542772216030
+      Effect_DitheredFire_1_058_21: 7747662953452869083
+      Effect_DitheredFire_1_058_22: 5558472821969821746
+      Effect_DitheredFire_1_058_23: -929853352831480351
+      Effect_DitheredFire_1_058_24: -3480125118997066527
+      Effect_DitheredFire_1_058_25: 8483379663181251398
+      Effect_DitheredFire_1_058_26: 5215937077322964158
+      Effect_DitheredFire_1_058_27: -7111647098020468700
+      Effect_DitheredFire_1_058_28: -2054159295026551232
+      Effect_DitheredFire_1_058_29: -8072793843887536576
+      Effect_DitheredFire_1_058_3: -7546575225670995921
+      Effect_DitheredFire_1_058_30: -3421773936660765574
+      Effect_DitheredFire_1_058_31: -4736857132763741706
+      Effect_DitheredFire_1_058_4: 655346141390351156
+      Effect_DitheredFire_1_058_5: -5113152619307603621
+      Effect_DitheredFire_1_058_6: -6039679531220009593
+      Effect_DitheredFire_1_058_7: 3164975250572603901
+      Effect_DitheredFire_1_058_8: 5555760047391013693
+      Effect_DitheredFire_1_058_9: -2360682360466499140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

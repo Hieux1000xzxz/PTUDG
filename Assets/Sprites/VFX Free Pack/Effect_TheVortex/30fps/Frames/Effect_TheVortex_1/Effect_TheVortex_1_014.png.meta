@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_TheVortex_1_014_0: 874631438492382371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

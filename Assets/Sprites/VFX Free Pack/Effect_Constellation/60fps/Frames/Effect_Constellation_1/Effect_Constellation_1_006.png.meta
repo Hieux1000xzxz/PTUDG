@@ -909,7 +909,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_006_0: -3152172042240472947
+      Effect_Constellation_1_006_1: 596121410835583305
+      Effect_Constellation_1_006_10: 309427911361675260
+      Effect_Constellation_1_006_11: -8518789969428629179
+      Effect_Constellation_1_006_12: -5516152401490352535
+      Effect_Constellation_1_006_13: -7468311516211840955
+      Effect_Constellation_1_006_14: 5025918576970382378
+      Effect_Constellation_1_006_15: -8266010267930320493
+      Effect_Constellation_1_006_16: -4287166432750955884
+      Effect_Constellation_1_006_17: -4371879268428395768
+      Effect_Constellation_1_006_18: 4701724627611746270
+      Effect_Constellation_1_006_19: -7770698410777282785
+      Effect_Constellation_1_006_2: -8899721381479026235
+      Effect_Constellation_1_006_20: 641187773962695740
+      Effect_Constellation_1_006_21: 13221211442861028
+      Effect_Constellation_1_006_22: -8510201045191153044
+      Effect_Constellation_1_006_23: -1758727258714420512
+      Effect_Constellation_1_006_24: 7055609882605013909
+      Effect_Constellation_1_006_25: 5018107062105851838
+      Effect_Constellation_1_006_26: -778317901936084526
+      Effect_Constellation_1_006_27: -2944146256909101051
+      Effect_Constellation_1_006_28: -6176581398047224865
+      Effect_Constellation_1_006_29: -2002033810899827921
+      Effect_Constellation_1_006_3: 4424369066807770548
+      Effect_Constellation_1_006_30: 107446375682498487
+      Effect_Constellation_1_006_31: 9161370054817501245
+      Effect_Constellation_1_006_4: 6196658822547828910
+      Effect_Constellation_1_006_5: -6315324228647814932
+      Effect_Constellation_1_006_6: -4188753028164031784
+      Effect_Constellation_1_006_7: -2192729943767093518
+      Effect_Constellation_1_006_8: 1524529917169150980
+      Effect_Constellation_1_006_9: 4441248019697772293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

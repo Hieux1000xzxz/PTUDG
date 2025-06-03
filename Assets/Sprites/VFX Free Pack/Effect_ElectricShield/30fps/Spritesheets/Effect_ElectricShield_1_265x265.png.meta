@@ -1484,7 +1484,62 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_ElectricShield_1_265x265_0: -4109989988012210610
+      Effect_ElectricShield_1_265x265_1: 2935908061450747703
+      Effect_ElectricShield_1_265x265_10: -6106901680813363202
+      Effect_ElectricShield_1_265x265_11: -4197937992849948289
+      Effect_ElectricShield_1_265x265_12: 2495660585177815775
+      Effect_ElectricShield_1_265x265_13: -1936449282028795700
+      Effect_ElectricShield_1_265x265_14: 7238919891723492506
+      Effect_ElectricShield_1_265x265_15: -4408391533436277985
+      Effect_ElectricShield_1_265x265_16: 8213542868761332470
+      Effect_ElectricShield_1_265x265_17: -1736688391216856965
+      Effect_ElectricShield_1_265x265_18: -2178117236401701183
+      Effect_ElectricShield_1_265x265_19: -1764446036645982223
+      Effect_ElectricShield_1_265x265_2: 3587902465573449853
+      Effect_ElectricShield_1_265x265_20: -4449252722782766181
+      Effect_ElectricShield_1_265x265_21: 3139059966915800357
+      Effect_ElectricShield_1_265x265_22: -4255113022749971942
+      Effect_ElectricShield_1_265x265_23: 6804112689859338385
+      Effect_ElectricShield_1_265x265_24: -1135039369282228869
+      Effect_ElectricShield_1_265x265_25: 6733675688342757431
+      Effect_ElectricShield_1_265x265_26: 8802357841587837044
+      Effect_ElectricShield_1_265x265_27: -7091716270127890438
+      Effect_ElectricShield_1_265x265_28: 3874525773241088999
+      Effect_ElectricShield_1_265x265_29: -1045188958132770412
+      Effect_ElectricShield_1_265x265_3: 5726507892922750033
+      Effect_ElectricShield_1_265x265_30: 713153149882677224
+      Effect_ElectricShield_1_265x265_31: -5573185241322528268
+      Effect_ElectricShield_1_265x265_32: 6380363950530168632
+      Effect_ElectricShield_1_265x265_33: -2149393609332882712
+      Effect_ElectricShield_1_265x265_34: 6572763034840042374
+      Effect_ElectricShield_1_265x265_35: -628065976114447799
+      Effect_ElectricShield_1_265x265_36: -3948760360558754297
+      Effect_ElectricShield_1_265x265_37: -1854726377680067414
+      Effect_ElectricShield_1_265x265_38: -1617596750606855184
+      Effect_ElectricShield_1_265x265_39: 1593983454446389496
+      Effect_ElectricShield_1_265x265_4: -7031463885915356843
+      Effect_ElectricShield_1_265x265_40: -7601821378822318403
+      Effect_ElectricShield_1_265x265_41: -8195092300822962596
+      Effect_ElectricShield_1_265x265_42: 6769310614996188814
+      Effect_ElectricShield_1_265x265_43: -4470720258400698628
+      Effect_ElectricShield_1_265x265_44: 4192615067848900929
+      Effect_ElectricShield_1_265x265_45: -3372129855900019563
+      Effect_ElectricShield_1_265x265_46: -8560701658516505679
+      Effect_ElectricShield_1_265x265_47: 6460371756150522343
+      Effect_ElectricShield_1_265x265_48: 1804176175040951070
+      Effect_ElectricShield_1_265x265_49: -1071820750659249614
+      Effect_ElectricShield_1_265x265_5: -5137589182062117860
+      Effect_ElectricShield_1_265x265_50: -1974724441467942621
+      Effect_ElectricShield_1_265x265_51: 7549530261679664272
+      Effect_ElectricShield_1_265x265_52: 5717024544178583051
+      Effect_ElectricShield_1_265x265_53: 4282302721022402463
+      Effect_ElectricShield_1_265x265_54: 4456322081359514026
+      Effect_ElectricShield_1_265x265_6: -3756059992025482745
+      Effect_ElectricShield_1_265x265_7: 2648972369873824080
+      Effect_ElectricShield_1_265x265_8: 7437694938100748649
+      Effect_ElectricShield_1_265x265_9: 187685017106566130
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

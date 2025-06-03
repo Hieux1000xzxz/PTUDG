@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_PuffAndStars_1_014_0: 2138139482203354181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

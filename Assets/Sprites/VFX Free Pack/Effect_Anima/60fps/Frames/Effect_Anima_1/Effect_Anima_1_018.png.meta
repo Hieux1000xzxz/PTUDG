@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Anima_1_018_0: -7331027444480425556
+      Effect_Anima_1_018_1: -2135846547976661139
+      Effect_Anima_1_018_2: -7907887163481236778
+      Effect_Anima_1_018_3: -2793466978661201849
+      Effect_Anima_1_018_4: -4318402210994309986
+      Effect_Anima_1_018_5: 6164872158512809526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

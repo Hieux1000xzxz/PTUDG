@@ -909,7 +909,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_050_0: -8712785147701219258
+      Effect_Constellation_1_050_1: -3571596366272565821
+      Effect_Constellation_1_050_10: 3063462168626321856
+      Effect_Constellation_1_050_11: -1899205518741948160
+      Effect_Constellation_1_050_12: -9051424975023565827
+      Effect_Constellation_1_050_13: -9122075381168005797
+      Effect_Constellation_1_050_14: -7695466228507778237
+      Effect_Constellation_1_050_15: -2783580413970240943
+      Effect_Constellation_1_050_16: -2833384730312670026
+      Effect_Constellation_1_050_17: 3139404470615905474
+      Effect_Constellation_1_050_18: 1697039589248237305
+      Effect_Constellation_1_050_19: 3564108406109887016
+      Effect_Constellation_1_050_2: -3968333516706594980
+      Effect_Constellation_1_050_20: -8701467998924983082
+      Effect_Constellation_1_050_21: 2393171168244425066
+      Effect_Constellation_1_050_22: 3478900136705882197
+      Effect_Constellation_1_050_23: -7597827054335477201
+      Effect_Constellation_1_050_24: -3679703101307934273
+      Effect_Constellation_1_050_25: -89441930523845839
+      Effect_Constellation_1_050_26: 6198445954668653313
+      Effect_Constellation_1_050_27: -2978673561798690456
+      Effect_Constellation_1_050_28: -7656639417701667815
+      Effect_Constellation_1_050_29: 9054840855625756342
+      Effect_Constellation_1_050_3: 5990799702772476847
+      Effect_Constellation_1_050_30: -7265406559194642098
+      Effect_Constellation_1_050_31: -4226383835235453271
+      Effect_Constellation_1_050_4: -5496268560707112430
+      Effect_Constellation_1_050_5: 3475040185552429096
+      Effect_Constellation_1_050_6: 2321685640021534948
+      Effect_Constellation_1_050_7: -5051668106241004248
+      Effect_Constellation_1_050_8: -4046278825998708086
+      Effect_Constellation_1_050_9: 5271984145593954675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

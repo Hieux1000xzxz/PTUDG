@@ -909,7 +909,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_016_0: 282260924728679481
+      Effect_Constellation_1_016_1: -73689712785853820
+      Effect_Constellation_1_016_10: 1437736260199061175
+      Effect_Constellation_1_016_11: -3011342210490274324
+      Effect_Constellation_1_016_12: 7559971787572959231
+      Effect_Constellation_1_016_13: 4745798705030250271
+      Effect_Constellation_1_016_14: 7285180166457335496
+      Effect_Constellation_1_016_15: 5395231656766114360
+      Effect_Constellation_1_016_16: 5910517562811599543
+      Effect_Constellation_1_016_17: 5016746317139528116
+      Effect_Constellation_1_016_18: -8653043733659948739
+      Effect_Constellation_1_016_19: -8961513353561013182
+      Effect_Constellation_1_016_2: -4800267249898480491
+      Effect_Constellation_1_016_20: 6019570768623043006
+      Effect_Constellation_1_016_21: 3538337817205492456
+      Effect_Constellation_1_016_22: -4952791034659482331
+      Effect_Constellation_1_016_23: -8375128178097192132
+      Effect_Constellation_1_016_24: 3311741010286779717
+      Effect_Constellation_1_016_25: 6735786951137492766
+      Effect_Constellation_1_016_26: 1914549349234051785
+      Effect_Constellation_1_016_27: 4030989146881864305
+      Effect_Constellation_1_016_28: -5916780778506951617
+      Effect_Constellation_1_016_29: 7992405142219531265
+      Effect_Constellation_1_016_3: 4182304114193913087
+      Effect_Constellation_1_016_30: 8555363443460844245
+      Effect_Constellation_1_016_31: 5770706794079178769
+      Effect_Constellation_1_016_4: 2744459989614452736
+      Effect_Constellation_1_016_5: -4625516186702772187
+      Effect_Constellation_1_016_6: 7445849404891918398
+      Effect_Constellation_1_016_7: -3090332737120944517
+      Effect_Constellation_1_016_8: 7223197300010550927
+      Effect_Constellation_1_016_9: 2796261197430876282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

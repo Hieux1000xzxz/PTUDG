@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_FastPixelFire_1_016_0: -3018395029346483604
+      Effect_FastPixelFire_1_016_1: -7411639505180357532
+      Effect_FastPixelFire_1_016_2: 3344402367059638031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

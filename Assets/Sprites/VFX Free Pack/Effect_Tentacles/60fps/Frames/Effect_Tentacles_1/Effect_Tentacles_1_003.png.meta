@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Tentacles_1_003_0: -456544356508930335
+      Effect_Tentacles_1_003_1: -2443103794157055065
+      Effect_Tentacles_1_003_2: 2701940427351328278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

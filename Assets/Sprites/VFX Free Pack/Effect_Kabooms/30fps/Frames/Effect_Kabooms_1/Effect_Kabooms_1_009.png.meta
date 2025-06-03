@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Kabooms_1_009_0: 5799564755986516572
+      Effect_Kabooms_1_009_1: 3415926406165684903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

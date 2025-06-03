@@ -634,7 +634,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_TheVortex_1_043_0: -4419475331866610869
+      Effect_TheVortex_1_043_1: 824802867504417079
+      Effect_TheVortex_1_043_10: 3996835673543854382
+      Effect_TheVortex_1_043_11: 8077679658092651258
+      Effect_TheVortex_1_043_12: -7808061790408541032
+      Effect_TheVortex_1_043_13: -3302268472676399332
+      Effect_TheVortex_1_043_14: 4633968801805676978
+      Effect_TheVortex_1_043_15: 166719644607872572
+      Effect_TheVortex_1_043_16: -6632603209726352558
+      Effect_TheVortex_1_043_17: 4126089443192455953
+      Effect_TheVortex_1_043_18: -3415485955261617514
+      Effect_TheVortex_1_043_19: 6247437127352873524
+      Effect_TheVortex_1_043_2: -4534962049727016719
+      Effect_TheVortex_1_043_20: -6170769490259220628
+      Effect_TheVortex_1_043_3: -96847487222554554
+      Effect_TheVortex_1_043_4: -178999944892849480
+      Effect_TheVortex_1_043_5: -5470123097250200405
+      Effect_TheVortex_1_043_6: -7724976632750383114
+      Effect_TheVortex_1_043_7: 1589975021736789628
+      Effect_TheVortex_1_043_8: -4039766666514733068
+      Effect_TheVortex_1_043_9: -5214929471754045628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

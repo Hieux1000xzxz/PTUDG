@@ -934,7 +934,40 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_052_0: -7426239747025704041
+      Effect_Constellation_1_052_1: 5465372759838297956
+      Effect_Constellation_1_052_10: 6568123443935829414
+      Effect_Constellation_1_052_11: 6909147831026382800
+      Effect_Constellation_1_052_12: -1493418893455319508
+      Effect_Constellation_1_052_13: 5453461148692538307
+      Effect_Constellation_1_052_14: 1920419589371128848
+      Effect_Constellation_1_052_15: -6992593368813730005
+      Effect_Constellation_1_052_16: -6711092644562458461
+      Effect_Constellation_1_052_17: 3057883223391849426
+      Effect_Constellation_1_052_18: 9172169713350263410
+      Effect_Constellation_1_052_19: 8199674849006977871
+      Effect_Constellation_1_052_2: 2335339069700754430
+      Effect_Constellation_1_052_20: 6913822869535562390
+      Effect_Constellation_1_052_21: -3220544992759656557
+      Effect_Constellation_1_052_22: 611327039391010265
+      Effect_Constellation_1_052_23: 1085559150235751252
+      Effect_Constellation_1_052_24: 8892886260888583975
+      Effect_Constellation_1_052_25: -1859620612864492258
+      Effect_Constellation_1_052_26: -7048098648763610775
+      Effect_Constellation_1_052_27: -4307610207438711862
+      Effect_Constellation_1_052_28: -8982599226232904182
+      Effect_Constellation_1_052_29: 7194863915639679000
+      Effect_Constellation_1_052_3: 7100682082541680675
+      Effect_Constellation_1_052_30: 3938245936098121492
+      Effect_Constellation_1_052_31: -3830610236431533095
+      Effect_Constellation_1_052_32: 92973839334305598
+      Effect_Constellation_1_052_4: 87261929462465246
+      Effect_Constellation_1_052_5: -8849301449332894630
+      Effect_Constellation_1_052_6: 6954055544721140275
+      Effect_Constellation_1_052_7: 6897304675909828703
+      Effect_Constellation_1_052_8: -325077973890189189
+      Effect_Constellation_1_052_9: -3786762177852010447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -909,7 +909,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Hyperspeed_1_025_0: 8401268883832694206
+      Effect_Hyperspeed_1_025_1: 4658228996494458932
+      Effect_Hyperspeed_1_025_10: -7007938722438898459
+      Effect_Hyperspeed_1_025_11: -7732232959776401401
+      Effect_Hyperspeed_1_025_12: 4185031632690966335
+      Effect_Hyperspeed_1_025_13: 4185951846257705607
+      Effect_Hyperspeed_1_025_14: 2364689930788139265
+      Effect_Hyperspeed_1_025_15: -5353495930442922354
+      Effect_Hyperspeed_1_025_16: -2662834731346143738
+      Effect_Hyperspeed_1_025_17: -9153926052712559846
+      Effect_Hyperspeed_1_025_18: 752442973235945435
+      Effect_Hyperspeed_1_025_19: -2700483841510180668
+      Effect_Hyperspeed_1_025_2: 941079661785974930
+      Effect_Hyperspeed_1_025_20: 7470488280070137469
+      Effect_Hyperspeed_1_025_21: -799550015825678697
+      Effect_Hyperspeed_1_025_22: -2285941665051235431
+      Effect_Hyperspeed_1_025_23: 1314273831926572059
+      Effect_Hyperspeed_1_025_24: 1004683914903220264
+      Effect_Hyperspeed_1_025_25: 4749226758222030564
+      Effect_Hyperspeed_1_025_26: -5209258607845339654
+      Effect_Hyperspeed_1_025_27: -2283424526226279543
+      Effect_Hyperspeed_1_025_28: -1380237206227895187
+      Effect_Hyperspeed_1_025_29: 6996689007213424274
+      Effect_Hyperspeed_1_025_3: 7391975456444755980
+      Effect_Hyperspeed_1_025_30: 4228529765849241436
+      Effect_Hyperspeed_1_025_31: -4291232872789110385
+      Effect_Hyperspeed_1_025_4: 9011723974611659836
+      Effect_Hyperspeed_1_025_5: -6663872903150427777
+      Effect_Hyperspeed_1_025_6: -7089817403638398674
+      Effect_Hyperspeed_1_025_7: 843236064254996869
+      Effect_Hyperspeed_1_025_8: -8781078506664365464
+      Effect_Hyperspeed_1_025_9: -7675329368270811068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

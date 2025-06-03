@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_DitheredFire_1_006_0: 3396444757726814808
+      Effect_DitheredFire_1_006_1: -7327763390735342142
+      Effect_DitheredFire_1_006_2: -1575801762883840506
+      Effect_DitheredFire_1_006_3: 3389858237198661357
+      Effect_DitheredFire_1_006_4: -9071945613685752010
+      Effect_DitheredFire_1_006_5: 5903126578330315207
+      Effect_DitheredFire_1_006_6: 8929150898703800243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

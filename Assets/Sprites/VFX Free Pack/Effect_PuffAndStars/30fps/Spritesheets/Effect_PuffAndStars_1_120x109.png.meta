@@ -959,7 +959,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_PuffAndStars_1_120x109_0: -7665429558428288123
+      Effect_PuffAndStars_1_120x109_1: 5268378520776210407
+      Effect_PuffAndStars_1_120x109_10: 2637035591061103746
+      Effect_PuffAndStars_1_120x109_11: 3408249740425509345
+      Effect_PuffAndStars_1_120x109_12: 8300223937494196766
+      Effect_PuffAndStars_1_120x109_13: -6350330380998208038
+      Effect_PuffAndStars_1_120x109_14: 7344819019132863556
+      Effect_PuffAndStars_1_120x109_15: -3919703572730134687
+      Effect_PuffAndStars_1_120x109_16: -3101344836758593342
+      Effect_PuffAndStars_1_120x109_17: 4859974863764720086
+      Effect_PuffAndStars_1_120x109_18: -8502980963591479753
+      Effect_PuffAndStars_1_120x109_19: 3043404382227511051
+      Effect_PuffAndStars_1_120x109_2: -6521433569867054560
+      Effect_PuffAndStars_1_120x109_20: 2394645567688945106
+      Effect_PuffAndStars_1_120x109_21: -3657873553374624924
+      Effect_PuffAndStars_1_120x109_22: -6808146606631555412
+      Effect_PuffAndStars_1_120x109_23: 9092954338893079777
+      Effect_PuffAndStars_1_120x109_24: -5898090001344065666
+      Effect_PuffAndStars_1_120x109_25: 6635668578411126191
+      Effect_PuffAndStars_1_120x109_26: 6601277414759992027
+      Effect_PuffAndStars_1_120x109_27: -4489924469216720586
+      Effect_PuffAndStars_1_120x109_28: 8181726208419203516
+      Effect_PuffAndStars_1_120x109_29: -5652006253024336514
+      Effect_PuffAndStars_1_120x109_3: 4014999568833476764
+      Effect_PuffAndStars_1_120x109_30: 7536199944646505832
+      Effect_PuffAndStars_1_120x109_31: 874544514338937653
+      Effect_PuffAndStars_1_120x109_32: 7598854238760247210
+      Effect_PuffAndStars_1_120x109_33: 6692204743215444546
+      Effect_PuffAndStars_1_120x109_4: -3901716828793924524
+      Effect_PuffAndStars_1_120x109_5: -3500749276111823471
+      Effect_PuffAndStars_1_120x109_6: -1328060710527785352
+      Effect_PuffAndStars_1_120x109_7: 341509100720732830
+      Effect_PuffAndStars_1_120x109_8: -5888078218872747748
+      Effect_PuffAndStars_1_120x109_9: -51200186006598514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
