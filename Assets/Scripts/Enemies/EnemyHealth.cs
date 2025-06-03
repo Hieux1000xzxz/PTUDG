@@ -5,6 +5,8 @@ public class EnemyHealth : MonoBehaviour
     [Header("Health Settings")]
     public int maxHealth = 100;
     private int currentHealth;
+    private EnemyItemDropper itemDropper;
+
     //private GameManager gameManager;
     public bool IsDead => currentHealth <= 0; // Thuộc tính kiểm tra trạng thái chết
     public delegate void OnHealthChanged(int currentHealth, int maxHealth);
@@ -22,6 +24,8 @@ public class EnemyHealth : MonoBehaviour
             Debug.LogError("GameManager not found in the scene!");
         }*/
         currentHealth = maxHealth;
+        itemDropper = GetComponent<EnemyItemDropper>();
+
     }
 
     public void TakeDamage(int amount)
@@ -45,9 +49,9 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log($"{gameObject.name} đã chết!");
-        // Thêm logic khi chết, ví dụ: animation, rơi vật phẩm, v.v.
         Instantiate(deathPrefab, transform.position, Quaternion.identity);
-        //gameManager.OnEnemyDefeated();
+
+        itemDropper?.DropItems(); // Gọi Drop từ script khác
 
         Destroy(gameObject);
     }

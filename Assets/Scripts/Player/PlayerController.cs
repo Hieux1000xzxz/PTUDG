@@ -147,7 +147,6 @@ public class PlayerController : MonoBehaviour
         isAttacking = true;
         isMovementLocked = true;
         attackLockPosition = rb.position;
-
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(attackDelay);
 
