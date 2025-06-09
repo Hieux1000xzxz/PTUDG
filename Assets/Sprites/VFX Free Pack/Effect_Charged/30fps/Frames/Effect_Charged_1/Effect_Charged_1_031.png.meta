@@ -759,7 +759,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Charged_1_031_0: -2011492118765297720
+      Effect_Charged_1_031_1: -1261142273885550875
+      Effect_Charged_1_031_10: 3748966539507325114
+      Effect_Charged_1_031_11: -1410534793401709091
+      Effect_Charged_1_031_12: -1992594125140920382
+      Effect_Charged_1_031_13: 2451455089542437214
+      Effect_Charged_1_031_14: 4862615761422477217
+      Effect_Charged_1_031_15: 3793081932875743061
+      Effect_Charged_1_031_16: 7453616039657946043
+      Effect_Charged_1_031_17: 1453935160579362610
+      Effect_Charged_1_031_18: -6209582686110901001
+      Effect_Charged_1_031_19: 7808737282178716112
+      Effect_Charged_1_031_2: -6521714269312338185
+      Effect_Charged_1_031_20: -597435883830851748
+      Effect_Charged_1_031_21: 1241389646659268834
+      Effect_Charged_1_031_22: 8698021730021056214
+      Effect_Charged_1_031_23: 8317684515329131994
+      Effect_Charged_1_031_24: -963128631651388225
+      Effect_Charged_1_031_25: -7929145568385414076
+      Effect_Charged_1_031_3: -5995415580637631250
+      Effect_Charged_1_031_4: -1878940520289786219
+      Effect_Charged_1_031_5: 2134855952365593594
+      Effect_Charged_1_031_6: 2977161422114344354
+      Effect_Charged_1_031_7: -8722669476494186965
+      Effect_Charged_1_031_8: 2125157876854547138
+      Effect_Charged_1_031_9: -1177679051881352007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

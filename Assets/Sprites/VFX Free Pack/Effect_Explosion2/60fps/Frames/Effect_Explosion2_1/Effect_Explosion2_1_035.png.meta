@@ -1909,7 +1909,79 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Explosion2_1_035_0: 3506410237445338811
+      Effect_Explosion2_1_035_1: -2877175532410040399
+      Effect_Explosion2_1_035_10: 2820910629614513119
+      Effect_Explosion2_1_035_11: -1461744518135436856
+      Effect_Explosion2_1_035_12: 2703730642150446635
+      Effect_Explosion2_1_035_13: 8139361998070045400
+      Effect_Explosion2_1_035_14: 6189844441808766327
+      Effect_Explosion2_1_035_15: 1431592744566199154
+      Effect_Explosion2_1_035_16: -5334621064690807358
+      Effect_Explosion2_1_035_17: -8307229249796764240
+      Effect_Explosion2_1_035_18: -3634926419766900446
+      Effect_Explosion2_1_035_19: -3084255123690330020
+      Effect_Explosion2_1_035_2: -513123804796173127
+      Effect_Explosion2_1_035_20: 3576119685772783224
+      Effect_Explosion2_1_035_21: -5245372982888253236
+      Effect_Explosion2_1_035_22: -1547632185918336437
+      Effect_Explosion2_1_035_23: 1271156824525376420
+      Effect_Explosion2_1_035_24: 6477658476162027880
+      Effect_Explosion2_1_035_25: -2404853243375577144
+      Effect_Explosion2_1_035_26: 11551283913000157
+      Effect_Explosion2_1_035_27: -7066100701026657010
+      Effect_Explosion2_1_035_28: 3705104984518860329
+      Effect_Explosion2_1_035_29: -2757706708899992266
+      Effect_Explosion2_1_035_3: -7349170961078268514
+      Effect_Explosion2_1_035_30: 1068530998182223825
+      Effect_Explosion2_1_035_31: 5718833624512683023
+      Effect_Explosion2_1_035_32: -4154104292588658120
+      Effect_Explosion2_1_035_33: 314220545902963619
+      Effect_Explosion2_1_035_34: -5280445683582966474
+      Effect_Explosion2_1_035_35: -5537501337823707801
+      Effect_Explosion2_1_035_36: -3504076749016324976
+      Effect_Explosion2_1_035_37: 3254355907799536077
+      Effect_Explosion2_1_035_38: -5026379542794851393
+      Effect_Explosion2_1_035_39: 1831132563142265058
+      Effect_Explosion2_1_035_4: 6000104710618434885
+      Effect_Explosion2_1_035_40: -8442490643678263309
+      Effect_Explosion2_1_035_41: -509572878520600356
+      Effect_Explosion2_1_035_42: -3348415668310451834
+      Effect_Explosion2_1_035_43: -9103835219262512485
+      Effect_Explosion2_1_035_44: 4964267956106310808
+      Effect_Explosion2_1_035_45: -668371131322161865
+      Effect_Explosion2_1_035_46: -5074150993691410294
+      Effect_Explosion2_1_035_47: 3772933062313120197
+      Effect_Explosion2_1_035_48: 5097095944768438531
+      Effect_Explosion2_1_035_49: 2779869893781985788
+      Effect_Explosion2_1_035_5: 1310320099868781217
+      Effect_Explosion2_1_035_50: 890969745385174776
+      Effect_Explosion2_1_035_51: -3725233564318069556
+      Effect_Explosion2_1_035_52: 3229373081000700062
+      Effect_Explosion2_1_035_53: 8978491101322686342
+      Effect_Explosion2_1_035_54: 6805286736714516851
+      Effect_Explosion2_1_035_55: 8377035635708079999
+      Effect_Explosion2_1_035_56: -7602733293792154868
+      Effect_Explosion2_1_035_57: 3913653350128966019
+      Effect_Explosion2_1_035_58: 4699704653068490269
+      Effect_Explosion2_1_035_59: 7373799546221356628
+      Effect_Explosion2_1_035_6: -4571673564858239588
+      Effect_Explosion2_1_035_60: -1394481560032967969
+      Effect_Explosion2_1_035_61: 6300241273783488047
+      Effect_Explosion2_1_035_62: 6499688050634216292
+      Effect_Explosion2_1_035_63: -1074844096156519388
+      Effect_Explosion2_1_035_64: 4500841148221413217
+      Effect_Explosion2_1_035_65: -7675704465649396095
+      Effect_Explosion2_1_035_66: -4224161383362848320
+      Effect_Explosion2_1_035_67: -5005988153816823897
+      Effect_Explosion2_1_035_68: 7426762713745191352
+      Effect_Explosion2_1_035_69: 5492566266189271175
+      Effect_Explosion2_1_035_7: -3653613547971348219
+      Effect_Explosion2_1_035_70: 1866371338641319339
+      Effect_Explosion2_1_035_71: -6763087422542833790
+      Effect_Explosion2_1_035_8: -1815632829765125775
+      Effect_Explosion2_1_035_9: 1316545810394565699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

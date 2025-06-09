@@ -2,25 +2,43 @@
 
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("Health")]
-    public float maxHealth = 100f;
+    [Header("Base Stats (used as upgrade source)")]
+    public float baseHealth = 100f;
+    public float baseMana = 50f;
+    public float baseArmor = 10f;
+
+    [Header("Current Stats")]
+    public float maxHealth;
     public float currentHealth;
 
-    [Header("Mana")]
-    public float maxMana = 50f;
+    public float maxMana;
     public float currentMana;
 
-    [Header("Defense")]
-    public float armor = 10f;
+    public float armor;
 
-    [Header("Regen")]
-    public float healthRegenRate = 0f;
-    public float manaRegenRate = 5f;
+    [Header("Regeneration")]
+    public float baseHealthRegen = 0f;
+    public float baseManaRegen = 2f;
+
+    public float healthRegenRate;
+    public float manaRegenRate;
+
+    private PlayerForm currentForm;
 
     private void Awake()
     {
+        // Không gọi SetForm ở đây, để PlayerController quyết định
+        // Khởi tạo currentHealth và currentMana hợp lý, giả sử bằng base stats ban đầu
+        maxHealth = baseHealth;
         currentHealth = maxHealth;
+
+        maxMana = baseMana;
         currentMana = maxMana;
+
+        armor = baseArmor;
+
+        healthRegenRate = baseHealthRegen;
+        manaRegenRate = baseManaRegen;
     }
 
     private void Update()
@@ -31,19 +49,15 @@ public class PlayerHealth : MonoBehaviour
     private void Regen()
     {
         if (currentHealth < maxHealth)
-        {
             currentHealth = Mathf.Min(currentHealth + healthRegenRate * Time.deltaTime, maxHealth);
-        }
 
         if (currentMana < maxMana)
-        {
             currentMana = Mathf.Min(currentMana + manaRegenRate * Time.deltaTime, maxMana);
-        }
     }
 
     public void TakeDamage(float damage)
     {
-        float effectiveDamage = Mathf.Max(damage - armor, 1f); // Không bao giờ nhỏ hơn 1 sát thương
+        float effectiveDamage = Mathf.Max(damage - armor, 1f);
         currentHealth -= effectiveDamage;
 
         Debug.Log($"Người chơi nhận {effectiveDamage} sát thương. Máu còn lại: {currentHealth}");
@@ -60,10 +74,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log($"Hồi {amount} máu. Máu hiện tại: {currentHealth}");
     }
 
-    public bool HasEnoughMana(float amount)
-    {
-        return currentMana >= amount;
-    }
+    public bool HasEnoughMana(float amount) => currentMana >= amount;
 
     public void UseMana(float amount)
     {
@@ -84,33 +95,81 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log($"Hồi {amount} mana. Mana hiện tại: {currentMana}");
     }
 
-    public void ApplyStatsForForm(PlayerForm form)
+    public void SetForm(PlayerForm form)
     {
+        currentForm = form;
+
+        // Mỗi form có bonus riêng
+        float bonusHealth = 0;
+        float bonusMana = 0;
+        float bonusArmor = 0;
+        float bonusHealthRegen = 0;
+        float bonusManaRegen = 0;
+
         switch (form)
         {
             case PlayerForm.Warrior:
-                maxHealth = 100f;
-                maxMana = 30f;
-                armor = 20f;
+                bonusHealth = 20f;
+                bonusArmor = 5f;
+                bonusManaRegen = -1f; // giảm tốc độ hồi mana
                 break;
 
             case PlayerForm.Mage:
-                maxHealth = 80f;
-                maxMana = 80f;
-                armor = 5f;
+                bonusMana = 50f;
+                bonusArmor = -5f;
+                bonusManaRegen = 4f; // hồi mana nhanh hơn
                 break;
         }
 
-        // Không khôi phục — chỉ giới hạn nếu vượt quá max mới
+        // Tính toán các chỉ số cuối cùng
+        maxHealth = baseHealth + bonusHealth;
+        maxMana = baseMana + bonusMana;
+        armor = baseArmor + bonusArmor;
+
+        healthRegenRate = Mathf.Max(0, baseHealthRegen + bonusHealthRegen);
+        manaRegenRate = Mathf.Max(0, baseManaRegen + bonusManaRegen);
+
+        // Giữ lại giá trị hiện tại không vượt quá max mới
         currentHealth = Mathf.Min(currentHealth, maxHealth);
         currentMana = Mathf.Min(currentMana, maxMana);
 
-        Debug.Log($"Đã cập nhật chỉ số cho dạng {form}: Máu {currentHealth}/{maxHealth}, Mana {currentMana}/{maxMana}, Giáp {armor}");
+        Debug.Log($"Chuyển sang dạng {form}: Máu {currentHealth}/{maxHealth}, Mana {currentMana}/{maxMana}, Giáp {armor}");
     }
 
     private void Die()
     {
         Debug.Log("Người chơi đã chết.");
-        // Gọi animation chết, disable điều khiển, hoặc load lại scene
+        // Trigger animation, respawn, scene reload, v.v.
+    }
+
+    // Các phương thức nâng cấp dùng base stat
+    public void UpgradeHealth(float amount)
+    {
+        baseHealth += amount;
+        SetForm(currentForm);
+    }
+
+    public void UpgradeMana(float amount)
+    {
+        baseMana += amount;
+        SetForm(currentForm);
+    }
+
+    public void UpgradeArmor(float amount)
+    {
+        baseArmor += amount;
+        SetForm(currentForm);
+    }
+
+    public void UpgradeManaRegen(float amount)
+    {
+        baseManaRegen += amount;
+        SetForm(currentForm);
+    }
+
+    public void UpgradeHealthRegen(float amount)
+    {
+        baseHealthRegen += amount;
+        SetForm(currentForm);
     }
 }

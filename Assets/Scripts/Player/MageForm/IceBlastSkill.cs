@@ -35,10 +35,13 @@ public class IceBlastSkill : MonoBehaviour
 
     public void ActivateIceBlast()
     {
+      
         if (cooldownTimer > 0f) return;
         isCasting = true;
-        animator.SetBool("isAttacking", true);
         GameObject nearestEnemy = FindNearestEnemy();
+        if (nearestEnemy == null) return;
+        animator.SetBool("isAttacking", true);
+        
         if (nearestEnemy == null) return;
         playerHealth.UseMana(manaCost); // Trừ mana
         Vector2 direction = (nearestEnemy.transform.position - transform.position).normalized;

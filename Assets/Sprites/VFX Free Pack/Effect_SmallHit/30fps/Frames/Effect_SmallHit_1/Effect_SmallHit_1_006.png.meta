@@ -884,7 +884,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_SmallHit_1_006_0: 8512254420343753847
+      Effect_SmallHit_1_006_1: -6063545673458781479
+      Effect_SmallHit_1_006_10: 7486308814351860641
+      Effect_SmallHit_1_006_11: -2168768945378998716
+      Effect_SmallHit_1_006_12: 4443328133811871976
+      Effect_SmallHit_1_006_13: 4001548597991704730
+      Effect_SmallHit_1_006_14: 4169341986532875048
+      Effect_SmallHit_1_006_15: 6558467206572703405
+      Effect_SmallHit_1_006_16: 7693761810687464005
+      Effect_SmallHit_1_006_17: 3532308457558240738
+      Effect_SmallHit_1_006_18: -4299008393207137707
+      Effect_SmallHit_1_006_19: 6447328777600946298
+      Effect_SmallHit_1_006_2: 3147628360594847344
+      Effect_SmallHit_1_006_20: 3849144022058012378
+      Effect_SmallHit_1_006_21: 4699220674120706111
+      Effect_SmallHit_1_006_22: -5469162980172028926
+      Effect_SmallHit_1_006_23: -3283948905985586232
+      Effect_SmallHit_1_006_24: 5274510449662212893
+      Effect_SmallHit_1_006_25: -6336054321113165943
+      Effect_SmallHit_1_006_26: 7608175716313749137
+      Effect_SmallHit_1_006_27: 9103116869953307638
+      Effect_SmallHit_1_006_28: -2705552169230057582
+      Effect_SmallHit_1_006_29: -3267209942083735127
+      Effect_SmallHit_1_006_3: 7488187151071837465
+      Effect_SmallHit_1_006_30: -7019274414592987676
+      Effect_SmallHit_1_006_4: -1543099096708150936
+      Effect_SmallHit_1_006_5: 6731424318528120789
+      Effect_SmallHit_1_006_6: -303239671380467779
+      Effect_SmallHit_1_006_7: -5904608641405767761
+      Effect_SmallHit_1_006_8: 7807508636041155917
+      Effect_SmallHit_1_006_9: -2024668327489411089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

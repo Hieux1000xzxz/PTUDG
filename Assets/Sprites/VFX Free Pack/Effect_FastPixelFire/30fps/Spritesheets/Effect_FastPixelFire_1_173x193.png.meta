@@ -1234,7 +1234,52 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_FastPixelFire_1_173x193_0: 2715072895217969897
+      Effect_FastPixelFire_1_173x193_1: 2575656731038106994
+      Effect_FastPixelFire_1_173x193_10: 5505109224989755459
+      Effect_FastPixelFire_1_173x193_11: 5435003241731615681
+      Effect_FastPixelFire_1_173x193_12: 8496182991349055974
+      Effect_FastPixelFire_1_173x193_13: -4882780288740540871
+      Effect_FastPixelFire_1_173x193_14: 3016605673771556975
+      Effect_FastPixelFire_1_173x193_15: -1161471423376264611
+      Effect_FastPixelFire_1_173x193_16: 5328399581374900989
+      Effect_FastPixelFire_1_173x193_17: -32916083545561820
+      Effect_FastPixelFire_1_173x193_18: 379131289740413609
+      Effect_FastPixelFire_1_173x193_19: 2282595333856628344
+      Effect_FastPixelFire_1_173x193_2: -7753186246521533053
+      Effect_FastPixelFire_1_173x193_20: 3074071389768258715
+      Effect_FastPixelFire_1_173x193_21: 5228679129882184335
+      Effect_FastPixelFire_1_173x193_22: 1107979464981924805
+      Effect_FastPixelFire_1_173x193_23: 8040423007243727621
+      Effect_FastPixelFire_1_173x193_24: -564818835244029838
+      Effect_FastPixelFire_1_173x193_25: -8734748469127998456
+      Effect_FastPixelFire_1_173x193_26: -750322283799738745
+      Effect_FastPixelFire_1_173x193_27: -9067031619414091535
+      Effect_FastPixelFire_1_173x193_28: 1692575303684715124
+      Effect_FastPixelFire_1_173x193_29: 4308224600510305099
+      Effect_FastPixelFire_1_173x193_3: 2640406356536627749
+      Effect_FastPixelFire_1_173x193_30: -7012526322401020262
+      Effect_FastPixelFire_1_173x193_31: 2401233351391938595
+      Effect_FastPixelFire_1_173x193_32: 8799926225709879866
+      Effect_FastPixelFire_1_173x193_33: -5048803438040204103
+      Effect_FastPixelFire_1_173x193_34: -7369349356494336875
+      Effect_FastPixelFire_1_173x193_35: 79113802394015321
+      Effect_FastPixelFire_1_173x193_36: -9192701527256154088
+      Effect_FastPixelFire_1_173x193_37: -5632956774727067192
+      Effect_FastPixelFire_1_173x193_38: 4175223612167446230
+      Effect_FastPixelFire_1_173x193_39: -126393827402796301
+      Effect_FastPixelFire_1_173x193_4: -464968303303268534
+      Effect_FastPixelFire_1_173x193_40: 2416762442342710272
+      Effect_FastPixelFire_1_173x193_41: -1376548393689280705
+      Effect_FastPixelFire_1_173x193_42: -6508785763534279963
+      Effect_FastPixelFire_1_173x193_43: 2418633490664032768
+      Effect_FastPixelFire_1_173x193_44: 3042690585515334157
+      Effect_FastPixelFire_1_173x193_5: 4243648690727325923
+      Effect_FastPixelFire_1_173x193_6: 9050815223130971833
+      Effect_FastPixelFire_1_173x193_7: -2388748340652812713
+      Effect_FastPixelFire_1_173x193_8: -1041691030932089424
+      Effect_FastPixelFire_1_173x193_9: -1686349111004096023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

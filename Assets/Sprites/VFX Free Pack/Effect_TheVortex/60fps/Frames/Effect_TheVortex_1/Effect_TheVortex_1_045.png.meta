@@ -959,7 +959,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_TheVortex_1_045_0: 6873456514218336647
+      Effect_TheVortex_1_045_1: -1678504220599512779
+      Effect_TheVortex_1_045_10: -3281268956056420741
+      Effect_TheVortex_1_045_11: -8219432713062216129
+      Effect_TheVortex_1_045_12: -1258674116456603940
+      Effect_TheVortex_1_045_13: -8211269913840643475
+      Effect_TheVortex_1_045_14: 6720686585395278632
+      Effect_TheVortex_1_045_15: 5331700468366065636
+      Effect_TheVortex_1_045_16: 7835812278885419882
+      Effect_TheVortex_1_045_17: 1974758213386126070
+      Effect_TheVortex_1_045_18: -8527048708346686208
+      Effect_TheVortex_1_045_19: -4613345385428018272
+      Effect_TheVortex_1_045_2: -4403878417614406167
+      Effect_TheVortex_1_045_20: -2229644395205573119
+      Effect_TheVortex_1_045_21: 2469227843421783315
+      Effect_TheVortex_1_045_22: -1878469017034163110
+      Effect_TheVortex_1_045_23: 2686139470099755516
+      Effect_TheVortex_1_045_24: 7207871922580809044
+      Effect_TheVortex_1_045_25: -3786448471720637189
+      Effect_TheVortex_1_045_26: -4676784071038965766
+      Effect_TheVortex_1_045_27: 7240739321244364211
+      Effect_TheVortex_1_045_28: -8210774033849855206
+      Effect_TheVortex_1_045_29: -5277512413308273807
+      Effect_TheVortex_1_045_3: 3591141174198643207
+      Effect_TheVortex_1_045_30: 3162922296651648721
+      Effect_TheVortex_1_045_31: -1415168067892303397
+      Effect_TheVortex_1_045_32: -3465054227187265485
+      Effect_TheVortex_1_045_33: -228541183632906856
+      Effect_TheVortex_1_045_4: 7187420517508414534
+      Effect_TheVortex_1_045_5: 2997265519175954012
+      Effect_TheVortex_1_045_6: 4431090669992030877
+      Effect_TheVortex_1_045_7: 127704507542805383
+      Effect_TheVortex_1_045_8: 938007290746223779
+      Effect_TheVortex_1_045_9: 6103522117321667154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

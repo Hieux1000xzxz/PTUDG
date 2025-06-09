@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5185779409658487007}
   - component: {fileID: 8562082747379637842}
   - component: {fileID: 6565029888502425887}
+  - component: {fileID: 6361276957038544581}
   m_Layer: 0
   m_Name: Diamon
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,3 +154,16 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0048508644, y: 0}
   m_Size: {x: 0.091012, y: 0.16}
   m_Direction: 0
+--- !u!114 &6361276957038544581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257668724218103852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87022655c45c8be4ba408a5be149977c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Crystal

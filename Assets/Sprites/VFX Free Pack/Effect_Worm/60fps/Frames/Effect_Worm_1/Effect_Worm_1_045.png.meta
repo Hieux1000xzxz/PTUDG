@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Worm_1_045_0: -6472124525669635535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

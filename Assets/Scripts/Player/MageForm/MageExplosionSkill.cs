@@ -57,6 +57,11 @@ public class MageExplosionSkill : MonoBehaviour
 
     private IEnumerator ExplosionCoroutine(Vector2 targetPos)
     {
+        if(targetPos == null)
+        {
+            Debug.LogWarning("Target position is null, cannot perform explosion.");
+            yield break;
+        }
         isExploding = true;
         animator.SetBool("isUsingSkill1", true);
         lockPosition = transform.position;

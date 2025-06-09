@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 297877235101177049}
   m_Layer: 11
   m_Name: Summon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -214,6 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173793640fa7d7e4dbc75051e08a6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  deathPrefab: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
+  maxHealth: 20
+  deathPrefab: {fileID: 7669966937311582299, guid: 2279ca83cbdf24e4082468656d4c1a18, type: 3}
+  floatingTextPrefab: {fileID: 1135579629834738341, guid: b39d161a9034af64a82d1d7019291e53, type: 3}

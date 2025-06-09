@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_PowerChords_1_032_0: 5066449090711330811
+      Effect_PowerChords_1_032_1: 4781562743729649750
+      Effect_PowerChords_1_032_2: -2066956474184722958
+      Effect_PowerChords_1_032_3: 3083778374440439004
+      Effect_PowerChords_1_032_4: -6583409093493486904
+      Effect_PowerChords_1_032_5: 6428771842727881431
+      Effect_PowerChords_1_032_6: -4956552850805463332
+      Effect_PowerChords_1_032_7: -8856134119489451391
+      Effect_PowerChords_1_032_8: -8660371062802272629
+      Effect_PowerChords_1_032_9: 5718518969094951163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

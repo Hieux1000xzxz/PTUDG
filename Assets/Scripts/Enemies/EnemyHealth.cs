@@ -49,11 +49,12 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log($"{gameObject.name} đã chết!");
-        Instantiate(deathPrefab, transform.position, Quaternion.identity);
+        GameObject x = Instantiate(deathPrefab, transform.position, Quaternion.identity);
 
         itemDropper?.DropItems(); // Gọi Drop từ script khác
 
         Destroy(gameObject);
+        Destroy(x, 1.5f);
     }
     /*private void ShowFloatingText(int damage)
     {

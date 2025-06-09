@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_BloodImpact_1_028_0: 6899652449491093111
+      Effect_BloodImpact_1_028_1: 7215146905580915591
+      Effect_BloodImpact_1_028_2: 1579607203225115554
+      Effect_BloodImpact_1_028_3: -3276081028539057561
+      Effect_BloodImpact_1_028_4: -9015428031095016342
+      Effect_BloodImpact_1_028_5: -1094553511573292418
+      Effect_BloodImpact_1_028_6: 3217022109714181748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -884,7 +884,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_044_0: -1241654703639355544
+      Effect_Constellation_1_044_1: 1442267668492635919
+      Effect_Constellation_1_044_10: -313809334604411807
+      Effect_Constellation_1_044_11: 4100137020911993941
+      Effect_Constellation_1_044_12: -3244565356207783034
+      Effect_Constellation_1_044_13: -7909893277217577302
+      Effect_Constellation_1_044_14: -4746264807619628517
+      Effect_Constellation_1_044_15: -2972884840214211420
+      Effect_Constellation_1_044_16: -9113166010405428923
+      Effect_Constellation_1_044_17: 1791779512208985947
+      Effect_Constellation_1_044_18: 2433250990537975873
+      Effect_Constellation_1_044_19: -4049373111785680168
+      Effect_Constellation_1_044_2: 4000998603476194127
+      Effect_Constellation_1_044_20: -5067549759585000132
+      Effect_Constellation_1_044_21: 2641611603548372021
+      Effect_Constellation_1_044_22: -5827621819600424884
+      Effect_Constellation_1_044_23: 6687188538415351909
+      Effect_Constellation_1_044_24: 416491986736863592
+      Effect_Constellation_1_044_25: 1743189201627637425
+      Effect_Constellation_1_044_26: 2876219726412508882
+      Effect_Constellation_1_044_27: -1106272091151441994
+      Effect_Constellation_1_044_28: -8479935681003136777
+      Effect_Constellation_1_044_29: -2311564140494224683
+      Effect_Constellation_1_044_3: 2144971038247909331
+      Effect_Constellation_1_044_30: 8116711024865448278
+      Effect_Constellation_1_044_4: -462414677642797477
+      Effect_Constellation_1_044_5: 2469472934265031284
+      Effect_Constellation_1_044_6: -1120384968253979702
+      Effect_Constellation_1_044_7: -6636783118904166522
+      Effect_Constellation_1_044_8: -1135483129796361914
+      Effect_Constellation_1_044_9: 3469734095042698273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

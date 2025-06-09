@@ -1284,7 +1284,54 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_SmallHit_1_016_0: -6379395015488260153
+      Effect_SmallHit_1_016_1: 2370494453187273311
+      Effect_SmallHit_1_016_10: -8549368357005066713
+      Effect_SmallHit_1_016_11: -6743489345364359017
+      Effect_SmallHit_1_016_12: -2925881550059125379
+      Effect_SmallHit_1_016_13: 4105018797726189377
+      Effect_SmallHit_1_016_14: -3843262047854514543
+      Effect_SmallHit_1_016_15: -2978630680934943967
+      Effect_SmallHit_1_016_16: -8491370357883348306
+      Effect_SmallHit_1_016_17: 4880771476701304046
+      Effect_SmallHit_1_016_18: -997398686645632135
+      Effect_SmallHit_1_016_19: 4052588636251866989
+      Effect_SmallHit_1_016_2: 3046034237236159445
+      Effect_SmallHit_1_016_20: 1634494719412093859
+      Effect_SmallHit_1_016_21: 6191658484618920368
+      Effect_SmallHit_1_016_22: -1223447530434765799
+      Effect_SmallHit_1_016_23: 2360024962581444134
+      Effect_SmallHit_1_016_24: -6933976516901270638
+      Effect_SmallHit_1_016_25: 2426724420731698313
+      Effect_SmallHit_1_016_26: 1453746954771738144
+      Effect_SmallHit_1_016_27: 5936714813431860519
+      Effect_SmallHit_1_016_28: 5043570329835273248
+      Effect_SmallHit_1_016_29: 7849064409428809137
+      Effect_SmallHit_1_016_3: 1953986337571885290
+      Effect_SmallHit_1_016_30: 6671862280084501830
+      Effect_SmallHit_1_016_31: -5719098937426030489
+      Effect_SmallHit_1_016_32: -4826279578760770269
+      Effect_SmallHit_1_016_33: 3725254046544017703
+      Effect_SmallHit_1_016_34: -4461767252877063440
+      Effect_SmallHit_1_016_35: 5964881746986628562
+      Effect_SmallHit_1_016_36: 6324579068603349043
+      Effect_SmallHit_1_016_37: 9199550857266442736
+      Effect_SmallHit_1_016_38: 2615050225357555565
+      Effect_SmallHit_1_016_39: -3541438552405282962
+      Effect_SmallHit_1_016_4: -6886559479291239391
+      Effect_SmallHit_1_016_40: 5839857451609359317
+      Effect_SmallHit_1_016_41: 4324262208907798963
+      Effect_SmallHit_1_016_42: 1353380160382338423
+      Effect_SmallHit_1_016_43: -4897543851321119962
+      Effect_SmallHit_1_016_44: -630281757384583241
+      Effect_SmallHit_1_016_45: 1276079763130838428
+      Effect_SmallHit_1_016_46: 5941495266134167614
+      Effect_SmallHit_1_016_5: 1164565204884145082
+      Effect_SmallHit_1_016_6: -8889598284965031103
+      Effect_SmallHit_1_016_7: -6033905160739866372
+      Effect_SmallHit_1_016_8: -5411525483528849382
+      Effect_SmallHit_1_016_9: 6291357864075448716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

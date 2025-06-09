@@ -112,7 +112,7 @@ public class SummonAI : MonoBehaviour
         if (Time.time - lastAttackTime < attackCooldown) return; // Nếu đang cooldown, bỏ qua
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
-        /*foreach (Collider2D hit in hits)
+        foreach (Collider2D hit in hits)
         {
             PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
             if (playerHealth != null)
@@ -120,7 +120,7 @@ public class SummonAI : MonoBehaviour
                 playerHealth.TakeDamage(damage);
                 lastAttackTime = Time.time;
             }
-        }*/
+        }
     }
 
 

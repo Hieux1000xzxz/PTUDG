@@ -1059,7 +1059,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_BigHit_1_013_0: -1030524720020460326
+      Effect_BigHit_1_013_1: -8505767524862474110
+      Effect_BigHit_1_013_10: 5198352907556217053
+      Effect_BigHit_1_013_11: -4160069904519696711
+      Effect_BigHit_1_013_12: -5861012386974275413
+      Effect_BigHit_1_013_13: -758527446857808556
+      Effect_BigHit_1_013_14: 311160393309982276
+      Effect_BigHit_1_013_15: -4276093521215428700
+      Effect_BigHit_1_013_16: -1581997306738648006
+      Effect_BigHit_1_013_17: -4601102793206919051
+      Effect_BigHit_1_013_18: -8921342917892158834
+      Effect_BigHit_1_013_19: -3137710963010461109
+      Effect_BigHit_1_013_2: 120463183409404749
+      Effect_BigHit_1_013_20: 2447967500660443278
+      Effect_BigHit_1_013_21: -8429504996371666166
+      Effect_BigHit_1_013_22: -3038791355251947353
+      Effect_BigHit_1_013_23: -7254396444451686385
+      Effect_BigHit_1_013_24: -5032415425218049550
+      Effect_BigHit_1_013_25: -692863490817736230
+      Effect_BigHit_1_013_26: 3272880150563170384
+      Effect_BigHit_1_013_27: -611623247908010367
+      Effect_BigHit_1_013_28: 4548989113208555774
+      Effect_BigHit_1_013_29: 3082566687399295349
+      Effect_BigHit_1_013_3: 1252431161298336932
+      Effect_BigHit_1_013_30: -2431817464187516345
+      Effect_BigHit_1_013_31: 8331128103301835913
+      Effect_BigHit_1_013_32: 1308157921676321435
+      Effect_BigHit_1_013_33: 3508441906014185699
+      Effect_BigHit_1_013_34: -4497493662711555784
+      Effect_BigHit_1_013_35: 5618310289645549325
+      Effect_BigHit_1_013_36: -594916735430162047
+      Effect_BigHit_1_013_37: 321852837138463165
+      Effect_BigHit_1_013_4: -2638434587473462574
+      Effect_BigHit_1_013_5: -1248470804435464542
+      Effect_BigHit_1_013_6: 7328139808891637355
+      Effect_BigHit_1_013_7: 2950331035786460323
+      Effect_BigHit_1_013_8: -6189100374293327581
+      Effect_BigHit_1_013_9: -8040736727097429276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

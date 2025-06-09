@@ -984,7 +984,42 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Hyperspeed_1_002_0: 2941486084175261941
+      Effect_Hyperspeed_1_002_1: 1563493080212670267
+      Effect_Hyperspeed_1_002_10: 4220357026516749577
+      Effect_Hyperspeed_1_002_11: 1893665734363705279
+      Effect_Hyperspeed_1_002_12: -6553659022310880789
+      Effect_Hyperspeed_1_002_13: -6333579903566001571
+      Effect_Hyperspeed_1_002_14: 981834322827940064
+      Effect_Hyperspeed_1_002_15: 6117430415717784838
+      Effect_Hyperspeed_1_002_16: 449988377718798520
+      Effect_Hyperspeed_1_002_17: -3243746698472010744
+      Effect_Hyperspeed_1_002_18: 3662205389198292446
+      Effect_Hyperspeed_1_002_19: -1013511972254564273
+      Effect_Hyperspeed_1_002_2: 1199067941527156610
+      Effect_Hyperspeed_1_002_20: 5544666850686894955
+      Effect_Hyperspeed_1_002_21: -5667993701387350738
+      Effect_Hyperspeed_1_002_22: -1970557675372353024
+      Effect_Hyperspeed_1_002_23: -2124129029784865591
+      Effect_Hyperspeed_1_002_24: -6637200496006151910
+      Effect_Hyperspeed_1_002_25: 2140075790258649868
+      Effect_Hyperspeed_1_002_26: 1429982302673278908
+      Effect_Hyperspeed_1_002_27: 6558743884893893356
+      Effect_Hyperspeed_1_002_28: -741532846628248045
+      Effect_Hyperspeed_1_002_29: 857588025405360003
+      Effect_Hyperspeed_1_002_3: -4311265209525810712
+      Effect_Hyperspeed_1_002_30: 4148795921320867732
+      Effect_Hyperspeed_1_002_31: -3602982426325062397
+      Effect_Hyperspeed_1_002_32: 9113087392826623175
+      Effect_Hyperspeed_1_002_33: 881695224708885339
+      Effect_Hyperspeed_1_002_34: -5462601640163027718
+      Effect_Hyperspeed_1_002_4: -5700221928611536136
+      Effect_Hyperspeed_1_002_5: -8201630876343797557
+      Effect_Hyperspeed_1_002_6: 1049334736348994206
+      Effect_Hyperspeed_1_002_7: 388696610971969105
+      Effect_Hyperspeed_1_002_8: -4567795848690588778
+      Effect_Hyperspeed_1_002_9: -1238806483710612686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

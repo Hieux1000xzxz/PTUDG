@@ -97,7 +97,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -634,7 +634,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Charged_1_004_0: 5961439717404473745
+      Effect_Charged_1_004_1: 4924157740579245149
+      Effect_Charged_1_004_10: -6799724315472299118
+      Effect_Charged_1_004_11: -4599182898361747389
+      Effect_Charged_1_004_12: 6600359133909238107
+      Effect_Charged_1_004_13: -7201018210063086962
+      Effect_Charged_1_004_14: 1847177648346986827
+      Effect_Charged_1_004_15: 4279478753225657065
+      Effect_Charged_1_004_16: 739049137231180294
+      Effect_Charged_1_004_17: 8090080735745874905
+      Effect_Charged_1_004_18: -1626902322009976652
+      Effect_Charged_1_004_19: -1462402407695755247
+      Effect_Charged_1_004_2: -8586081194472764026
+      Effect_Charged_1_004_20: 6880601208521148149
+      Effect_Charged_1_004_3: 2359936741661092868
+      Effect_Charged_1_004_4: -4554044827230861486
+      Effect_Charged_1_004_5: -6920876095246666069
+      Effect_Charged_1_004_6: -410859724101819617
+      Effect_Charged_1_004_7: -1731133462183310243
+      Effect_Charged_1_004_8: 8657868648408191541
+      Effect_Charged_1_004_9: -3348586140433404780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

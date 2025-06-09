@@ -934,7 +934,40 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Constellation_1_030_0: 8076325487052676805
+      Effect_Constellation_1_030_1: 4839732015827323179
+      Effect_Constellation_1_030_10: 1551387320762511254
+      Effect_Constellation_1_030_11: -8508930158943392150
+      Effect_Constellation_1_030_12: -238318513124936243
+      Effect_Constellation_1_030_13: -2306891540309760151
+      Effect_Constellation_1_030_14: 5517535659173980200
+      Effect_Constellation_1_030_15: -7599659050785716540
+      Effect_Constellation_1_030_16: -5874595891531126243
+      Effect_Constellation_1_030_17: 3600121521093016278
+      Effect_Constellation_1_030_18: -4956890772913291493
+      Effect_Constellation_1_030_19: -6041464162781398204
+      Effect_Constellation_1_030_2: 3157445624814350639
+      Effect_Constellation_1_030_20: 4724477876780830587
+      Effect_Constellation_1_030_21: -2598803092879385791
+      Effect_Constellation_1_030_22: -1386165624400589545
+      Effect_Constellation_1_030_23: 8246702684270511431
+      Effect_Constellation_1_030_24: -7938301327946336637
+      Effect_Constellation_1_030_25: 414614793232615644
+      Effect_Constellation_1_030_26: 8414417353476528594
+      Effect_Constellation_1_030_27: -3720392625739535306
+      Effect_Constellation_1_030_28: -7573105677883629478
+      Effect_Constellation_1_030_29: 7901761527016263096
+      Effect_Constellation_1_030_3: 5631852678468000317
+      Effect_Constellation_1_030_30: 2741673974187683200
+      Effect_Constellation_1_030_31: -6908012479597403341
+      Effect_Constellation_1_030_32: -6458240982834590573
+      Effect_Constellation_1_030_4: 9029979018889148455
+      Effect_Constellation_1_030_5: -4513940151902889399
+      Effect_Constellation_1_030_6: 1403010141347042487
+      Effect_Constellation_1_030_7: 3138905713550391358
+      Effect_Constellation_1_030_8: -3073162426581423514
+      Effect_Constellation_1_030_9: 159627306277864329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

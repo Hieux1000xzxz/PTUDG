@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_ElectricShield_1_013_0: 8676662911750903851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

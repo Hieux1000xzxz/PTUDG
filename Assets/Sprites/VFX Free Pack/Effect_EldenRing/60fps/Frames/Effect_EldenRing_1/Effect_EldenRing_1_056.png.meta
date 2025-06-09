@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_EldenRing_1_056_0: 5755953983146516711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,13 +14,22 @@ public class EnemyItemDropper : MonoBehaviour
     [SerializeField] private GameObject goldPrefab;
     [SerializeField] private GameObject crystalPrefab;
 
+    [Header("Special Drop")]
+    [SerializeField] private GameObject gateTicketPrefab; // Vé qua cổng
+
     public void DropItems()
     {
         Vector3 dropPosition = transform.position;
 
         DropOnePotion(dropPosition);
-        TrySpawn(goldPrefab, 50f, dropPosition);     // 20% rơi vàng
-        TrySpawn(crystalPrefab, 50f, dropPosition);   // 5% rơi tinh thạch
+        TrySpawn(goldPrefab, 50f, dropPosition);     // 50% rơi vàng
+        TrySpawn(crystalPrefab, 5f, dropPosition);   // 5% rơi tinh thạch
+
+        // Vé qua cổng: nếu được gán thì luôn rơi
+        if (gateTicketPrefab != null)
+        {
+            SpawnItem(gateTicketPrefab, dropPosition);
+        }
     }
 
     private void DropOnePotion(Vector3 position)
@@ -57,7 +66,6 @@ public class EnemyItemDropper : MonoBehaviour
     {
         if (prefab == null) return;
 
-        // Tạo vị trí lệch ngẫu nhiên
         Vector2 offset = Random.insideUnitCircle.normalized * Random.Range(0.2f, 0.6f);
         Vector3 spawnPos = centerPosition + (Vector3)offset;
 

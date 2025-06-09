@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8003181386151967333}
   - component: {fileID: 268778208662393918}
   - component: {fileID: -3879815094279165165}
+  - component: {fileID: -8951495186158201247}
   m_Layer: 0
   m_Name: BlueMax
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,3 +177,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.16, y: 0.16}
   m_Direction: 0
+--- !u!114 &-8951495186158201247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048517565500053279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87022655c45c8be4ba408a5be149977c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ManaPotionLarge

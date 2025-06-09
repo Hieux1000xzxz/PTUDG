@@ -54,6 +54,8 @@ GameObject:
   - component: {fileID: 274788574320209607}
   - component: {fileID: 4633622233490444498}
   - component: {fileID: 3017367460792130380}
+  - component: {fileID: 5438218722173421345}
+  - component: {fileID: 6767603846975161020}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -269,11 +271,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c637998c441d2240aca0a98354c1c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHealth: 100
+  baseMana: 50
+  baseArmor: 10
   maxHealth: 100
   currentHealth: 0
   maxMana: 50
   currentMana: 0
   armor: 10
+  baseHealthRegen: 0
+  baseManaRegen: 2
   healthRegenRate: 0
   manaRegenRate: 5
 --- !u!114 &1763869440973662466
@@ -381,11 +388,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c637998c441d2240aca0a98354c1c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHealth: 100
+  baseMana: 50
+  baseArmor: 10
   maxHealth: 100
   currentHealth: 0
   maxMana: 50
   currentMana: 0
   armor: 10
+  baseHealthRegen: 0
+  baseManaRegen: 2
   healthRegenRate: 0
   manaRegenRate: 1
 --- !u!114 &3017367460792130380
@@ -402,3 +414,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
   manaSlider: {fileID: 0}
+--- !u!114 &5438218722173421345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb2d5c0b2847f244bf332722ca37d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6767603846975161020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520286994756439704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b0fc39f1453c64d8e6a832678d6c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     public RuntimeAnimatorController warriorAnimator;
     public RuntimeAnimatorController mageAnimator;
-
+    private PlayerHealth playerHealth;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         moonveilDashSkill = GetComponent<MoonveilDashSkill>();
         explosionSkill = GetComponent<MageExplosionSkill>();
         iceBlastSkill = GetComponent<IceBlastSkill>();
+        playerHealth = GetComponent<PlayerHealth>();
 
     }
     private void Start()
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Tấn công
-        if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
+        if (Input.GetKeyDown(KeyCode.J) && !isAttacking && !isUsingSkill)
         {
             StartCoroutine(AttackRoutine());
         }
@@ -187,6 +188,10 @@ public class PlayerController : MonoBehaviour
                 animator.runtimeAnimatorController = mageAnimator;
         }
 
+        if (playerHealth != null)
+        {
+            playerHealth.SetForm(form);  // Gọi PlayerHealth cập nhật stats
+        }
         Debug.Log("Đã chuyển sang dạng: " + form);
     }
 

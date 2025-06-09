@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,10 +139,10 @@ TextureImporter:
       name: Werebear-Attack03_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 39
-        width: 21
-        height: 22
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Werebear-Attack03_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 39
-        width: 21
-        height: 23
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: Werebear-Attack03_2
       rect:
         serializedVersion: 2
-        x: 242
-        y: 39
-        width: 20
-        height: 23
+        x: 200
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Werebear-Attack03_3
       rect:
         serializedVersion: 2
-        x: 342
-        y: 39
-        width: 21
-        height: 23
+        x: 300
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: Werebear-Attack03_4
       rect:
         serializedVersion: 2
-        x: 442
-        y: 39
-        width: 21
-        height: 23
+        x: 400
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: Werebear-Attack03_5
       rect:
         serializedVersion: 2
-        x: 535
-        y: 39
-        width: 31
-        height: 28
+        x: 500
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: Werebear-Attack03_6
       rect:
         serializedVersion: 2
-        x: 567
-        y: 42
-        width: 15
-        height: 23
+        x: 600
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: Werebear-Attack03_7
       rect:
         serializedVersion: 2
-        x: 626
-        y: 39
-        width: 40
-        height: 21
+        x: 700
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: Werebear-Attack03_8
       rect:
         serializedVersion: 2
-        x: 667
-        y: 42
-        width: 19
-        height: 15
+        x: 800
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,99 +333,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Werebear-Attack03_9
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 42
-        width: 12
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d60c612f66c950390800000000000000
-      internalID: -7852698409288417171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Werebear-Attack03_10
-      rect:
-        serializedVersion: 2
-        x: 742
-        y: 39
-        width: 24
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43a5890bf687d71c0800000000000000
-      internalID: -4504311631201150412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Werebear-Attack03_11
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 42
-        width: 12
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edc0998911b13fc80800000000000000
-      internalID: -8290252726670390050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Werebear-Attack03_12
-      rect:
-        serializedVersion: 2
-        x: 842
-        y: 39
-        width: 24
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85e95d80b62c82cc0800000000000000
-      internalID: -3735522125938319784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: becc79ef4a4805a42ad8f5e9e98de79c
     internalID: 0
     vertices: []
     indices: 
@@ -437,9 +349,6 @@ TextureImporter:
     nameFileIdTable:
       Werebear-Attack03_0: 6353673333787211752
       Werebear-Attack03_1: -1889263424893382321
-      Werebear-Attack03_10: -4504311631201150412
-      Werebear-Attack03_11: -8290252726670390050
-      Werebear-Attack03_12: -3735522125938319784
       Werebear-Attack03_2: 8513044110120892325
       Werebear-Attack03_3: -4954300554207446309
       Werebear-Attack03_4: 7439776703322888219
@@ -447,7 +356,6 @@ TextureImporter:
       Werebear-Attack03_6: -3268796486880599453
       Werebear-Attack03_7: 7142114829653999447
       Werebear-Attack03_8: 7693308044905398322
-      Werebear-Attack03_9: -7852698409288417171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1009,7 +1009,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_BigHit_1_006_0: -4318166098243307295
+      Effect_BigHit_1_006_1: 7750088693243514770
+      Effect_BigHit_1_006_10: 6274009071551450470
+      Effect_BigHit_1_006_11: 1731008230661434876
+      Effect_BigHit_1_006_12: -4115993476596797324
+      Effect_BigHit_1_006_13: 683765089288985969
+      Effect_BigHit_1_006_14: -1304546790951884588
+      Effect_BigHit_1_006_15: -8840421938165676633
+      Effect_BigHit_1_006_16: 814679765702798009
+      Effect_BigHit_1_006_17: -58109449983174810
+      Effect_BigHit_1_006_18: -4514508218236652884
+      Effect_BigHit_1_006_19: -3940907115592156280
+      Effect_BigHit_1_006_2: -7524640501981802255
+      Effect_BigHit_1_006_20: -7741057460942599719
+      Effect_BigHit_1_006_21: 762547507560716324
+      Effect_BigHit_1_006_22: -1743848989389814145
+      Effect_BigHit_1_006_23: -320881599315900396
+      Effect_BigHit_1_006_24: -757331333522035900
+      Effect_BigHit_1_006_25: 8195752213800719331
+      Effect_BigHit_1_006_26: 4165886356985350589
+      Effect_BigHit_1_006_27: 483853517105992984
+      Effect_BigHit_1_006_28: -2921301052165971713
+      Effect_BigHit_1_006_29: 3477737072081769135
+      Effect_BigHit_1_006_3: 6915097073980207321
+      Effect_BigHit_1_006_30: -9024142871935490920
+      Effect_BigHit_1_006_31: -1422717308861068092
+      Effect_BigHit_1_006_32: -6996301237234107729
+      Effect_BigHit_1_006_33: 3703442300622487208
+      Effect_BigHit_1_006_34: -4032163173721198809
+      Effect_BigHit_1_006_35: 2243946066273900415
+      Effect_BigHit_1_006_4: -5927018710129234668
+      Effect_BigHit_1_006_5: 2711231306323073329
+      Effect_BigHit_1_006_6: 3756077462378085367
+      Effect_BigHit_1_006_7: -2931401091429012866
+      Effect_BigHit_1_006_8: 2059882126236817349
+      Effect_BigHit_1_006_9: 3124851249793314974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

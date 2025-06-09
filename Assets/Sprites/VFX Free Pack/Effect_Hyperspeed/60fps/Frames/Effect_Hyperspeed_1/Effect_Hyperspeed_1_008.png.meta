@@ -959,7 +959,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Effect_Hyperspeed_1_008_0: -7180938085292175710
+      Effect_Hyperspeed_1_008_1: -2973524335652841029
+      Effect_Hyperspeed_1_008_10: -1164140488469750340
+      Effect_Hyperspeed_1_008_11: 8957006692369111354
+      Effect_Hyperspeed_1_008_12: 9070375582791034290
+      Effect_Hyperspeed_1_008_13: 1958492277050826022
+      Effect_Hyperspeed_1_008_14: 2400106409245281313
+      Effect_Hyperspeed_1_008_15: 2620726817735426570
+      Effect_Hyperspeed_1_008_16: 5298269236175198736
+      Effect_Hyperspeed_1_008_17: -2664277585816882999
+      Effect_Hyperspeed_1_008_18: 834322413296617041
+      Effect_Hyperspeed_1_008_19: 8617832779937510759
+      Effect_Hyperspeed_1_008_2: -8705171642247933573
+      Effect_Hyperspeed_1_008_20: 6223260755208196685
+      Effect_Hyperspeed_1_008_21: 4989743907088423634
+      Effect_Hyperspeed_1_008_22: 4379534402195390575
+      Effect_Hyperspeed_1_008_23: 734972377057876809
+      Effect_Hyperspeed_1_008_24: 3144137219876870379
+      Effect_Hyperspeed_1_008_25: -167835273239989612
+      Effect_Hyperspeed_1_008_26: 2557295921292505739
+      Effect_Hyperspeed_1_008_27: -7928911381268682064
+      Effect_Hyperspeed_1_008_28: 8876201359441788071
+      Effect_Hyperspeed_1_008_29: -4496099588694211394
+      Effect_Hyperspeed_1_008_3: 8926028891686359356
+      Effect_Hyperspeed_1_008_30: 7745363349324554235
+      Effect_Hyperspeed_1_008_31: 550833785604486391
+      Effect_Hyperspeed_1_008_32: 1233629453789030002
+      Effect_Hyperspeed_1_008_33: 2154444668020294124
+      Effect_Hyperspeed_1_008_4: -7259464238052516633
+      Effect_Hyperspeed_1_008_5: 6887302963697552662
+      Effect_Hyperspeed_1_008_6: 968275658596371842
+      Effect_Hyperspeed_1_008_7: -5501707153778339811
+      Effect_Hyperspeed_1_008_8: -3677044931283758280
+      Effect_Hyperspeed_1_008_9: -6667858120527115713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
