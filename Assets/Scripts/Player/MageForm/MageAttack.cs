@@ -6,8 +6,8 @@ public class MageAttack : MonoBehaviour
     public Transform attackPoint;
     public float projectileSpeed = 8f;
     public int attackDamage = 10;
+    public float attackRange = 8f;
     public string enemyTag = "Enemy";
-
     public void PerformAttack(Vector2 _)
     {
         if (!attackPrefab) return;
@@ -39,7 +39,7 @@ public class MageAttack : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         GameObject nearest = null;
-        float minDist = float.MaxValue;
+        float minDist = attackRange;
         Vector2 myPos = attackPoint.position;
 
         foreach (var enemy in enemies)

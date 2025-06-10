@@ -11,7 +11,7 @@ public class MageExplosionSkill : MonoBehaviour
     public float explosionDelay = 2f;
     public string enemyTag = "Enemy";
     public float manaCost = 20f;
-
+    private float attackRange = 10f;
     [Header("Cooldown Settings")]
     public float cooldownTime = 10f;
     private float cooldownTimer = 0f;
@@ -104,7 +104,7 @@ public class MageExplosionSkill : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         GameObject nearest = null;
-        float minDist = float.MaxValue;
+        float minDist = attackRange;
         Vector2 myPos = transform.position;
 
         foreach (var enemy in enemies)

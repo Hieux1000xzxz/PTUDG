@@ -2,102 +2,111 @@
 
 public class UndeadAI : MonoBehaviour
 {
-    public float attackRange = 2f;
-    public float summonCooldown = 12f;
+    [Header("Combat Settings")]
+    [SerializeField] private float attackRange = 2f;
+    [SerializeField] private float maxEngagementRange = 10f;
+    [SerializeField] private float summonCooldown = 12f;
+    [SerializeField] private float attackCooldown = 5f;
+
+    [Header("Skill References")]
+    [SerializeField] private UndeadDashSkill dashSkill;
+    [SerializeField] private UndeadAttackSkill attackSkill;
+    [SerializeField] private UndeadSummonSkill summonSkill;
+    [SerializeField] private Animator animator;
+
+    private Transform target;
     private float lastSummonTime;
-    private float attackCooldown = 5f;
     private float lastAttackTime;
-
-    public UndeadDashSkill dashSkill;
-    public UndeadAttackSkill attackSkill;
-    public UndeadSummonSkill summonSkill;
-    public Animator animator;
-    private Transform target; // Mục tiêu (người chơi)
-
+    private const float StopDistance = 2f;
+    private const float WalkSpeed = 2f;
 
     private void Start()
     {
-        // Tìm kiếm đối tượng có tag "Player" khi bắt đầu
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            target = player.transform;
-        }
+        FindPlayerTarget();
     }
+
     private void Update()
     {
-        // Kiểm tra xem target có null không (tránh lỗi khi không có mục tiêu)
-        if (target == null) return;
-
-        // Kiểm tra trạng thái triệu hồi
-        if (summonSkill.IsSummoning)
+        if (target == null)
         {
+            FindPlayerTarget();
             return;
         }
 
-        float distance = Vector3.Distance(transform.position, target.position);
-        bool didSomething = false;
+        if (summonSkill.IsSummoning) return;
 
-        // Ưu tiên triệu hồi
+        float distance = Vector3.Distance(transform.position, target.position);
+
+        // Chỉ hành động nếu player trong phạm vi chiến đấu
+        if (distance > maxEngagementRange) return;
+
+        bool didSomething = TrySummon(distance);
+
+        if (!didSomething) didSomething = TryAttack(distance);
+
+        if (!didSomething) didSomething = TryDash(distance);
+
+        if (!didSomething) MoveTowardsPlayer(distance);
+    }
+
+    private bool TrySummon(float distance)
+    {
         if (Time.time - lastSummonTime >= summonCooldown)
         {
             summonSkill.Execute();
             lastSummonTime = Time.time;
-            didSomething = true;
+            return true;
         }
+        return false;
+    }
 
-        // Tấn công nếu gần và không đang lướt
-        if (!didSomething && !dashSkill.IsDashing && distance <= attackRange && Time.time - lastAttackTime >= attackCooldown)
+    private bool TryAttack(float distance)
+    {
+        if (!dashSkill.IsDashing && distance <= attackRange && Time.time - lastAttackTime >= attackCooldown)
         {
             attackSkill.Execute();
             lastAttackTime = Time.time;
-            didSomething = true;
+            return true;
         }
+        return false;
+    }
 
-        // Lướt nếu ngoài tầm tấn công và có thể dash
-        if (!didSomething && distance > attackRange && dashSkill.CanDash())
+    private bool TryDash(float distance)
+    {
+        if (distance > attackRange && dashSkill.CanDash())
         {
             dashSkill.Execute(target.position);
-            didSomething = true;
+            return true;
         }
+        return false;
+    }
 
-        // Nếu chưa làm gì, tiếp tục đi bộ theo người chơi
-        if (!didSomething)
+    private void MoveTowardsPlayer(float distance)
+    {
+        if (distance > StopDistance)
         {
             Vector3 direction = (target.position - transform.position).normalized;
-
-            // Tính toán vị trí đích sao cho boss dừng lại khi còn cách người chơi 1 đơn vị
-            float targetDistance = 2f; // Khoảng cách cần giữ
-            if (distance > targetDistance)
-            {
-                Vector3 targetPosition = target.position - direction * targetDistance;
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * 2f);
-            }
-
-            // Lật người theo hướng di chuyển
-            FlipBasedOnMovement(target.position.x);
+            Vector3 targetPosition = target.position - direction * StopDistance;
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * WalkSpeed);
         }
+
+        FlipBasedOnMovement(target.position.x);
+    }
+
+    private void FindPlayerTarget()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null) target = player.transform;
     }
 
     private void FlipBasedOnMovement(float targetXPosition)
     {
-        if (target == null) return;
-
-        bool isMovingRight = targetXPosition > transform.position.x;
-
-        if (isMovingRight && transform.localScale.x < 0)
-        {
-            Flip();
-        }
-        else if (!isMovingRight && transform.localScale.x > 0)
-        {
-            Flip();
-        }
+        bool shouldFlip = (targetXPosition > transform.position.x) ^ (transform.localScale.x > 0);
+        if (shouldFlip) Flip();
     }
 
     private void Flip()
     {
-        // Lật sprite theo trục X
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;

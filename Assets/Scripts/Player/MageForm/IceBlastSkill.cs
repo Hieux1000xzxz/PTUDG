@@ -9,7 +9,7 @@ public class IceBlastSkill : MonoBehaviour
     public Vector2 explosionAreaSize = new Vector2(4f, 2f);
     public int damage = 25;
     public float freezeDuration = 2f;
-
+    private float attackRange = 10f;
     [Header("Ice Blast Settings")]
     public float cooldownTime = 8f;
     public float manaCost = 20;
@@ -65,7 +65,7 @@ public class IceBlastSkill : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         GameObject nearest = null;
-        float minDist = float.MaxValue;
+        float minDist = attackRange;
         Vector2 myPos = transform.position;
 
         foreach (var enemy in enemies)

@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Base Stats (used as upgrade source)")]
@@ -10,23 +11,26 @@ public class PlayerHealth : MonoBehaviour
     [Header("Current Stats")]
     public float maxHealth;
     public float currentHealth;
-
     public float maxMana;
     public float currentMana;
-
     public float armor;
 
     [Header("Regeneration")]
     public float baseHealthRegen = 0f;
     public float baseManaRegen = 2f;
-
     public float healthRegenRate;
     public float manaRegenRate;
 
+
+    private float hitStunDuration = 0.25f;
     private PlayerForm currentForm;
 
+    private Animator animator;
+    private PlayerController playerController;
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();
         // Không gọi SetForm ở đây, để PlayerController quyết định
         // Khởi tạo currentHealth và currentMana hợp lý, giả sử bằng base stats ban đầu
         maxHealth = baseHealth;
@@ -59,9 +63,8 @@ public class PlayerHealth : MonoBehaviour
     {
         float effectiveDamage = Mathf.Max(damage - armor, 1f);
         currentHealth -= effectiveDamage;
-
+        StartCoroutine(HandleHitStun());
         Debug.Log($"Người chơi nhận {effectiveDamage} sát thương. Máu còn lại: {currentHealth}");
-
         if (currentHealth <= 0)
         {
             Die();
@@ -109,8 +112,7 @@ public class PlayerHealth : MonoBehaviour
         switch (form)
         {
             case PlayerForm.Warrior:
-                bonusHealth = 20f;
-                bonusArmor = 5f;
+                bonusArmor = 7f;
                 bonusManaRegen = -1f; // giảm tốc độ hồi mana
                 break;
 
@@ -139,7 +141,21 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Người chơi đã chết.");
-        // Trigger animation, respawn, scene reload, v.v.
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Death");
+        }
+
+        // Vô hiệu hóa các chức năng khác nếu cần
+        if (playerController != null)
+        {
+            playerController.enabled = false;
+        }
+        if (animator != null)
+        {
+            StartCoroutine(DisableAnimatorAfterDeath());
+        }
     }
 
     // Các phương thức nâng cấp dùng base stat
@@ -172,4 +188,29 @@ public class PlayerHealth : MonoBehaviour
         baseHealthRegen += amount;
         SetForm(currentForm);
     }
+    private IEnumerator HandleHitStun()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Hit");
+        }
+
+        if (playerController != null)
+        {
+            playerController.moveSpeed = 2f;
+        }
+
+        yield return new WaitForSeconds(hitStunDuration);
+
+        if (playerController != null)
+        {
+            playerController.moveSpeed = 5f;
+        }
+     }
+    private IEnumerator DisableAnimatorAfterDeath()
+    {
+        yield return new WaitForSeconds(1.5f); // Thời gian chờ để animation chết hoàn thành
+        animator.enabled = false; // Vô hiệu hóa animator sau khi chết
+    }
+
 }

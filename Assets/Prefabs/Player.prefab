@@ -171,6 +171,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackDelay: 0.3
   attackCooldown: 0.6
+  canAttack: 1
   warriorAnimator: {fileID: 9100000, guid: 0dbd9c9d4f9fe204b88eb41405be69e5, type: 2}
   mageAnimator: {fileID: 9100000, guid: 822db7c14bd5caa4789ae407a73d4d40, type: 2}
 --- !u!50 &353763121606276645
@@ -255,7 +256,7 @@ MonoBehaviour:
   totalDuration: 1
   slashCount: 3
   damagePerHit: 10
-  manaCost: 10
+  manaCost: 20
   cooldownTime: 10
   slashPrefab: {fileID: 6127185634937417836, guid: 1912754282d32654f9392a96da36a0fd, type: 3}
   slashSpeed: 8
@@ -301,7 +302,7 @@ MonoBehaviour:
   attackLength: 1.5
   attackWidth: 1
   attackPoint: {fileID: 711083208983344580}
-  manaCost: 20
+  manaCost: 15
   cooldownTime: 5
 --- !u!114 &264515516811776203
 MonoBehaviour:
@@ -333,8 +334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPrefab: {fileID: 5314248272164810418, guid: 40da40fbdd30e6a43a3db5f5718072f8, type: 3}
   attackPoint: {fileID: 711083208983344580}
-  projectileSpeed: 8
-  attackDamage: 10
+  projectileSpeed: 10
+  attackDamage: 20
+  attackRange: 10
   enemyTag: Enemy
 --- !u!114 &8063712462168062396
 MonoBehaviour:
@@ -351,7 +353,7 @@ MonoBehaviour:
   explosionAreaPrefab: {fileID: 8926859448230160511, guid: cf5b55106f7b8b244971b182fcb46770, type: 3}
   explosionEffect: {fileID: 5921951903980953427, guid: 50bf86f7cec25b245abcaa069460efeb, type: 3}
   explosionRadius: 2.5
-  explosionDamage: 30
+  explosionDamage: 100
   explosionDelay: 1.5
   enemyTag: Enemy
   manaCost: 20
@@ -371,7 +373,7 @@ MonoBehaviour:
   iceProjectilePrefab: {fileID: 7319089552330959462, guid: 66e01b245dfd2334d9ebf0a775cfc1ba, type: 3}
   projectileSpeed: 10
   explosionAreaSize: {x: 4, y: 2}
-  damage: 2
+  damage: 30
   freezeDuration: 3
   cooldownTime: 5
   manaCost: 20

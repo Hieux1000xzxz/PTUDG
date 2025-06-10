@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6287526746528250534}
   - component: {fileID: 930005343906975385}
   - component: {fileID: 833314722724551885}
-  - component: {fileID: 1038731836413737160}
   - component: {fileID: 140117701212292937}
   - component: {fileID: 6034459712626431397}
   m_Layer: 0
@@ -192,23 +191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5474ab263785c534ea41db9108142f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 6782337341328828859}
-  attackRange: 0.6
-  attackRate: 1
+  moveSpeed: 3
+  detectionRange: 4
+  attackRange: 1
+  attackCooldown: 2
   damage: 10
---- !u!114 &1038731836413737160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5665355602516697924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e59b2af059e812e4285f6885ff7a30a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
+  attackPoint: {fileID: 6782337341328828859}
+  roamInterval: 2
 --- !u!114 &140117701212292937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,9 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173793640fa7d7e4dbc75051e08a6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30
+  hitStunDuration: 0.25
+  healthBarPrefab: {fileID: 7073661888884717440, guid: 3e8b9c71513dd0b42acafb952173e285, type: 3}
   deathPrefab: {fileID: 7669966937311582299, guid: ee239e809d9baa94c8ca0c2e23064bd3, type: 3}
-  floatingTextPrefab: {fileID: 1135579629834738341, guid: b39d161a9034af64a82d1d7019291e53, type: 3}
 --- !u!114 &6034459712626431397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +234,7 @@ MonoBehaviour:
   manaPotionLarge: {fileID: 1048517565500053279, guid: f23e70dee2f63084d995be5fcf9b673c, type: 3}
   goldPrefab: {fileID: 5716621936566318400, guid: a4246e3b427c8f44c9255b38e5b9047b, type: 3}
   crystalPrefab: {fileID: 2257668724218103852, guid: c9052fcbb83fd8f4081c20c7f34448e0, type: 3}
+  gateTicketPrefab: {fileID: 0}
 --- !u!1 &8186740963552403058
 GameObject:
   m_ObjectHideFlags: 0

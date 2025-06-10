@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using NUnit.Framework.Internal.Commands;
 
 public enum PlayerForm { Warrior, Mage }
 
@@ -12,78 +11,113 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Settings")]
     public float attackDelay = 0.4f;
     public float attackCooldown = 0.3f;
+    public float hitCooldown = 0.35f; // Cooldown after being hit
 
     private Vector2 moveInput;
     private Vector2 lastMoveDirection = Vector2.right;
 
+    // Component references
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private PlayerHealth playerHealth;
 
+    // Attack components
     private WarriorAttack warriorAttack;
     private MageAttack mageAttack;
 
-    private bool isAttacking = false;
-    private bool isMovementLocked = false;
-    private bool isUsingSkill = false;
-
-    private Vector2 attackLockPosition;
-
-    private PlayerForm currentForm;
+    // Skill components
     private TripleSlashSkill tripleSlashSkill;
     private MoonveilDashSkill moonveilDashSkill;
     private MageExplosionSkill explosionSkill;
     private IceBlastSkill iceBlastSkill;
 
+    // State variables
+    private bool isAttacking = false;
+    private bool isMovementLocked = false;
+    private bool isUsingSkill = false;
+    private bool isOnHitCooldown = false;
+    private Vector2 attackLockPosition;
+
+    private PlayerForm currentForm;
+
+    [Header("Animators")]
     public RuntimeAnimatorController warriorAnimator;
     public RuntimeAnimatorController mageAnimator;
-    private PlayerHealth playerHealth;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
+
+        // Get attack components
         warriorAttack = GetComponent<WarriorAttack>();
         mageAttack = GetComponent<MageAttack>();
+
+        // Get skill components
         tripleSlashSkill = GetComponent<TripleSlashSkill>();
         moonveilDashSkill = GetComponent<MoonveilDashSkill>();
         explosionSkill = GetComponent<MageExplosionSkill>();
         iceBlastSkill = GetComponent<IceBlastSkill>();
-        playerHealth = GetComponent<PlayerHealth>();
-
     }
+
     private void Start()
     {
-        // Mặc định là dạng Warrior
         SetForm(PlayerForm.Warrior);
     }
+
     private void Update()
     {
         if (!isMovementLocked)
         {
-            moveInput.x = Input.GetAxisRaw("Horizontal");
-            moveInput.y = Input.GetAxisRaw("Vertical");
-            moveInput = moveInput.normalized;
-
-            if (moveInput.sqrMagnitude > 0.01f)
-            {
-                lastMoveDirection = moveInput;
-            }
-
-            if (lastMoveDirection.x > 0.1f)
-                spriteRenderer.flipX = false;
-            else if (lastMoveDirection.x < -0.1f)
-                spriteRenderer.flipX = true;
-
-            animator.SetBool("isMoving", moveInput.sqrMagnitude > 0);
+            HandleMovementInput();
         }
 
-        // Tấn công
-        if (Input.GetKeyDown(KeyCode.J) && !isAttacking && !isUsingSkill)
+        if (!isUsingSkill && !isOnHitCooldown)
+        {
+            HandleAttackInput();
+            HandleSkillInput();
+        }
+
+        HandleFormChangeInput();
+    }
+
+    private void HandleMovementInput()
+    {
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput = moveInput.normalized;
+
+        if (moveInput.sqrMagnitude > 0.01f)
+        {
+            lastMoveDirection = moveInput;
+        }
+
+        UpdateSpriteFlip();
+        animator.SetBool("isMoving", moveInput.sqrMagnitude > 0);
+    }
+
+    private void UpdateSpriteFlip()
+    {
+        if (lastMoveDirection.x > 0.1f)
+            spriteRenderer.flipX = false;
+        else if (lastMoveDirection.x < -0.1f)
+            spriteRenderer.flipX = true;
+    }
+
+    private void HandleAttackInput()
+    {
+        if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
         {
             StartCoroutine(AttackRoutine());
         }
-        if (Input.GetKeyDown(KeyCode.L) && !isUsingSkill)
+    }
+
+    private void HandleSkillInput()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
         {
             if (currentForm == PlayerForm.Warrior && tripleSlashSkill && !tripleSlashSkill.IsTripleSlashing())
             {
@@ -97,7 +131,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.K) && !isUsingSkill)
+        if (Input.GetKeyDown(KeyCode.K))
         {
             if (currentForm == PlayerForm.Warrior && moonveilDashSkill && !moonveilDashSkill.IsDashing())
             {
@@ -110,8 +144,10 @@ public class PlayerController : MonoBehaviour
                 explosionSkill.ActivateExplosion();
             }
         }
+    }
 
-        // Biến hình
+    private void HandleFormChangeInput()
+    {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SetForm(PlayerForm.Warrior);
@@ -138,8 +174,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Vector2 newPos = rb.position + moveInput * moveSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(newPos);
+            rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
         }
     }
 
@@ -149,6 +184,7 @@ public class PlayerController : MonoBehaviour
         isMovementLocked = true;
         attackLockPosition = rb.position;
         animator.SetBool("isAttacking", true);
+
         yield return new WaitForSeconds(attackDelay);
 
         if (currentForm == PlayerForm.Warrior)
@@ -179,24 +215,26 @@ public class PlayerController : MonoBehaviour
         warriorAttack.enabled = (form == PlayerForm.Warrior);
         mageAttack.enabled = (form == PlayerForm.Mage);
 
-        // Thay đổi Animator Controller theo form
         if (animator != null)
         {
-            if (form == PlayerForm.Warrior && warriorAnimator != null)
-                animator.runtimeAnimatorController = warriorAnimator;
-            else if (form == PlayerForm.Mage && mageAnimator != null)
-                animator.runtimeAnimatorController = mageAnimator;
+            animator.runtimeAnimatorController = form == PlayerForm.Warrior ? warriorAnimator : mageAnimator;
         }
 
-        if (playerHealth != null)
-        {
-            playerHealth.SetForm(form);  // Gọi PlayerHealth cập nhật stats
-        }
+        playerHealth?.SetForm(form);
         Debug.Log("Đã chuyển sang dạng: " + form);
     }
 
-    public Vector2 GetLastMoveDirection()
+    public void OnHit()
     {
-        return lastMoveDirection;
+        StartCoroutine(HitCooldownRoutine());
     }
+
+    private IEnumerator HitCooldownRoutine()
+    {
+        isOnHitCooldown = true;
+        yield return new WaitForSeconds(hitCooldown);
+        isOnHitCooldown = false;
+    }
+
+    public Vector2 GetLastMoveDirection() => lastMoveDirection;
 }

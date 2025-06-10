@@ -215,5 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
+  hitStunDuration: 0.5
+  healthBarPrefab: {fileID: 7073661888884717440, guid: 3e8b9c71513dd0b42acafb952173e285, type: 3}
   deathPrefab: {fileID: 7669966937311582299, guid: 2279ca83cbdf24e4082468656d4c1a18, type: 3}
-  floatingTextPrefab: {fileID: 1135579629834738341, guid: b39d161a9034af64a82d1d7019291e53, type: 3}
