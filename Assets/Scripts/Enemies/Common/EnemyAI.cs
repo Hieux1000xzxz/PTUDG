@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class EnemyAI : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public abstract class EnemyAI : MonoBehaviour
     [SerializeField] protected float attackRange = 2f;
     [SerializeField] protected float attackCooldown = 2f;
 
+    protected List<Coroutine> activeCoroutines = new List<Coroutine>();
     protected Transform target;
     protected float lastAttackTime;
     protected bool isAttacking = false;
@@ -29,7 +31,7 @@ public abstract class EnemyAI : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (target == null) return;
+        if (target == null || GetComponent<FreezeEffect>() != null) return;
 
         HandleMovement();
         HandleAttack();
@@ -85,7 +87,17 @@ public abstract class EnemyAI : MonoBehaviour
         if (target == null) return false;
         return Vector2.Distance(transform.position, target.position) <= detectionRange;
     }
-
+    protected void StopAllEnemyCoroutines()
+    {
+        foreach (var coroutine in activeCoroutines)
+        {
+            if (coroutine != null)
+            {
+                StopCoroutine(coroutine);
+            }
+        }
+        activeCoroutines.Clear();
+    }
     protected abstract void Attack();
     protected abstract void UpdateAnimation();
 

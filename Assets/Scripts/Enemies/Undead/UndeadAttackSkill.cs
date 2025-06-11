@@ -56,7 +56,7 @@ public class UndeadAttackSkill : MonoBehaviour
         // Kiểm tra xem có player nào trong phạm vi không
         Collider2D[] hits = Physics2D.OverlapBoxAll(center, size, 0f);
 
-        /*foreach (Collider2D hit in hits)
+        foreach (Collider2D hit in hits)
         {
             if (hit.CompareTag("Player"))
             {
@@ -66,7 +66,7 @@ public class UndeadAttackSkill : MonoBehaviour
                     playerHealth.TakeDamage(damageAmount);
                 }
             }
-        }*/
+        }
     }
     // Đổi hướng tấn công của boss dựa trên vị trí của boss và người chơi
     private void SetAttackDirection()
