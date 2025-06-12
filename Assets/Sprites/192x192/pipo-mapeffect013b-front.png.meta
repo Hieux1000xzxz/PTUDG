@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pipo-mapeffect013b-front_0: -8015214045936500306
+      pipo-mapeffect013b-front_1: 5219004438876101889
+      pipo-mapeffect013b-front_2: -4396411565702134552
+      pipo-mapeffect013b-front_3: 8213013183747539365
+      pipo-mapeffect013b-front_4: 4389439408812953375
+      pipo-mapeffect013b-front_5: 414043528037471950
+      pipo-mapeffect013b-front_6: -4944408331328350484
+      pipo-mapeffect013b-front_7: -781599602722683649
+      pipo-mapeffect013b-front_8: 6519174561990078100
+      pipo-mapeffect013b-front_9: 468283807125105449
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
