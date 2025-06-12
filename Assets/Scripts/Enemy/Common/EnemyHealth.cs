@@ -46,7 +46,6 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
         UpdateHealthBar();
 
-        // Trigger hit reaction
         TriggerHitReaction();
 
         if (currentHealth <= 0)
@@ -57,16 +56,13 @@ public class EnemyHealth : MonoBehaviour
 
     private void TriggerHitReaction()
     {
-        // Trigger hit animation
         animator.SetTrigger("Hit");
 
-        // Temporarily disable enemy controller
         if (enemyController != null)
         {
             enemyController.enabled = false;
         }
 
-        // Restore control after hit stun duration
         Invoke(nameof(RestoreEnemyControl), hitStunDuration);
     }
 
@@ -95,7 +91,6 @@ public class EnemyHealth : MonoBehaviour
         SpawnDeathEffect();
         DropItems();
         Destroy(gameObject); 
-        // Give time for death animation to play
     }
 
     private void SpawnDeathEffect()
