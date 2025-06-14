@@ -4637,7 +4637,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c2f8e3677b4acc4c8bb9095a6022db3, type: 2}
+  - {fileID: 2100000, guid: 1c63a44a72568354d98d42af0e41420d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39626,67 +39626,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: 84395be60ff2def43bb58fa039614eab, type: 3}
   m_PrefabInstance: {fileID: 1121691539}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1136939329
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.0669355
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 14.016385
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2097616497340338500, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: healthBarPrefab
-      value: 
-      objectReference: {fileID: 7073661888884717440, guid: 3e8b9c71513dd0b42acafb952173e285, type: 3}
-    - target: {fileID: 2554868998497530532, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
-      propertyPath: m_Name
-      value: Undead
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
 --- !u!1001 &1144802543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59191,4 +59130,3 @@ SceneRoots:
   - {fileID: 1829201875}
   - {fileID: 1029964324}
   - {fileID: 2016751806}
-  - {fileID: 1136939329}
