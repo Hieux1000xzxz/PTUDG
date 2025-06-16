@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     public float manaRegenRate;
 
 
-    private float hitStunDuration = 0.25f;
+    private float hitStunDuration = 0.5f;
     private PlayerForm currentForm;
 
     private Animator animator;
@@ -198,6 +198,7 @@ public class PlayerHealth : MonoBehaviour
         if (playerController != null)
         {
             playerController.moveSpeed = 2f;
+            playerController.canAttack = false; // Không cho phép tấn công trong thời gian hit stun
         }
 
         yield return new WaitForSeconds(hitStunDuration);
@@ -205,6 +206,7 @@ public class PlayerHealth : MonoBehaviour
         if (playerController != null)
         {
             playerController.moveSpeed = 5f;
+            playerController.canAttack = true; // Cho phép tấn công lại sau hit stun
         }
      }
     private IEnumerator DisableAnimatorAfterDeath()

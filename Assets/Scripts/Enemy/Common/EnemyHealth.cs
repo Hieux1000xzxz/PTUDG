@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float hitStunDuration = 0.25f;
     [SerializeField] private GameObject healthBarPrefab;
     [SerializeField] private GameObject deathPrefab;
+    [SerializeField] private GameObject damageTextPrefab;
 
     private int currentHealth;
     private EnemyHealthBar healthBarInstance;
@@ -14,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     private Animator animator;
     private EnemyAI enemyController;
     private bool isDead = false;
+    public event Action OnDeath; 
 
     private void Start()
     {
@@ -45,7 +48,7 @@ public class EnemyHealth : MonoBehaviour
 
         currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
         UpdateHealthBar();
-
+        ShowDamageText(damageAmount);
         TriggerHitReaction();
 
         if (currentHealth <= 0)
@@ -89,6 +92,7 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         Debug.Log($"{gameObject.name} has died!");
         SpawnDeathEffect();
+        OnDeath?.Invoke();
         DropItems();
         Destroy(gameObject); 
     }
@@ -100,7 +104,22 @@ public class EnemyHealth : MonoBehaviour
         var deathEffect = Instantiate(deathPrefab, transform.position, Quaternion.identity);
         Destroy(deathEffect, 1.5f);
     }
+    private void ShowDamageText(int damage)
+    {
+        if (damageTextPrefab == null) return;
 
+        // Tạo text tại vị trí enemy + offset
+        Vector3 spawnPosition = transform.position + new Vector3(0, 1f, 0);
+        GameObject textObj = Instantiate(damageTextPrefab, spawnPosition, Quaternion.identity);
+
+        // Lấy component FloatingText và khởi tạo
+        FloatingText floatingText = textObj.GetComponent<FloatingText>();
+        if (floatingText != null)
+        {
+            Color textColor = (damage >= 20) ? Color.yellow : Color.red; // Tuỳ chỉnh màu theo damage
+            floatingText.Initialize(damage, textColor);
+        }
+    }
     private void DropItems()
     {
         itemDropper?.DropItems();

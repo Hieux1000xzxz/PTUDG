@@ -13,9 +13,12 @@ public class GateTrigger : MonoBehaviour
             {
                 PlayerInventory.Instance.RemoveItem(requiredItem);
                 Debug.Log("Player passed the gate!");
-
-                // Chuyển scene (hoặc thực hiện logic chuyển màn)
                 SceneManager.LoadScene(nextSceneName);
+                GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
+                if (spawnPoint != null)
+                {
+                    transform.position = spawnPoint.transform.position;
+                }
             }
             else
             {

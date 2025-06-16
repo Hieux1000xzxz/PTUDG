@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float attackCooldown = 0.3f;
     public float hitCooldown = 0.35f; // Cooldown after being hit
 
+    [Header("Form Change Effect")]
+    [SerializeField] private FormChangeEffect formChangeEffect;
     private Vector2 moveInput;
     private Vector2 lastMoveDirection = Vector2.right;
 
@@ -31,14 +33,14 @@ public class PlayerController : MonoBehaviour
     private MoonveilDashSkill moonveilDashSkill;
     private MageExplosionSkill explosionSkill;
     private IceBlastSkill iceBlastSkill;
-
     // State variables
     private bool isAttacking = false;
     private bool isMovementLocked = false;
     private bool isUsingSkill = false;
     private bool isOnHitCooldown = false;
+    public bool canAttack = true; // Biến này để kiểm soát việc có thể tấn công hay không
     private Vector2 attackLockPosition;
-
+    
     private PlayerForm currentForm;
 
     [Header("Animators")]
@@ -61,6 +63,20 @@ public class PlayerController : MonoBehaviour
         moonveilDashSkill = GetComponent<MoonveilDashSkill>();
         explosionSkill = GetComponent<MageExplosionSkill>();
         iceBlastSkill = GetComponent<IceBlastSkill>();
+        if (formChangeEffect == null)
+        {
+            formChangeEffect = GetComponent<FormChangeEffect>();
+        }
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Đánh dấu GameObject này không bị hủy khi load scene mới
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Start()
@@ -75,7 +91,7 @@ public class PlayerController : MonoBehaviour
             HandleMovementInput();
         }
 
-        if (!isUsingSkill && !isOnHitCooldown)
+        if (!isUsingSkill && !isOnHitCooldown && canAttack == true)
         {
             HandleAttackInput();
             HandleSkillInput();
@@ -109,6 +125,10 @@ public class PlayerController : MonoBehaviour
 
     private void HandleAttackInput()
     {
+        if(canAttack == false)
+        {
+            return; // Không cho phép tấn công nếu không thể tấn công
+        }
         if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
         {
             StartCoroutine(AttackRoutine());
@@ -117,6 +137,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleSkillInput()
     {
+       
         if (Input.GetKeyDown(KeyCode.L))
         {
             if (currentForm == PlayerForm.Warrior && tripleSlashSkill && !tripleSlashSkill.IsTripleSlashing())
@@ -199,6 +220,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         animator.SetBool("isAttacking", false);
         isMovementLocked = false;
+        yield return new WaitForSeconds(attackCooldown-0.3f);
         isAttacking = false;
     }
 
@@ -219,7 +241,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.runtimeAnimatorController = form == PlayerForm.Warrior ? warriorAnimator : mageAnimator;
         }
-
+        if (formChangeEffect != null)
+        {
+            formChangeEffect.PlayEffect(form);
+        }
         playerHealth?.SetForm(form);
         Debug.Log("Đã chuyển sang dạng: " + form);
     }

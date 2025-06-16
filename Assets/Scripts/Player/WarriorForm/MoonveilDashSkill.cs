@@ -69,7 +69,7 @@ public class MoonveilDashSkill : MonoBehaviour
         dashTimer = 0f;
         int hitCount = 0;
         animator.SetBool("isDashing", true);
-
+        yield return new WaitForSeconds(0.2f); // Delay before starting dash
         while (dashTimer < dashDuration && hitCount < 4)
         {
             // Tấn công mỗi khoảng thời gian
