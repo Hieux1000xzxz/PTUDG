@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public enum PlayerForm { Warrior, Mage }
 
@@ -17,6 +18,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FormChangeEffect formChangeEffect;
     private Vector2 moveInput;
     private Vector2 lastMoveDirection = Vector2.right;
+
+    [Header("Form Change Settings")]
+    public float formChangeCooldown = 1.5f; // Thời gian delay giữa các lần biến hình
+    private bool isFormChangeOnCooldown = false;
 
     // Component references
     private Rigidbody2D rb;
@@ -38,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private bool isMovementLocked = false;
     private bool isUsingSkill = false;
     private bool isOnHitCooldown = false;
+    private bool hasMagicStaff = false;
     public bool canAttack = true; // Biến này để kiểm soát việc có thể tấn công hay không
     private Vector2 attackLockPosition;
     
@@ -99,6 +105,7 @@ public class PlayerController : MonoBehaviour
         }
 
         HandleFormChangeInput();
+        SetMagicStaff();
     }
 
     private void HandleMovementInput()
@@ -170,13 +177,27 @@ public class PlayerController : MonoBehaviour
 
     private void HandleFormChangeInput()
     {
+        if (isFormChangeOnCooldown) return;
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SetForm(PlayerForm.Warrior);
+            if (currentForm != PlayerForm.Warrior)
+            {
+                SetForm(PlayerForm.Warrior);
+                StartCoroutine(FormChangeCooldownRoutine());
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SetForm(PlayerForm.Mage);
+            if (currentForm != PlayerForm.Mage && hasMagicStaff)
+            {
+                SetForm(PlayerForm.Mage);
+                StartCoroutine(FormChangeCooldownRoutine());
+            }
+            else if (!hasMagicStaff)
+            {
+                Debug.Log("You need to find the magic staff first!");
+            }
         }
     }
 
@@ -247,6 +268,7 @@ public class PlayerController : MonoBehaviour
             formChangeEffect.PlayEffect(form);
         }
         Debug.Log("Đã chuyển sang dạng: " + form);
+        playerHealth.SetForm(form);
     }
 
     public void OnHit()
@@ -262,4 +284,17 @@ public class PlayerController : MonoBehaviour
     }
 
     public Vector2 GetLastMoveDirection() => lastMoveDirection;
+    public void SetMagicStaff()
+    {
+        if (PlayerInventory.Instance.GetItemCount("Staff") > 0)
+        {
+            hasMagicStaff = true;
+        }
+    }
+    private IEnumerator FormChangeCooldownRoutine()
+    {
+        isFormChangeOnCooldown = true;
+        yield return new WaitForSeconds(formChangeCooldown);
+        isFormChangeOnCooldown = false;
+    }
 }

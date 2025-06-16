@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7690484634398746497}
   - component: {fileID: 5758990437464012293}
   - component: {fileID: -7508943994458758979}
+  - component: {fileID: -1327784886112529423}
   m_Layer: 11
   m_Name: Worf
   m_TagString: Enemy
@@ -214,3 +215,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-1327784886112529423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586057633000846439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7371de0277f1c4ab7c0095b0c29a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPotionSmall: {fileID: 0}
+  healthPotionMedium: {fileID: 0}
+  healthPotionLarge: {fileID: 0}
+  manaPotionSmall: {fileID: 0}
+  manaPotionMedium: {fileID: 0}
+  manaPotionLarge: {fileID: 0}
+  goldPrefab: {fileID: 0}
+  crystalPrefab: {fileID: 0}
+  gateTicketPrefab: {fileID: 55423517973740623, guid: 5b4e2133f661acc409f0f3663784f3ad, type: 3}

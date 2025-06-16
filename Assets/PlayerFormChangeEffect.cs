@@ -2,6 +2,7 @@
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class FormChangeEffect : MonoBehaviour
 {
@@ -83,7 +84,28 @@ public class FormChangeEffect : MonoBehaviour
 
         playerLight.intensity = 0f;
     }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        volume = FindAnyObjectByType<Volume>();
+        if (volume != null && volume.profile.TryGet(out bloom))
+        {
+            bloom.intensity.value = 0f;
+        }
+        else
+        {
+            Debug.LogWarning("Không tìm thấy Volume hoặc Bloom trong scene: " + scene.name);
+        }
+    }
     private IEnumerator BloomEffect()
     {
         if (bloom == null) yield break;
