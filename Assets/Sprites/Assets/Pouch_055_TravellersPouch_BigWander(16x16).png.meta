@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cee7f2c1a653fa64db93aa30a8322e7d
+guid: 546d8b046d173c543810cbcd349eec7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9164097274103974401
-    second: RectangleBox_96x96_0
+      213: 3837875320023291639
+    second: Pouch_055_TravellersPouch_BigWander(16x16)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 12, y: 12, z: 12, w: 12}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RectangleBox_96x96_0
+      name: Pouch_055_TravellersPouch_BigWander(16x16)_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 96
-        height: 96
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10ac716dae96d2f70800000000000000
-      internalID: 9164097274103974401
+      spriteID: 7f61a36054fd24530800000000000000
+      internalID: 3837875320023291639
       vertices: []
       indices: 
       edges: []
@@ -125,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RectangleBox_96x96_0: 9164097274103974401
+      Pouch_055_TravellersPouch_BigWander(16x16)_0: 3837875320023291639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
