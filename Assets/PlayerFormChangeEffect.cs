@@ -13,10 +13,10 @@ public class FormChangeEffect : MonoBehaviour
 
     [Header("Vignette Settings")]
     [SerializeField] private Volume volume;
-    [SerializeField] private float vignetteIntensity = 0.4f;
+    [SerializeField] private float intensity = 0.4f;
     [SerializeField] private float effectDuration = 1f;
 
-    private Vignette vignette;
+    private Bloom bloom;
     private PlayerForm currentForm;
 
     private void Awake()
@@ -38,9 +38,9 @@ public class FormChangeEffect : MonoBehaviour
         }
 
         // Lấy Vignette từ Volume
-        if (volume != null && volume.profile.TryGet(out vignette))
+        if (volume != null && volume.profile.TryGet(out bloom))
         {
-            vignette.intensity.value = 0.5f;
+            bloom.intensity.value = 0.5f;
         }
     }
 
@@ -54,7 +54,7 @@ public class FormChangeEffect : MonoBehaviour
 
         // Kích hoạt hiệu ứng
         StartCoroutine(GlowLightEffect(lightColor));
-        StartCoroutine(VignetteEffect());
+        StartCoroutine(BloomEffect());
     }
 
     private IEnumerator GlowLightEffect(Color targetColor)
@@ -84,29 +84,17 @@ public class FormChangeEffect : MonoBehaviour
         playerLight.intensity = 0f;
     }
 
-    private IEnumerator VignetteEffect()
+    private IEnumerator BloomEffect()
     {
-        if (vignette == null) yield break;
+        if (bloom == null) yield break;
 
-        float elapsed = 0f;
+        // Sáng ngay lập tức
+        bloom.intensity.value = intensity;
 
-        // Tối dần
-        while (elapsed < effectDuration / 2)
-        {
-            vignette.intensity.value = Mathf.Lerp(0f, vignetteIntensity, elapsed / (effectDuration / 2));
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
+        // Giữ trong một khoảng thời gian
+        yield return new WaitForSeconds(effectDuration);
 
-        // Sáng lại
-        elapsed = 0f;
-        while (elapsed < effectDuration / 2)
-        {
-            vignette.intensity.value = Mathf.Lerp(vignetteIntensity, 0f, elapsed / (effectDuration / 2));
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-
-        vignette.intensity.value = 0f;
+        // Tắt hiệu ứng
+        bloom.intensity.value = 0f;
     }
 }

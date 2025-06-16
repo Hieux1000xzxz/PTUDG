@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         SetForm(PlayerForm.Warrior);
+        
     }
 
     private void Update()
@@ -245,7 +246,6 @@ public class PlayerController : MonoBehaviour
         {
             formChangeEffect.PlayEffect(form);
         }
-        playerHealth?.SetForm(form);
         Debug.Log("Đã chuyển sang dạng: " + form);
     }
 

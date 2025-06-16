@@ -31785,7 +31785,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 01837c54655fcc64d8217448284226bf, type: 2}
+  sharedProfile: {fileID: 11400000, guid: c30bf916a7990f44bb3060f3a43e0adf, type: 2}
 --- !u!4 &481988717
 Transform:
   m_ObjectHideFlags: 0
@@ -46815,6 +46815,38 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 481988716}
     - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: intensity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: mageColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: mageColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: mageColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: effectDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: warriorColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: warriorColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
+      propertyPath: warriorColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756425623556669269, guid: 646f2dfe601fa7e4d8a0e288a6cb42be, type: 3}
       propertyPath: postProcessVolume
       value: 
       objectReference: {fileID: 481988716}
@@ -58601,7 +58633,6 @@ SceneRoots:
   - {fileID: 105657605}
   - {fileID: 1640397534}
   - {fileID: 3774095727189806445}
-  - {fileID: 269859199}
   - {fileID: 1075601373}
   - {fileID: 67757978}
   - {fileID: 111796846}
@@ -58609,3 +58640,4 @@ SceneRoots:
   - {fileID: 1332275875}
   - {fileID: 481988717}
   - {fileID: 225949324}
+  - {fileID: 269859199}
