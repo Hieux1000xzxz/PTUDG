@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,10 +139,10 @@ TextureImporter:
       name: Orc rider-Attack02_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 42
-        width: 34
-        height: 30
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Orc rider-Attack02_1
       rect:
         serializedVersion: 2
-        x: 136
-        y: 42
-        width: 33
-        height: 31
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: Orc rider-Attack02_2
       rect:
         serializedVersion: 2
-        x: 236
-        y: 42
-        width: 33
-        height: 35
+        x: 200
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Orc rider-Attack02_3
       rect:
         serializedVersion: 2
-        x: 336
-        y: 42
-        width: 34
-        height: 42
+        x: 300
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: Orc rider-Attack02_4
       rect:
         serializedVersion: 2
-        x: 436
-        y: 42
-        width: 33
-        height: 30
+        x: 400
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: Orc rider-Attack02_5
       rect:
         serializedVersion: 2
-        x: 455
-        y: 67
-        width: 32
-        height: 24
+        x: 500
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: Orc rider-Attack02_6
       rect:
         serializedVersion: 2
-        x: 458
-        y: 63
-        width: 10
-        height: 10
+        x: 600
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: Orc rider-Attack02_7
       rect:
         serializedVersion: 2
-        x: 536
-        y: 42
-        width: 38
-        height: 29
+        x: 700
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,108 +315,20 @@ TextureImporter:
       name: Orc rider-Attack02_8
       rect:
         serializedVersion: 2
-        x: 573
-        y: 26
-        width: 24
-        height: 43
+        x: 800
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 34ee0e42eb0544060800000000000000
+      spriteID: 28aba6ece19805243820346c99d1c151
       internalID: 6936758103650135619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc rider-Attack02_9
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 42
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e9610780879317d0800000000000000
-      internalID: -2948846752720918047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc rider-Attack02_10
-      rect:
-        serializedVersion: 2
-        x: 736
-        y: 42
-        width: 51
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1f9c8001aa986980800000000000000
-      internalID: -8545410276645888226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc rider-Attack02_11
-      rect:
-        serializedVersion: 2
-        x: 836
-        y: 42
-        width: 35
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f353062f167fdce50800000000000000
-      internalID: 6831388209841190207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc rider-Attack02_12
-      rect:
-        serializedVersion: 2
-        x: 673
-        y: 29
-        width: 20
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63b85931bc37bd710800000000000000
-      internalID: 1719094998816099126
       vertices: []
       indices: 
       edges: []
@@ -425,7 +337,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a75107854fe55224f8d21635e25f1b85
     internalID: 0
     vertices: []
     indices: 
@@ -437,9 +349,6 @@ TextureImporter:
     nameFileIdTable:
       Orc rider-Attack02_0: -4805291195941671494
       Orc rider-Attack02_1: -898491107783281163
-      Orc rider-Attack02_10: -8545410276645888226
-      Orc rider-Attack02_11: 6831388209841190207
-      Orc rider-Attack02_12: 1719094998816099126
       Orc rider-Attack02_2: 2851206345125205499
       Orc rider-Attack02_3: 5773026405177017699
       Orc rider-Attack02_4: -3239606791055260546
@@ -447,7 +356,6 @@ TextureImporter:
       Orc rider-Attack02_6: 837233935513997722
       Orc rider-Attack02_7: 7414343374642175032
       Orc rider-Attack02_8: 6936758103650135619
-      Orc rider-Attack02_9: -2948846752720918047
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
