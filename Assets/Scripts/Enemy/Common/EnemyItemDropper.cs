@@ -4,10 +4,8 @@ public class EnemyItemDropper : MonoBehaviour
 {
     [Header("Potion Drop Settings")]
     [SerializeField] private GameObject healthPotionSmall;
-    [SerializeField] private GameObject healthPotionMedium;
     [SerializeField] private GameObject healthPotionLarge;
     [SerializeField] private GameObject manaPotionSmall;
-    [SerializeField] private GameObject manaPotionMedium;
     [SerializeField] private GameObject manaPotionLarge;
 
     [Header("Bonus Drop Settings")]
@@ -16,19 +14,23 @@ public class EnemyItemDropper : MonoBehaviour
 
     [Header("Special Drop")]
     [SerializeField] private GameObject gateTicketPrefab; // Vé qua cổng
-
+    [SerializeField] private GameObject staff;
     public void DropItems()
     {
         Vector3 dropPosition = transform.position;
 
         DropOnePotion(dropPosition);
-        TrySpawn(goldPrefab, 50f, dropPosition);     // 50% rơi vàng
-        TrySpawn(crystalPrefab, 5f, dropPosition);   // 5% rơi tinh thạch
+        TrySpawn(goldPrefab, 80f, dropPosition); 
+        TrySpawn(crystalPrefab, 50f, dropPosition);
 
         // Vé qua cổng: nếu được gán thì luôn rơi
         if (gateTicketPrefab != null)
         {
             SpawnItem(gateTicketPrefab, dropPosition);
+        }
+        if (staff != null)
+        {
+            SpawnItem(staff, dropPosition);
         }
     }
 
@@ -36,16 +38,12 @@ public class EnemyItemDropper : MonoBehaviour
     {
         float roll = Random.Range(0f, 100f);
 
-        if (roll < 20f)
+        if (roll < 25f)
             SpawnItem(healthPotionSmall, position);
-        else if (roll < 30f)
-            SpawnItem(healthPotionMedium, position);
-        else if (roll < 40f)
+        else if (roll < 35f)
             SpawnItem(healthPotionLarge, position);
-        else if (roll < 50f)
-            SpawnItem(manaPotionSmall, position);
         else if (roll < 60f)
-            SpawnItem(manaPotionMedium, position);
+            SpawnItem(manaPotionSmall, position);
         else if (roll < 70f)
             SpawnItem(manaPotionLarge, position);
         // else: không rơi gì

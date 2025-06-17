@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8ca0c7e425771d94fa1da603ebcb744e
+guid: dac2bd126ade66a4c8fe012abf40eb7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6192310441617013460
-    second: Coin_spin2_0
+      213: 3473359137553555466
+    second: icon2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coin_spin2_0
+      name: icon2_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 12
-        height: 12
+        x: 4
+        y: 4
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c25c97c267e701aa0800000000000000
-      internalID: -6192310441617013460
+      spriteID: a00ac33abb9d33030800000000000000
+      internalID: 3473359137553555466
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Coin_spin2_0: -6192310441617013460
+      icon2_0: 3473359137553555466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

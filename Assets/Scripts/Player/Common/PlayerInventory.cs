@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance { get; private set; }
 
     private Dictionary<string, int> itemCounts = new Dictionary<string, int>();
+    public event Action OnInventoryChanged;
+
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class PlayerInventory : MonoBehaviour
             itemCounts[itemName] += amount;
         else
             itemCounts[itemName] = amount;
+        OnInventoryChanged?.Invoke();
 
         Debug.Log($"Picked up {itemName}. Total: {itemCounts[itemName]}");
     }
@@ -34,10 +37,22 @@ public class PlayerInventory : MonoBehaviour
         if (itemCounts.ContainsKey(itemName))
         {
             itemCounts[itemName] -= amount;
-            if (itemCounts[itemName] <= 0)
-                itemCounts.Remove(itemName);
 
+            if (itemCounts[itemName] <= 0)
+            {
+                itemCounts.Remove(itemName); // XÓA hoàn toàn khỏi inventory
+                Debug.Log($"{itemName} đã bị xóa khỏi inventory.");
+            }
+
+            OnInventoryChanged?.Invoke();
             Debug.Log($"Removed {itemName}. Remaining: {GetItemCount(itemName)}");
         }
     }
+
+
+    public Dictionary<string, int> GetAllItems()
+    {
+        return new Dictionary<string, int>(itemCounts);
+    }
+
 }

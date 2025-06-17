@@ -216,10 +216,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: baa159e7adf9c38d0800000000000000
-      internalID: -2865239502139090261
+      spriteID: 2c5fc2310b74f9f4bbe37226834b0496
+      internalID: 688262333
       vertices: []
       indices: 
       edges: []
@@ -238,10 +238,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c8e87389ddf5368a0800000000000000
-      internalID: -6313096847297114484
+      spriteID: 4b29c4f1cb694ff48bb0a72a264f86f0
+      internalID: -1585410718
       vertices: []
       indices: 
       edges: []
@@ -264,8 +264,8 @@ TextureImporter:
       Swordsman-Idle_1: -7132607124198789229
       Swordsman-Idle_2: 1745013774301411547
       Swordsman-Idle_3: -3124490933595188275
-      Swordsman-Idle_4: -2865239502139090261
-      Swordsman-Idle_5: -6313096847297114484
+      Swordsman-Idle_4: 688262333
+      Swordsman-Idle_5: -1585410718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

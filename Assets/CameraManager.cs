@@ -1,37 +1,55 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Unity.Cinemachine; // Bỏ nếu không dùng Cinemachine
 
 public class CameraManager : MonoBehaviour
 {
-    public CinemachineCamera virtualCamera; // Gắn camera hiện tại (trong scene mới)
+    [Header("Cài đặt Camera")]
+    public float smoothSpeed = 5f;
+    public Vector3 offset = new Vector3(0f, 0f, -10f); // Mặc định cho 2D
 
-    void OnEnable()
+    private Transform target;
+    private Vector3 initialOffset;
+
+    void Awake()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        // Tìm player ngay khi scene load
+        FindPlayerTarget();
+        initialOffset = offset;
     }
 
-    void OnDisable()
+    void FixedUpdate() // Sử dụng FixedUpdate thay vì LateUpdate khi theo dõi vật lý
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // Tìm Player đang sống (DontDestroyOnLoad)
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null && virtualCamera != null)
+        if (target != null)
         {
-            Canvas canvas = player.GetComponentInChildren<Canvas>();
-            canvas.renderMode = RenderMode.ScreenSpaceCamera;
-            canvas.worldCamera = Camera.main;
-            virtualCamera.Follow = player.transform;
-            virtualCamera.LookAt = player.transform;
-            Debug.Log("Gắn Camera cho Player thành công sau khi load map.");
+            Vector3 desiredPosition = target.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(
+                transform.position,
+                desiredPosition,
+                smoothSpeed * Time.fixedDeltaTime // Sử dụng fixedDeltaTime
+            );
+            transform.position = smoothedPosition;
+        }
+    }
+
+    void FindPlayerTarget()
+    {
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObj != null)
+        {
+            target = playerObj.transform;
+            Debug.Log("Đã tìm thấy Player: " + playerObj.name);
         }
         else
         {
-            Debug.LogWarning("Không tìm thấy Player hoặc Camera để gắn.");
+            Debug.LogWarning("Không tìm thấy đối tượng với tag 'Player'");
+            // Tự động tìm lại sau 1 giây nếu không thấy
+            Invoke("FindPlayerTarget", 1f);
         }
+    }
+
+    // Gọi khi cần thay đổi target
+    public void SetNewTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
 }

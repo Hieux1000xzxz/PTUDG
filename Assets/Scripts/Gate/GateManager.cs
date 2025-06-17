@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GateManager : MonoBehaviour
 {
     [SerializeField] private GameObject gate;
-    [SerializeField] private string requiredItem = "GateTicket"; // Tên item cần thiết để mở cổng
+    [SerializeField] private string requiredItem = "Gate Ticket"; // Tên item cần thiết để mở cổng
     private void Start()
     {
         if (gate != null)

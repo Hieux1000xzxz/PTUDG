@@ -214,5 +214,16 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(1.5f); // Thời gian chờ để animation chết hoàn thành
         animator.enabled = false; // Vô hiệu hóa animator sau khi chết
     }
+    public void UseHealthPotion(float healAmount)
+    {
+        Heal(healAmount);
+        Debug.Log($"Sử dụng bình máu: +{healAmount} HP");
+    }
+
+    public void UseManaPotion(float manaAmount)
+    {
+        RecoverMana(manaAmount);
+        Debug.Log($"Sử dụng bình mana: +{manaAmount} Mana");
+    }
 
 }

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "itemName": "Coin",
+      "description": "Dùng để mua vật phẩm trong cửa hàng",
+      "iconPath": "Icons/coin_icon"
+    },
+    {
+      "itemName": "Crystal",
+      "description": "Dùng để nâng cấp trang bị",
+      "iconPath": "Icons/crystal_icon"
+    },
+    {
+      "itemName": "Staff",
+      "description": "Ban cho bạn sức mạnh phép thuật thần kỳ [Nhấn phím 2 để sử dụng]",
+      "iconPath": "Icons/staff_icon"
+    },
+    {
+      "itemName": "Gate Ticket",
+      "description": "Kích hoạt cổng dịch chuyển dùng xong sẽ biến mất",
+      "iconPath": "Icons/gate_ticket_icon"
+    },
+    {
+      "itemName": "Health Potion Large",
+      "description": "Hồi phục 50 máu [Nhấn phím E để dùng]",
+      "iconPath": "Icons/hlarge_icon"
+    },
+    {
+      "itemName": "Health Potion Small",
+      "description": "Hồi phục 25 máu [Nhấn phím E để dùng]",
+      "iconPath": "Icons/hsmall_icon"
+    },
+    {
+      "itemName": "Mana Potion Small",
+      "description": "Hồi phục 25 năng lượng[Nhấn phím R để dùng]",
+      "iconPath": "Icons/msmall_icon"
+    },
+    {
+      "itemName": "Mana Potion Large",
+      "description": "Hồi phục 50 năng lượng [Nhấn phím R để dùng]",
+      "iconPath": "Icons/mlarge_icon"
+    }
+  ]
+}
