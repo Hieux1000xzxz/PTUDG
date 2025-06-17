@@ -112,10 +112,10 @@ TextureImporter:
       name: Orc rider-Death_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 39
-        width: 34
-        height: 33
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Orc rider-Death_1
       rect:
         serializedVersion: 2
-        x: 136
-        y: 39
-        width: 33
-        height: 32
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: Orc rider-Death_2
       rect:
         serializedVersion: 2
-        x: 232
-        y: 39
-        width: 45
-        height: 22
+        x: 200
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: Orc rider-Death_3
       rect:
         serializedVersion: 2
-        x: 327
-        y: 39
-        width: 54
-        height: 17
+        x: 300
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cf73a74a6abc6bf4b869d0e5b987dfdf
     internalID: 0
     vertices: []
     indices: 
