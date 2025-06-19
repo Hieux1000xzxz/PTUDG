@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Staff
-  attractSpeed: 2
+  attractSpeed: 5
   attractRange: 1.5
   pickupDistance: 0.3
 --- !u!50 &628364525944123148

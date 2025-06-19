@@ -48,8 +48,12 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log($"Removed {itemName}. Remaining: {GetItemCount(itemName)}");
         }
     }
-
-
+    public void ClearInventory()
+    {
+        itemCounts.Clear();
+        OnInventoryChanged?.Invoke();
+        Debug.Log("Inventory cleared.");
+    }
     public Dictionary<string, int> GetAllItems()
     {
         return new Dictionary<string, int>(itemCounts);

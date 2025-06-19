@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Item
   - SpawnPoint
+  - Sister
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Layer 1
   - Layer 2
   - Layer 3
-  - 
+  - Wall
   - 
   - 
   - 

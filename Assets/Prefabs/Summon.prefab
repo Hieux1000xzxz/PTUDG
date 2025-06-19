@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 7
   stopDistance: 2
   attackSpeed: 10
   waitDuration: 1
@@ -214,7 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173793640fa7d7e4dbc75051e08a6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 15
   hitStunDuration: 0.5
   healthBarPrefab: {fileID: 7073661888884717440, guid: 3e8b9c71513dd0b42acafb952173e285, type: 3}
-  deathPrefab: {fileID: 7669966937311582299, guid: 2279ca83cbdf24e4082468656d4c1a18, type: 3}
+  deathPrefab: {fileID: 7669966937311582299, guid: c0351219a01f1814cb8cbce46cb7ef5f, type: 3}
+  damageTextPrefab: {fileID: 4771922008321150501, guid: 5d6fc0a8a070ad44e8cbd3328f708f41, type: 3}

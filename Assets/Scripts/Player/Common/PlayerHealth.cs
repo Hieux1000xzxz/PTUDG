@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     public float manaRegenRate;
 
 
-    private float hitStunDuration = 0.5f;
+    private float hitStunDuration = 0.25f;
     private PlayerForm currentForm;
 
     private Animator animator;
@@ -112,14 +112,14 @@ public class PlayerHealth : MonoBehaviour
         switch (form)
         {
             case PlayerForm.Warrior:
-                bonusArmor = 7f;
+                bonusArmor = 5f;
                 bonusManaRegen = -1f; // giảm tốc độ hồi mana
                 break;
 
             case PlayerForm.Mage:
                 bonusMana = 50f;
                 bonusArmor = -5f;
-                bonusManaRegen = 4f; // hồi mana nhanh hơn
+                bonusManaRegen = 3f; // hồi mana nhanh hơn
                 break;
         }
 
@@ -156,8 +156,11 @@ public class PlayerHealth : MonoBehaviour
         {
             StartCoroutine(DisableAnimatorAfterDeath());
         }
+        PlayerInventory.Instance.ClearInventory(); // Xóa sạch inventory khi chết
+        Destroy(gameObject);
+        GameManager.Instance.GameOver();
     }
-
+   
     // Các phương thức nâng cấp dùng base stat
     public void UpgradeHealth(float amount)
     {

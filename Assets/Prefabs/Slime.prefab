@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173793640fa7d7e4dbc75051e08a6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 30
   hitStunDuration: 0.25
   healthBarPrefab: {fileID: 7073661888884717440, guid: 3e8b9c71513dd0b42acafb952173e285, type: 3}
   deathPrefab: {fileID: 7669966937311582299, guid: ee239e809d9baa94c8ca0c2e23064bd3, type: 3}

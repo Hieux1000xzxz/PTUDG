@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 1346174600535645877}
   - component: {fileID: 7178732467652367868}
   - component: {fileID: 7576863733643028428}
-  - component: {fileID: 7462373669705646120}
+  - component: {fileID: -5238242440038576124}
   m_Layer: 0
   m_Name: OrcRider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173793640fa7d7e4dbc75051e08a6521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 120
   hitStunDuration: 0.25
-  healthBarPrefab: {fileID: 0}
-  deathPrefab: {fileID: 0}
-  damageTextPrefab: {fileID: 0}
+  healthBarPrefab: {fileID: 7073661888884717440, guid: 3e8b9c71513dd0b42acafb952173e285, type: 3}
+  deathPrefab: {fileID: 7669966937311582299, guid: 09b71b549315d3a4ab8a9f9998140657, type: 3}
+  damageTextPrefab: {fileID: 4771922008321150501, guid: 5d6fc0a8a070ad44e8cbd3328f708f41, type: 3}
 --- !u!114 &7576863733643028428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,16 +207,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7371de0277f1c4ab7c0095b0c29a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPotionSmall: {fileID: 0}
-  healthPotionMedium: {fileID: 0}
-  healthPotionLarge: {fileID: 0}
-  manaPotionSmall: {fileID: 0}
-  manaPotionMedium: {fileID: 0}
-  manaPotionLarge: {fileID: 0}
-  goldPrefab: {fileID: 0}
-  crystalPrefab: {fileID: 0}
+  healthPotionSmall: {fileID: 6214194973298909607, guid: de2882f22527708449fe7f7bb4bcb730, type: 3}
+  healthPotionLarge: {fileID: 8441805751741539525, guid: 24c5f7c0a6cf92b48a56f569aaec4af2, type: 3}
+  manaPotionSmall: {fileID: 8400624239508346841, guid: f62194ce9b339c64ca9499c9aecb3ed0, type: 3}
+  manaPotionLarge: {fileID: 1048517565500053279, guid: f23e70dee2f63084d995be5fcf9b673c, type: 3}
+  goldPrefab: {fileID: 5716621936566318400, guid: a4246e3b427c8f44c9255b38e5b9047b, type: 3}
+  crystalPrefab: {fileID: 2257668724218103852, guid: c9052fcbb83fd8f4081c20c7f34448e0, type: 3}
   gateTicketPrefab: {fileID: 0}
---- !u!114 &7462373669705646120
+  staff: {fileID: 0}
+--- !u!114 &-5238242440038576124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,16 +227,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4859077726b4a4cb9b20221ea520cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 5
   detectionRange: 10
   attackRange: 2
   attackCooldown: 2
   damage: 25
-  attackDuration: 1.2
+  attackDuration: 0.7
   attackDelay: 0.4
+  postAttackDelay: 0.5
   chargeDuration: 1.2
-  chargeStartDelay: 0.3
+  chargeStartDelay: 0.8
   chargeSpeed: 4
   chargeDamageMultiplier: 1.3
   chargeChance: 0.3
   chargeCheckInterval: 1.5
+  chargeCooldown: 5

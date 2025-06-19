@@ -7,53 +7,77 @@ public class MoonveilDashSkill : MonoBehaviour
     public float dashDuration = 0.6f;
     public float hitInterval = 0.15f;
     public int damagePerHit = 10;
-    public float attackLength = 1.5f; // Chiều dài của đòn tấn công
+    public float attackLength = 1.5f;
     public float attackWidth = 0.4f;
     public Transform attackPoint;
     public float manaCost = 20f;
+    public string enemyTag = "Enemy"; // Sử dụng tag thay vì layer
 
     [Header("Cooldown Settings")]
     public float cooldownTime = 5f;
     private float cooldownTimer = 0f;
 
     private bool isDashing = false;
+    private bool canDash = true;
     private Vector2 dashDirection;
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
     private PlayerController playerController;
     private Animator animator;
-    private Vector2 dashStartPosition;
     private PlayerHealth playerHealth;
     private float dashTimer;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
     }
+
     private void Update()
     {
         if (cooldownTimer > 0f)
+        {
             cooldownTimer -= Time.deltaTime;
+        }
+        else if (!canDash)
+        {
+            canDash = true;
+        }
     }
+
     public void ActivateMoonveilDash()
     {
-        if (isDashing) return;             // Đang thực hiện skill
-        if (cooldownTimer > 0f) return;           // Đang cooldown
-        if (playerHealth == null) return;
-        if (playerHealth.currentMana < manaCost)
-        {
-            Debug.Log("Không đủ mana để dùng Triple Slash");
-            return;
-        }
+        if (!CanActivateDash()) return;
 
-        playerHealth.UseMana(manaCost); // Trừ mana
+        playerHealth.UseMana(manaCost);
         cooldownTimer = cooldownTime;
+        canDash = false;
 
         StartCoroutine(MoonveilDashRoutine());
+    }
+
+    private bool CanActivateDash()
+    {
+        if (isDashing)
+        {
+            Debug.Log("Dash is already active");
+            return false;
+        }
+
+        if (!canDash)
+        {
+            Debug.Log("Dash is on cooldown");
+            return false;
+        }
+
+        if (playerHealth == null || playerHealth.currentMana < manaCost)
+        {
+            Debug.Log("Not enough mana for Moonveil Dash");
+            return false;
+        }
+
+        return true;
     }
 
     public bool IsDashing()
@@ -63,39 +87,68 @@ public class MoonveilDashSkill : MonoBehaviour
 
     private IEnumerator MoonveilDashRoutine()
     {
-        isDashing = true;
-        dashDirection = playerController.GetLastMoveDirection();
-        dashStartPosition = rb.position;
-        dashTimer = 0f;
+        InitializeDash();
+
+        yield return new WaitForSeconds(0.2f); // Startup delay
+
         int hitCount = 0;
-        animator.SetBool("isDashing", true);
-        yield return new WaitForSeconds(0.2f); // Delay before starting dash
-        while (dashTimer < dashDuration && hitCount < 4)
+        while (ShouldContinueDash(hitCount))
         {
-            // Tấn công mỗi khoảng thời gian
-            if (hitCount * hitInterval <= dashTimer)
+            if (ShouldHit(hitCount))
             {
-                Vector2 center = (Vector2)attackPoint.position + dashDirection.normalized * 0.5f;
-
-                Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(
-                    center,
-                    new Vector2(attackLength, attackWidth),
-                    0f
-                );
-
-                foreach (var enemy in hitEnemies)
-                {
-                    if (enemy.CompareTag("Enemy"))
-                    {
-                        enemy.GetComponent<EnemyHealth>()?.TakeDamage(damagePerHit);
-                    }
-                }
+                PerformAttack();
                 hitCount++;
             }
 
             dashTimer += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
+
+        EndDash();
+    }
+
+    private void InitializeDash()
+    {
+        isDashing = true;
+        dashDirection = playerController.GetLastMoveDirection();
+        dashTimer = 0f;
+        animator.SetBool("isDashing", true);
+    }
+
+    private bool ShouldContinueDash(int hitCount)
+    {
+        return dashTimer < dashDuration && hitCount < 4;
+    }
+
+    private bool ShouldHit(int hitCount)
+    {
+        return hitCount * hitInterval <= dashTimer;
+    }
+
+    private void PerformAttack()
+    {
+        // Tạo một hình chữ nhật tại vị trí tấn công
+        Vector2 attackCenter = (Vector2)attackPoint.position + dashDirection.normalized * (attackLength * 0.5f);
+
+        // Lấy tất cả collider trong khu vực
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(
+            attackCenter,
+            new Vector2(attackLength, attackWidth),
+            Vector2.Angle(Vector2.right, dashDirection)
+        );
+
+        foreach (var collider in hitColliders)
+        {
+            // Kiểm tra theo tag thay vì layer
+            if (collider.CompareTag(enemyTag))
+            {
+                collider.GetComponent<EnemyHealth>()?.TakeDamage(damagePerHit);
+            }
+        }
+    }
+
+    private void EndDash()
+    {
         animator.SetBool("isDashing", false);
         isDashing = false;
     }
@@ -103,8 +156,14 @@ public class MoonveilDashSkill : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         if (!attackPoint) return;
-        Vector2 pos = (Vector2)attackPoint.position + Vector2.right * 0.5f;
+
+        Vector2 center = (Vector2)attackPoint.position + dashDirection.normalized * (attackLength * 0.5f);
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(pos, new Vector3(attackLength, attackWidth, 0));
+        Gizmos.matrix = Matrix4x4.TRS(
+            center,
+            Quaternion.Euler(0, 0, Vector2.Angle(Vector2.right, dashDirection)),
+            Vector3.one
+        );
+        Gizmos.DrawWireCube(Vector3.zero, new Vector3(attackLength, attackWidth, 0));
     }
 }

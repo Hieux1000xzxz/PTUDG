@@ -38,13 +38,13 @@ public class EnemyItemDropper : MonoBehaviour
     {
         float roll = Random.Range(0f, 100f);
 
-        if (roll < 25f)
+        if (roll < 15f)
             SpawnItem(healthPotionSmall, position);
-        else if (roll < 35f)
+        else if (roll < 25f)
             SpawnItem(healthPotionLarge, position);
-        else if (roll < 60f)
+        else if (roll < 40f)
             SpawnItem(manaPotionSmall, position);
-        else if (roll < 70f)
+        else if (roll < 50f)
             SpawnItem(manaPotionLarge, position);
         // else: không rơi gì
     }

@@ -7,6 +7,7 @@ public class OrcRiderAI : EnemyAI
     [SerializeField] private int damage = 25;
     [SerializeField] private float attackDuration = 1.2f;
     [SerializeField] private float attackDelay = 0.4f;
+    [SerializeField] private float postAttackDelay = 0.5f;
 
     [Header("Charge Settings")]
     [SerializeField] private float chargeDuration = 1.2f;
@@ -15,26 +16,60 @@ public class OrcRiderAI : EnemyAI
     [SerializeField] private float chargeDamageMultiplier = 1.3f;
     [SerializeField] private float chargeChance = 0.3f;
     [SerializeField] private float chargeCheckInterval = 1.5f;
+    [SerializeField] private float chargeCooldown = 3f;
+
+    // Animation states
+    private enum AnimationState { Idle, Walking, Attacking, Charging }
+    private AnimationState currentState = AnimationState.Idle;
 
     private bool isCharging = false;
-    private float lastChargeCheckTime = 0f;
+    private float lastChargeTime = -10f;
+    private Vector2 lastDirection;
+    private bool canCharge => Time.time - lastChargeTime >= chargeCooldown;
 
     protected override void Start()
     {
         base.Start();
-
-        // Gán lại tầm phát hiện và tầm đánh cho riêng OrcRider
         detectionRange = 7f;
         attackRange = 1.8f;
     }
 
     protected override void Update()
     {
-        base.Update();
-
-        if (!isAttacking && !isCharging && !IsPlayerInAttackRange())
+        if (target == null || GetComponent<FreezeEffect>() != null)
         {
-            TryChargeAttack();
+            rb.linearVelocity = Vector2.zero;
+            UpdateAnimationState(AnimationState.Idle);
+            return;
+        }
+
+        lastDirection = (target.position - transform.position).normalized;
+        UpdateSpriteFlip();
+
+        if (!isAttacking && !isCharging)
+        {
+            if (IsPlayerInAttackRange())
+            {
+                Attack();
+            }
+            else if (IsPlayerInDetectionRange())
+            {
+                TryChargeAttack();
+                HandleMovement();
+            }
+            else
+            {
+                rb.linearVelocity = Vector2.zero;
+                UpdateAnimationState(AnimationState.Idle);
+            }
+        }
+    }
+
+    private void UpdateSpriteFlip()
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = lastDirection.x < 0;
         }
     }
 
@@ -48,37 +83,30 @@ public class OrcRiderAI : EnemyAI
 
     private void TryChargeAttack()
     {
-        if (Time.time - lastChargeCheckTime >= chargeCheckInterval)
+        if (canCharge && Random.value <= chargeChance &&
+            Vector2.Distance(transform.position, target.position) > attackRange * 1.5f)
         {
-            lastChargeCheckTime = Time.time;
-
-            if (IsPlayerInDetectionRange() && Random.value <= chargeChance)
-            {
-                StartCoroutine(ChargeRoutine());
-            }
+            StartCoroutine(ChargeRoutine());
         }
     }
 
     private IEnumerator AttackRoutine()
     {
         isAttacking = true;
-
-        if (animator != null)
-            animator.SetBool("IsAttacking", true);
+        rb.linearVelocity = Vector2.zero;
+        UpdateAnimationState(AnimationState.Attacking);
 
         yield return new WaitForSeconds(attackDelay);
-        rb.linearVelocity = Vector2.zero;
 
         if (IsPlayerInAttackRange())
         {
-            var playerHealth = target?.GetComponent<PlayerHealth>();
-            playerHealth?.TakeDamage(damage);
+            target?.GetComponent<PlayerHealth>()?.TakeDamage(damage);
         }
 
         yield return new WaitForSeconds(attackDuration - attackDelay);
 
-        if (animator != null)
-            animator.SetBool("IsAttacking", false);
+        // Thời gian hồi chiêu sau tấn công
+        yield return new WaitForSeconds(postAttackDelay);
 
         isAttacking = false;
     }
@@ -86,50 +114,32 @@ public class OrcRiderAI : EnemyAI
     private IEnumerator ChargeRoutine()
     {
         isCharging = true;
+        lastChargeTime = Time.time;
         rb.linearVelocity = Vector2.zero;
+        UpdateAnimationState(AnimationState.Charging);
 
         yield return new WaitForSeconds(chargeStartDelay);
 
-        if (animator != null)
-            animator.SetBool("IsCharging", true);
-
-        Vector2 direction = (target.position - transform.position).normalized;
-        float elapsed = 0f;
+        Vector2 chargeDirection = lastDirection;
+        float chargeEndTime = Time.time + (chargeDuration - chargeStartDelay);
         bool hasHit = false;
 
-        while (elapsed < (chargeDuration - chargeStartDelay))
+        while (Time.time < chargeEndTime)
         {
-            rb.linearVelocity = direction * chargeSpeed;
+            rb.linearVelocity = chargeDirection * chargeSpeed;
 
             if (!hasHit && target != null &&
-                Vector2.Distance(transform.position, target.position) <= 1.0f)
+                Vector2.Distance(transform.position, target.position) <= attackRange)
             {
-                var playerHealth = target.GetComponent<PlayerHealth>();
-                playerHealth?.TakeDamage(Mathf.RoundToInt(damage * chargeDamageMultiplier));
+                target.GetComponent<PlayerHealth>()?.TakeDamage(Mathf.RoundToInt(damage * chargeDamageMultiplier));
                 hasHit = true;
             }
 
-            elapsed += Time.deltaTime;
             yield return null;
         }
 
         rb.linearVelocity = Vector2.zero;
-
-        if (animator != null)
-            animator.SetBool("IsCharging", false);
-
         isCharging = false;
-    }
-
-    protected override void UpdateAnimation()
-    {
-        if (animator == null) return;
-
-        bool isWalking = !isAttacking && !isCharging &&
-                         IsPlayerInDetectionRange() &&
-                         !IsPlayerInAttackRange();
-
-        animator.SetBool("IsWalking", isWalking);
     }
 
     protected override void HandleMovement()
@@ -138,11 +148,53 @@ public class OrcRiderAI : EnemyAI
 
         if (IsPlayerInDetectionRange() && !IsPlayerInAttackRange())
         {
-            Vector2 direction = (target.position - transform.position).normalized;
-            Move(direction);
+            rb.linearVelocity = lastDirection * moveSpeed;
+            UpdateAnimationState(AnimationState.Walking);
+        }
+    }
 
-            if (spriteRenderer != null)
-                spriteRenderer.flipX = direction.x < 0;
+    protected override void UpdateAnimation()
+    {
+        // Đã được xử lý trong UpdateAnimationState
+    }
+
+    private void UpdateAnimationState(AnimationState newState)
+    {
+        if (animator == null || currentState == newState) return;
+
+        currentState = newState;
+
+        // Reset all parameters first
+        animator.SetBool("IsWalking", false);
+        animator.SetBool("IsAttacking", false);
+        animator.SetBool("IsCharging", false);
+
+        switch (currentState)
+        {
+            case AnimationState.Walking:
+                animator.SetBool("IsWalking", true);
+                break;
+            case AnimationState.Attacking:
+                animator.SetBool("IsAttacking", true);
+                break;
+            case AnimationState.Charging:
+                animator.SetBool("IsCharging", true);
+                break;
+            case AnimationState.Idle:
+                // All parameters already false
+                break;
+        }
+    }
+
+    protected override void OnDrawGizmosSelected()
+    {
+        base.OnDrawGizmosSelected();
+
+        // Vẽ hướng di chuyển hiện tại
+        if (Application.isPlaying)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)lastDirection * 2f);
         }
     }
 }
