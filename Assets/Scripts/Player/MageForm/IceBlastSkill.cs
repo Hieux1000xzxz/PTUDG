@@ -19,6 +19,8 @@ public class IceBlastSkill : MonoBehaviour
     [Header("Enemy Settings")]
     public string enemyTag = "Enemy";
 
+    private AudioSource audioSource;
+    public AudioClip iceExplosionSound;
     private Animator animator;
     private bool isCasting = false;
     private PlayerHealth playerHealth;
@@ -26,6 +28,7 @@ public class IceBlastSkill : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -35,27 +38,45 @@ public class IceBlastSkill : MonoBehaviour
 
     public void ActivateIceBlast()
     {
-      
         if (cooldownTimer > 0f) return;
-        isCasting = true;
         GameObject nearestEnemy = FindNearestEnemy();
-        if (nearestEnemy == null) return;
-        animator.SetBool("isAttacking", true);
-        
-        if (nearestEnemy == null) return;
-        playerHealth.UseMana(manaCost); // Trừ mana
-        Vector2 direction = (nearestEnemy.transform.position - transform.position).normalized;
 
+        // Nếu không có mục tiêu thì không làm gì cả
+        if (nearestEnemy == null)
+        {
+            Debug.Log("❄️ Không tìm thấy mục tiêu để dùng Ice Blast.");
+            return;
+        }
+
+        // Đảm bảo đủ mana trước khi dùng skill
+        if (!playerHealth.HasEnoughMana(manaCost))
+        {
+            Debug.Log("❌ Không đủ mana để dùng Ice Blast.");
+            return;
+        }
+
+        // Bắt đầu kỹ năng
+        isCasting = true;
+        animator.SetBool("isAttacking", true);
+        audioSource.PlayOneShot(iceExplosionSound);
+
+        // Trừ mana và tạo đạn
+        playerHealth.UseMana(manaCost);
+        Vector2 direction = (nearestEnemy.transform.position - transform.position).normalized;
         GameObject proj = Instantiate(iceProjectilePrefab, transform.position, Quaternion.identity);
+
         IceProjectile projectile = proj.GetComponent<IceProjectile>();
         if (projectile != null)
         {
             projectile.InitializeHoming(nearestEnemy, projectileSpeed, explosionAreaSize, damage, freezeDuration, enemyTag);
         }
+
+        // Reset sau delay
         Invoke("ResetAnimator", 0.5f);
         cooldownTimer = cooldownTime;
         isCasting = false;
     }
+
     //tạo hàm reset animator sau 1 giây
     public void ResetAnimator()
     {

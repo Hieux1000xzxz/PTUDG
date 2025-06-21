@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "itemName": "Coin",
-      "description": "Dùng để mua vật phẩm trong cửa hàng",
-      "iconPath": "Icons/coin_icon"
+      "itemName": "Sword",
+      "description": "Vũ khí chuyên dụng [Nhấn phím 1 để dùng]",
+      "iconPath": "Icons/sword_icon"
     },
     {
       "itemName": "Crystal",

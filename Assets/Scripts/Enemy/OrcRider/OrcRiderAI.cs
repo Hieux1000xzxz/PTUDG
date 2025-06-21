@@ -15,7 +15,6 @@ public class OrcRiderAI : EnemyAI
     [SerializeField] private float chargeSpeed = 4f;
     [SerializeField] private float chargeDamageMultiplier = 1.3f;
     [SerializeField] private float chargeChance = 0.3f;
-    [SerializeField] private float chargeCheckInterval = 1.5f;
     [SerializeField] private float chargeCooldown = 3f;
 
     // Animation states

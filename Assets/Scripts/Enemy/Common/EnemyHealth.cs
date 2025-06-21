@@ -17,7 +17,8 @@ public class EnemyHealth : MonoBehaviour
     private EnemyAI enemyController;
     private bool isDead = false;
     public event Action OnDeath; 
-
+    private AudioSource audioSource;
+    public AudioClip hitSound;
     private void Start()
     {
         InitializeComponents();
@@ -30,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
         itemDropper = GetComponent<EnemyItemDropper>();
         animator = GetComponent<Animator>();
         enemyController = GetComponent<EnemyAI>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void SetupHealthBar()
@@ -45,7 +47,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         if (isDead || currentHealth <= 0) return;
-
+        audioSource?.PlayOneShot(hitSound); // Phát âm thanh khi bị đánh
         currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
         UpdateHealthBar();
         ShowDamageText(damageAmount);

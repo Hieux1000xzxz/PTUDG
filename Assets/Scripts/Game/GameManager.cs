@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         PauseMenuUI.SetActive(false);
         GameWinUI.SetActive(false);
     }
+    
     public void OpenMenu()
     {
         Time.timeScale = 0f; // Dừng thời gian
@@ -58,6 +59,12 @@ public class GameManager : MonoBehaviour
         GameOverUI.SetActive(false); // Ẩn GameOver UI
         GameWinUI.SetActive(false); // Ẩn GameWin UI
         PauseMenuUI.SetActive(false); // Ẩn Pause Menu UI
+        //xóa người chơi 
+        if (FindAnyObjectByType<PlayerHealth>() != null)
+        {
+            PlayerHealth playerHealth = FindAnyObjectByType<PlayerHealth>();
+            Destroy(playerHealth.gameObject);
+        }
         SceneManager.LoadScene("MainMenu"); // Quay về menu chính
     }
  

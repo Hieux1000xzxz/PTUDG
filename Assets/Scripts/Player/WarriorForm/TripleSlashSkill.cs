@@ -11,6 +11,7 @@ public class TripleSlashSkill : MonoBehaviour
     public int slashCount = 3;
     public int damagePerHit = 17;
     public int manaCost = 10;
+    public AudioClip attackSound;
 
     [Header("Cooldown Settings")]
     public float cooldownTime = 10f;
@@ -24,16 +25,16 @@ public class TripleSlashSkill : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private PlayerHealth playerHealth;
-
+    private AudioSource audioSource;
     private bool isTripleSlashing = false;
     private Vector2 lockPosition;
-
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         playerHealth = GetComponent<PlayerHealth>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -55,7 +56,6 @@ public class TripleSlashSkill : MonoBehaviour
 
         playerHealth.UseMana(manaCost); // Trừ mana
         cooldownTimer = cooldownTime;
-
         StartCoroutine(TripleSlashCoroutine());
     }
 
@@ -68,7 +68,6 @@ public class TripleSlashSkill : MonoBehaviour
     {
         isTripleSlashing = true;
         float delay = totalDuration / slashCount;
-
         lockPosition = rb.position;
         animator.SetBool("isUsingSkill1", true);
         yield return new WaitForSeconds(0.1f);
@@ -76,7 +75,7 @@ public class TripleSlashSkill : MonoBehaviour
         for (int i = 0; i < slashCount; i++)
         {
             rb.MovePosition(lockPosition); // Giữ nguyên vị trí
-
+            audioSource.PlayOneShot(attackSound); // Phát âm thanh tấn công
             Vector2 offset = spriteRenderer.flipX ? Vector2.left : Vector2.right;
             Vector2 center = (Vector2)attackPoint.position + offset * (attackLength / 2f);
 
@@ -116,7 +115,6 @@ public class TripleSlashSkill : MonoBehaviour
 
             yield return new WaitForSeconds(delay);
         }
-
         animator.SetBool("isUsingSkill1", false);
         isTripleSlashing = false;
     }

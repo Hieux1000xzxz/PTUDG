@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3574078676251954949}
   - component: {fileID: 6458365267142942518}
   - component: {fileID: 7336140373385542806}
-  - component: {fileID: 5670262149220587694}
   - component: {fileID: 9176068071070457211}
   - component: {fileID: 8828948205867923915}
   m_Layer: 0
@@ -113,33 +112,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!50 &5670262149220587694
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319089552330959462}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &9176068071070457211
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,3 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceExplosionEffectPrefab: {fileID: 6416114809348999645, guid: 47b175dbb00269a4cb15aa58f7a7e66a, type: 3}
+  audioSource: {fileID: -389503735545361311, guid: 47b175dbb00269a4cb15aa58f7a7e66a, type: 3}

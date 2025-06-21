@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public enum PlayerForm { Warrior, Mage }
 
@@ -13,11 +15,13 @@ public class PlayerController : MonoBehaviour
     public float attackDelay = 0.4f;
     public float attackCooldown = 0.3f;
     public float hitCooldown = 0.35f; // Cooldown after being hit
-
+    public AudioClip attackSound;
     [Header("Form Change Effect")]
-    [SerializeField] private FormChangeEffect formChangeEffect;
+    private FormChangeEffect formChangeEffect;
     private Vector2 moveInput;
     private Vector2 lastMoveDirection = Vector2.right;
+    public AudioClip changeSound;
+    public SkillCooldownUI[] skillCooldownUIs; // Array of all skill UI elements
 
     [Header("Form Change Settings")]
     public float formChangeCooldown = 1.5f; // Thời gian delay giữa các lần biến hình
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private MoonveilDashSkill moonveilDashSkill;
     private MageExplosionSkill explosionSkill;
     private IceBlastSkill iceBlastSkill;
+   
     // State variables
     private bool isAttacking = false;
     private bool isMovementLocked = false;
@@ -47,8 +52,8 @@ public class PlayerController : MonoBehaviour
     public bool canAttack = true; // Biến này để kiểm soát việc có thể tấn công hay không
     private Vector2 attackLockPosition;
     
-    private PlayerForm currentForm;
-
+    public PlayerForm currentForm;
+    private AudioSource audioSource;
     [Header("Animators")]
     public RuntimeAnimatorController warriorAnimator;
     public RuntimeAnimatorController mageAnimator;
@@ -69,6 +74,7 @@ public class PlayerController : MonoBehaviour
         moonveilDashSkill = GetComponent<MoonveilDashSkill>();
         explosionSkill = GetComponent<MageExplosionSkill>();
         iceBlastSkill = GetComponent<IceBlastSkill>();
+        audioSource = GetComponent<AudioSource>();
         if (formChangeEffect == null)
         {
             formChangeEffect = GetComponent<FormChangeEffect>();
@@ -153,11 +159,12 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(UseSkillCoroutine(tripleSlashSkill.totalDuration));
                 tripleSlashSkill.ActivateTripleSlash();
             }
-            else if (currentForm == PlayerForm.Mage && iceBlastSkill && !iceBlastSkill.IsCasting())
+            else if (currentForm == PlayerForm.Mage && explosionSkill && !explosionSkill.IsExploding())
             {
-                StartCoroutine(UseSkillCoroutine(0.5f));
-                iceBlastSkill.ActivateIceBlast();
+                StartCoroutine(UseSkillCoroutine(explosionSkill.explosionDelay));
+                explosionSkill.ActivateExplosion();
             }
+          
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -167,10 +174,10 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(UseSkillCoroutine(moonveilDashSkill.dashDuration));
                 moonveilDashSkill.ActivateMoonveilDash();
             }
-            else if (currentForm == PlayerForm.Mage && explosionSkill && !explosionSkill.IsExploding())
+            else if (currentForm == PlayerForm.Mage && iceBlastSkill && !iceBlastSkill.IsCasting())
             {
-                StartCoroutine(UseSkillCoroutine(explosionSkill.explosionDelay));
-                explosionSkill.ActivateExplosion();
+                StartCoroutine(UseSkillCoroutine(0.5f));
+                iceBlastSkill.ActivateIceBlast();
             }
         }
     }
@@ -183,6 +190,7 @@ public class PlayerController : MonoBehaviour
         {
             if (currentForm != PlayerForm.Warrior)
             {
+                audioSource.PlayOneShot(changeSound);
                 SetForm(PlayerForm.Warrior);
                 StartCoroutine(FormChangeCooldownRoutine());
             }
@@ -193,6 +201,7 @@ public class PlayerController : MonoBehaviour
             {
                 SetForm(PlayerForm.Mage);
                 StartCoroutine(FormChangeCooldownRoutine());
+                audioSource.PlayOneShot(changeSound);
             }
             else if (!hasMagicStaff)
             {
@@ -236,6 +245,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (currentForm == PlayerForm.Mage)
         {
+            audioSource.PlayOneShot(attackSound);
             mageAttack.PerformAttack(lastMoveDirection);
         }
 
@@ -253,12 +263,12 @@ public class PlayerController : MonoBehaviour
         isUsingSkill = false;
     }
 
-    public void SetForm(PlayerForm form)
+   public void SetForm(PlayerForm form)
     {
         currentForm = form;
         warriorAttack.enabled = (form == PlayerForm.Warrior);
         mageAttack.enabled = (form == PlayerForm.Mage);
-
+    
         if (animator != null)
         {
             animator.runtimeAnimatorController = form == PlayerForm.Warrior ? warriorAnimator : mageAnimator;
@@ -267,6 +277,10 @@ public class PlayerController : MonoBehaviour
         {
             formChangeEffect.PlayEffect(form);
         }
+    
+        // Update all skill icons
+        UpdateAllSkillIcons();
+    
         Debug.Log("Đã chuyển sang dạng: " + form);
         playerHealth.SetForm(form);
     }
@@ -296,5 +310,15 @@ public class PlayerController : MonoBehaviour
         isFormChangeOnCooldown = true;
         yield return new WaitForSeconds(formChangeCooldown);
         isFormChangeOnCooldown = false;
+    }
+    private void UpdateAllSkillIcons()
+    {
+        foreach (var skillUI in skillCooldownUIs)
+        {
+            if (skillUI != null)
+            {
+                skillUI.UpdateSkillIcon();
+            }
+        }
     }
 }

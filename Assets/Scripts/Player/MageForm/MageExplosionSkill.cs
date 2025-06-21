@@ -20,11 +20,14 @@ public class MageExplosionSkill : MonoBehaviour
     private Animator animator;
     private PlayerHealth playerHealth;
     private Vector2 lockPosition;
-
+    private AudioSource audioSource;
+    [SerializeField]private AudioClip explosionSound;
+    [SerializeField]private AudioClip explosionCharge;
     private void Awake()
     {
         animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -46,7 +49,7 @@ public class MageExplosionSkill : MonoBehaviour
             Debug.Log("Không đủ mana để dùng Triple Slash");
             return;
         }
-
+        audioSource.PlayOneShot(explosionCharge); // Phát âm thanh khi bắt đầu nạp skill
         playerHealth.UseMana(manaCost); // Trừ mana
         cooldownTimer = cooldownTime;
         GameObject nearestEnemy = FindNearestEnemy();
@@ -89,7 +92,7 @@ public class MageExplosionSkill : MonoBehaviour
 
     private void DealExplosionDamage(Vector2 position)
     {
-
+        audioSource.PlayOneShot(explosionSound); // Phát âm thanh khi nổ
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(position, explosionRadius);
         foreach (Collider2D enemy in hitEnemies)
         {

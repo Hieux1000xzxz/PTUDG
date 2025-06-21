@@ -9,11 +9,11 @@ public class IceProjectile : MonoBehaviour
     private int damage;
     private float freezeDuration;
     private string enemyTag;
-
     public GameObject iceExplosionEffectPrefab;
-
+    public AudioSource audioSource;
     private Vector2 direction;
-
+  
+    
     public void InitializeHoming(GameObject target, float spd, Vector2 area, int dmg, float freezeTime, string tag)
     {
         targetEnemy = target;
@@ -47,8 +47,7 @@ public class IceProjectile : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-
-        Destroy(gameObject);
+        Destroy(gameObject); // Hủy nếu không va chạm trong thời gian sống
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,6 +61,7 @@ public class IceProjectile : MonoBehaviour
 
     private void ExplodeAt(Vector2 center)
     {
+        audioSource?.Play(); // Phát âm thanh nổ nếu có
         Collider2D[] hits = Physics2D.OverlapBoxAll(center, areaSize, 0f);
         foreach (var enemy in hits)
         {

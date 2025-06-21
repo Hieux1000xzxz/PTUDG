@@ -12,6 +12,7 @@ public class MoonveilDashSkill : MonoBehaviour
     public Transform attackPoint;
     public float manaCost = 20f;
     public string enemyTag = "Enemy"; // Sử dụng tag thay vì layer
+    public AudioClip dashSound; // Âm thanh khi dash
 
     [Header("Cooldown Settings")]
     public float cooldownTime = 5f;
@@ -25,13 +26,16 @@ public class MoonveilDashSkill : MonoBehaviour
     private Animator animator;
     private PlayerHealth playerHealth;
     private float dashTimer;
-
+    private AudioSource audioSource;
+    private SpriteRenderer spriteRenderer;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
+        audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -97,6 +101,8 @@ public class MoonveilDashSkill : MonoBehaviour
             if (ShouldHit(hitCount))
             {
                 PerformAttack();
+                audioSource.PlayOneShot(dashSound); // Assuming index 0 is the dash sound
+
                 hitCount++;
             }
 
@@ -127,25 +133,24 @@ public class MoonveilDashSkill : MonoBehaviour
 
     private void PerformAttack()
     {
-        // Tạo một hình chữ nhật tại vị trí tấn công
-        Vector2 attackCenter = (Vector2)attackPoint.position + dashDirection.normalized * (attackLength * 0.5f);
+        Vector2 direction = spriteRenderer.flipX ? Vector2.left : Vector2.right;
+        Vector2 center = (Vector2)attackPoint.position + direction * (attackLength * 0.5f);
 
-        // Lấy tất cả collider trong khu vực
         Collider2D[] hitColliders = Physics2D.OverlapBoxAll(
-            attackCenter,
+            center,
             new Vector2(attackLength, attackWidth),
-            Vector2.Angle(Vector2.right, dashDirection)
+            0f
         );
 
         foreach (var collider in hitColliders)
         {
-            // Kiểm tra theo tag thay vì layer
             if (collider.CompareTag(enemyTag))
             {
                 collider.GetComponent<EnemyHealth>()?.TakeDamage(damagePerHit);
             }
         }
     }
+
 
     private void EndDash()
     {
@@ -157,13 +162,17 @@ public class MoonveilDashSkill : MonoBehaviour
     {
         if (!attackPoint) return;
 
-        Vector2 center = (Vector2)attackPoint.position + dashDirection.normalized * (attackLength * 0.5f);
+        // Giả định hướng nhìn là bên phải nếu chưa chạy game
+        Vector2 direction = Application.isPlaying && spriteRenderer != null && spriteRenderer.flipX ? Vector2.left : Vector2.right;
+        Vector2 center = (Vector2)attackPoint.position + direction * (attackLength * 0.5f);
+
         Gizmos.color = Color.cyan;
         Gizmos.matrix = Matrix4x4.TRS(
             center,
-            Quaternion.Euler(0, 0, Vector2.Angle(Vector2.right, dashDirection)),
+            Quaternion.identity,
             Vector3.one
         );
         Gizmos.DrawWireCube(Vector3.zero, new Vector3(attackLength, attackWidth, 0));
     }
+
 }
