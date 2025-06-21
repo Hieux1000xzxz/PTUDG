@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventoryUIManager : MonoBehaviour
 {
@@ -58,6 +59,10 @@ public class InventoryUIManager : MonoBehaviour
         {
             UpdateInventoryUI();
             needUpdate = false;
+        }
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Destroy(gameObject);
         }
     }
     private void OnInventoryChangedHandler()

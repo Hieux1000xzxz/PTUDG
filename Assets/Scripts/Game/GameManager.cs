@@ -65,7 +65,9 @@ public class GameManager : MonoBehaviour
             PlayerHealth playerHealth = FindAnyObjectByType<PlayerHealth>();
             Destroy(playerHealth.gameObject);
         }
+        Destroy(gameObject);
         SceneManager.LoadScene("MainMenu"); // Quay về menu chính
+
     }
- 
+
 }
