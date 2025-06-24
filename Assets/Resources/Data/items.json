@@ -6,6 +6,11 @@
       "iconPath": "Icons/sword_icon"
     },
     {
+      "itemName": "Coin",
+      "description": "Dùng để mua vật phẩm trong shop",
+      "iconPath": "Icons/coin_icon"
+    },
+    {
       "itemName": "Crystal",
       "description": "Dùng để nâng cấp trang bị",
       "iconPath": "Icons/crystal_icon"

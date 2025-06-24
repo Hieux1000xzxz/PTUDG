@@ -18,7 +18,7 @@ public class UndeadAI : MonoBehaviour
     private float lastSummonTime;
     private float lastAttackTime;
     private const float StopDistance = 2f;
-    private const float WalkSpeed = 2f;
+    private const float WalkSpeed = 3f;
 
     private void Start()
     {

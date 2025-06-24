@@ -278,8 +278,7 @@ public class PlayerController : MonoBehaviour
             formChangeEffect.PlayEffect(form);
         }
     
-        // Update all skill icons
-        UpdateAllSkillIcons();
+      
     
         Debug.Log("Đã chuyển sang dạng: " + form);
         playerHealth.SetForm(form);
@@ -311,14 +310,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(formChangeCooldown);
         isFormChangeOnCooldown = false;
     }
-    private void UpdateAllSkillIcons()
-    {
-        foreach (var skillUI in skillCooldownUIs)
-        {
-            if (skillUI != null)
-            {
-                skillUI.UpdateSkillIcon();
-            }
-        }
-    }
+   
 }

@@ -1042,9 +1042,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 592862958199881913, guid: d675e1d40aa57394cb8e9fc257d51c6d, type: 3}
-  spawnInterval: 10
+  spawnInterval: 8
   maxEnemies: 5
-  spawnRadius: 5
+  spawnRadius: 4
 --- !u!4 &162416830
 Transform:
   m_ObjectHideFlags: 0
@@ -1054,7 +1054,7 @@ Transform:
   m_GameObject: {fileID: 162416828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.32, y: 5.01, z: -0.022296581}
+  m_LocalPosition: {x: 8.32, y: 2.02, z: -0.022296581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31292,7 +31292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9
+      value: 8.42
       objectReference: {fileID: 0}
     - target: {fileID: 752724605674898425, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31326,9 +31326,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1977081871782975062, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
+      propertyPath: cooldown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977081871782975062, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
+      propertyPath: dashDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2097616497340338500, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2097616497340338500, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
       propertyPath: deathPrefab
@@ -31337,6 +31345,14 @@ PrefabInstance:
     - target: {fileID: 2554868998497530532, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
       propertyPath: m_Name
       value: Undead
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483723061649340693, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218493463312167105, guid: 39c04a7fcfea64547a8e2f4a8f13746e, type: 3}
+      propertyPath: attackDuration
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31417,9 +31433,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1586057633000846439, guid: e57687dba88b43545ab742e4f5dcf7c5, type: 3}
-  spawnInterval: 8
+  spawnInterval: 5
   maxEnemies: 6
-  spawnRadius: 5
+  spawnRadius: 4
 --- !u!4 &1273725944
 Transform:
   m_ObjectHideFlags: 0
@@ -31429,7 +31445,7 @@ Transform:
   m_GameObject: {fileID: 1273725942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2174664, y: 5.01, z: -0.022296581}
+  m_LocalPosition: {x: -1.2174664, y: 0.06, z: -0.022296581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
